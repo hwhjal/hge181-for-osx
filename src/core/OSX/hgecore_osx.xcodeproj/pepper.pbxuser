@@ -58,7 +58,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					833,
 					20,
 					48,
 					43,
@@ -121,14 +121,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 310510175;
-			PBXWorkspaceStateSaveDate = 310510175;
+			PBXPerProjectTemplateStateSaveDate = 334710077;
+			PBXWorkspaceStateSaveDate = 334710077;
 		};
 		perUserProjectItems = {
-			5643E5B41267A44900C4975E /* PBXTextBookmark */ = 5643E5B41267A44900C4975E /* PBXTextBookmark */;
-			56E0AA21128203D800769BEC /* PBXTextBookmark */ = 56E0AA21128203D800769BEC /* PBXTextBookmark */;
-			56E0AA22128203D800769BEC /* PBXTextBookmark */ = 56E0AA22128203D800769BEC /* PBXTextBookmark */;
-			56E0AA23128203D800769BEC /* PBXTextBookmark */ = 56E0AA23128203D800769BEC /* PBXTextBookmark */;
+			5643E5B41267A44900C4975E = 5643E5B41267A44900C4975E /* PBXTextBookmark */;
+			5694896413F345C2000A3A69 /* PBXBookmark */ = 5694896413F345C2000A3A69 /* PBXBookmark */;
+			5694896513F345C2000A3A69 /* PBXTextBookmark */ = 5694896513F345C2000A3A69 /* PBXTextBookmark */;
+			56E0AA21128203D800769BEC = 56E0AA21128203D800769BEC /* PBXTextBookmark */;
+			56E0AA22128203D800769BEC = 56E0AA22128203D800769BEC /* PBXTextBookmark */;
+			56E0AA23128203D800769BEC = 56E0AA23128203D800769BEC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56B15AFF1188A74800677E1E /* Source Control */;
 		userBuildSettings = {
@@ -241,6 +243,20 @@
 		originalNumberOfMultipleMatches = 0;
 		state = 1;
 	};
+	5694896413F345C2000A3A69 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 56FBE2EA11C3E34B00469001 /* graphics.mm */;
+	};
+	5694896513F345C2000A3A69 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 56FBE2EA11C3E34B00469001 /* graphics.mm */;
+		name = "graphics.mm: 508";
+		rLen = 0;
+		rLoc = 13116;
+		rType = 0;
+		vrLen = 1381;
+		vrLoc = 12361;
+	};
 	5696312E11BEB82000BD84FA /* graphics.cpp */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.cpp.cpp;
@@ -274,7 +290,7 @@
 		fRef = 56FBE2EA11C3E34B00469001 /* graphics.mm */;
 		name = "graphics.mm: 876";
 		rLen = 0;
-		rLoc = 23141;
+		rLoc = 23135;
 		rType = 0;
 		vrLen = 1603;
 		vrLoc = 23946;
@@ -333,9 +349,9 @@
 	};
 	56FBE2EA11C3E34B00469001 /* graphics.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {997, 14768}}";
-			sepNavSelRange = "{23141, 0}";
-			sepNavVisRange = "{23946, 1603}";
+			sepNavIntBoundsRect = "{{0, 0}, {1013, 14508}}";
+			sepNavSelRange = "{13116, 0}";
+			sepNavVisRange = "{12361, 1381}";
 		};
 	};
 	56FBE2F011C3E36800469001 /* input.mm */ = {

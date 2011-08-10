@@ -366,7 +366,7 @@ void CALL HGE_Impl::Gfx_EndScene()
 	_render_batch (true);
 
 	// glFlush ();
-	// glFinish ();
+	glFinish ();
 	if (bWindowed) [glContextWindowed flushBuffer];
 		else [glContextFullscreen flushBuffer];
 }
@@ -505,7 +505,7 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			}
 			
 			nPrim=0;
-			// glFinish();
+			glFinish();
 			// glFlush ();
 		}
 		
