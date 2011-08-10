@@ -1,0 +1,6 @@
+//
+// Prefix header for all source files of the 'hgecore_osx' target in the 'hgecore_osx' project.
+//
+
+
+#include "main.h"
