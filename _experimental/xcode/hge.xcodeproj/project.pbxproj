@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56646A7D11DD344B0018A9F4 /* cocoa_app.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646A7811DD344B0018A9F4 /* cocoa_app.h */; };
+		56646A7E11DD344B0018A9F4 /* cocoa_app.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A7911DD344B0018A9F4 /* cocoa_app.mm */; };
+		56646A8011DD344B0018A9F4 /* graphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A7B11DD344B0018A9F4 /* graphics.mm */; };
+		56646A8111DD344B0018A9F4 /* hge_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646A7C11DD344B0018A9F4 /* hge_impl.h */; };
+		56646A8911DD34600018A9F4 /* input.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8211DD34600018A9F4 /* input.mm */; };
+		56646A8A11DD34600018A9F4 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646A8311DD34600018A9F4 /* main.h */; };
+		56646A8B11DD34600018A9F4 /* random.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8411DD34600018A9F4 /* random.mm */; };
+		56646A8C11DD34600018A9F4 /* resource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8511DD34600018A9F4 /* resource.mm */; };
+		56646A8D11DD34600018A9F4 /* sound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8611DD34600018A9F4 /* sound.mm */; };
+		56646A8E11DD34600018A9F4 /* system.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8711DD34600018A9F4 /* system.mm */; };
+		56646A8F11DD34600018A9F4 /* timer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56646A8811DD34600018A9F4 /* timer.mm */; };
+		56646AD711DD375D0018A9F4 /* hge.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACA11DD375D0018A9F4 /* hge.h */; };
+		56646AD811DD375D0018A9F4 /* hgeanim.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACB11DD375D0018A9F4 /* hgeanim.h */; };
+		56646AD911DD375D0018A9F4 /* hgecolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACC11DD375D0018A9F4 /* hgecolor.h */; };
+		56646ADA11DD375D0018A9F4 /* hgedistort.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACD11DD375D0018A9F4 /* hgedistort.h */; };
+		56646ADB11DD375D0018A9F4 /* hgefont.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACE11DD375D0018A9F4 /* hgefont.h */; };
+		56646ADC11DD375D0018A9F4 /* hgegui.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646ACF11DD375D0018A9F4 /* hgegui.h */; };
+		56646ADD11DD375D0018A9F4 /* hgeguictrls.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD011DD375D0018A9F4 /* hgeguictrls.h */; };
+		56646ADE11DD375D0018A9F4 /* hgeparticle.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD111DD375D0018A9F4 /* hgeparticle.h */; };
+		56646ADF11DD375D0018A9F4 /* hgerect.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD211DD375D0018A9F4 /* hgerect.h */; };
+		56646AE011DD375D0018A9F4 /* hgeresource.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD311DD375D0018A9F4 /* hgeresource.h */; };
+		56646AE111DD375D0018A9F4 /* hgesprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD411DD375D0018A9F4 /* hgesprite.h */; };
+		56646AE211DD375D0018A9F4 /* hgestrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD511DD375D0018A9F4 /* hgestrings.h */; };
+		56646AE311DD375D0018A9F4 /* hgevector.h in Headers */ = {isa = PBXBuildFile; fileRef = 56646AD611DD375D0018A9F4 /* hgevector.h */; };
+		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		56646A7811DD344B0018A9F4 /* cocoa_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cocoa_app.h; path = ../core/osx/cocoa_app.h; sourceTree = SOURCE_ROOT; };
+		56646A7911DD344B0018A9F4 /* cocoa_app.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cocoa_app.mm; path = ../core/osx/cocoa_app.mm; sourceTree = SOURCE_ROOT; };
+		56646A7B11DD344B0018A9F4 /* graphics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = graphics.mm; path = ../core/osx/graphics.mm; sourceTree = SOURCE_ROOT; };
+		56646A7C11DD344B0018A9F4 /* hge_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hge_impl.h; path = ../core/osx/hge_impl.h; sourceTree = SOURCE_ROOT; };
+		56646A8211DD34600018A9F4 /* input.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = input.mm; path = ../core/osx/input.mm; sourceTree = SOURCE_ROOT; };
+		56646A8311DD34600018A9F4 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../core/osx/main.h; sourceTree = SOURCE_ROOT; };
+		56646A8411DD34600018A9F4 /* random.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = random.mm; path = ../core/osx/random.mm; sourceTree = SOURCE_ROOT; };
+		56646A8511DD34600018A9F4 /* resource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = resource.mm; path = ../core/osx/resource.mm; sourceTree = SOURCE_ROOT; };
+		56646A8611DD34600018A9F4 /* sound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sound.mm; path = ../core/osx/sound.mm; sourceTree = SOURCE_ROOT; };
+		56646A8711DD34600018A9F4 /* system.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = system.mm; path = ../core/osx/system.mm; sourceTree = SOURCE_ROOT; };
+		56646A8811DD34600018A9F4 /* timer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = timer.mm; path = ../core/osx/timer.mm; sourceTree = SOURCE_ROOT; };
+		56646ACA11DD375D0018A9F4 /* hge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hge.h; sourceTree = "<group>"; };
+		56646ACB11DD375D0018A9F4 /* hgeanim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgeanim.h; sourceTree = "<group>"; };
+		56646ACC11DD375D0018A9F4 /* hgecolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgecolor.h; sourceTree = "<group>"; };
+		56646ACD11DD375D0018A9F4 /* hgedistort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgedistort.h; sourceTree = "<group>"; };
+		56646ACE11DD375D0018A9F4 /* hgefont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgefont.h; sourceTree = "<group>"; };
+		56646ACF11DD375D0018A9F4 /* hgegui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgegui.h; sourceTree = "<group>"; };
+		56646AD011DD375D0018A9F4 /* hgeguictrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgeguictrls.h; sourceTree = "<group>"; };
+		56646AD111DD375D0018A9F4 /* hgeparticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgeparticle.h; sourceTree = "<group>"; };
+		56646AD211DD375D0018A9F4 /* hgerect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgerect.h; sourceTree = "<group>"; };
+		56646AD311DD375D0018A9F4 /* hgeresource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgeresource.h; sourceTree = "<group>"; };
+		56646AD411DD375D0018A9F4 /* hgesprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgesprite.h; sourceTree = "<group>"; };
+		56646AD511DD375D0018A9F4 /* hgestrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgestrings.h; sourceTree = "<group>"; };
+		56646AD611DD375D0018A9F4 /* hgevector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hgevector.h; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libhge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libhge.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* hge */ = {
+			isa = PBXGroup;
+			children = (
+				56646AC911DD375D0018A9F4 /* include */,
+				56646A7C11DD344B0018A9F4 /* hge_impl.h */,
+				56646A8211DD34600018A9F4 /* input.mm */,
+				56646A8311DD34600018A9F4 /* main.h */,
+				56646A8411DD34600018A9F4 /* random.mm */,
+				56646A8511DD34600018A9F4 /* resource.mm */,
+				56646A8611DD34600018A9F4 /* sound.mm */,
+				56646A8711DD34600018A9F4 /* system.mm */,
+				56646A8811DD34600018A9F4 /* timer.mm */,
+				56646A7811DD344B0018A9F4 /* cocoa_app.h */,
+				56646A7911DD344B0018A9F4 /* cocoa_app.mm */,
+				56646A7B11DD344B0018A9F4 /* graphics.mm */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = hge;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E8BE07B2D77200F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		56646AC911DD375D0018A9F4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				56646ACA11DD375D0018A9F4 /* hge.h */,
+				56646ACB11DD375D0018A9F4 /* hgeanim.h */,
+				56646ACC11DD375D0018A9F4 /* hgecolor.h */,
+				56646ACD11DD375D0018A9F4 /* hgedistort.h */,
+				56646ACE11DD375D0018A9F4 /* hgefont.h */,
+				56646ACF11DD375D0018A9F4 /* hgegui.h */,
+				56646AD011DD375D0018A9F4 /* hgeguictrls.h */,
+				56646AD111DD375D0018A9F4 /* hgeparticle.h */,
+				56646AD211DD375D0018A9F4 /* hgerect.h */,
+				56646AD311DD375D0018A9F4 /* hgeresource.h */,
+				56646AD411DD375D0018A9F4 /* hgesprite.h */,
+				56646AD511DD375D0018A9F4 /* hgestrings.h */,
+				56646AD611DD375D0018A9F4 /* hgevector.h */,
+			);
+			name = include;
+			path = ../include;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56646A7D11DD344B0018A9F4 /* cocoa_app.h in Headers */,
+				56646A8111DD344B0018A9F4 /* hge_impl.h in Headers */,
+				56646A8A11DD34600018A9F4 /* main.h in Headers */,
+				56646AD711DD375D0018A9F4 /* hge.h in Headers */,
+				56646AD811DD375D0018A9F4 /* hgeanim.h in Headers */,
+				56646AD911DD375D0018A9F4 /* hgecolor.h in Headers */,
+				56646ADA11DD375D0018A9F4 /* hgedistort.h in Headers */,
+				56646ADB11DD375D0018A9F4 /* hgefont.h in Headers */,
+				56646ADC11DD375D0018A9F4 /* hgegui.h in Headers */,
+				56646ADD11DD375D0018A9F4 /* hgeguictrls.h in Headers */,
+				56646ADE11DD375D0018A9F4 /* hgeparticle.h in Headers */,
+				56646ADF11DD375D0018A9F4 /* hgerect.h in Headers */,
+				56646AE011DD375D0018A9F4 /* hgeresource.h in Headers */,
+				56646AE111DD375D0018A9F4 /* hgesprite.h in Headers */,
+				56646AE211DD375D0018A9F4 /* hgestrings.h in Headers */,
+				56646AE311DD375D0018A9F4 /* hgevector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* hge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "hge" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hge;
+			productName = hge;
+			productReference = D2AAC07E0554694100DB518D /* libhge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hge" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* hge */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = ..;
+			targets = (
+				D2AAC07D0554694100DB518D /* hge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56646A7E11DD344B0018A9F4 /* cocoa_app.mm in Sources */,
+				56646A8011DD344B0018A9F4 /* graphics.mm in Sources */,
+				56646A8911DD34600018A9F4 /* input.mm in Sources */,
+				56646A8B11DD34600018A9F4 /* random.mm in Sources */,
+				56646A8C11DD34600018A9F4 /* resource.mm in Sources */,
+				56646A8D11DD34600018A9F4 /* sound.mm in Sources */,
+				56646A8E11DD34600018A9F4 /* system.mm in Sources */,
+				56646A8F11DD34600018A9F4 /* timer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = hge;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = hge;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					OSX,
+				);
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../source,
+					../../../third_party,
+				);
+				OBJROOT = ../../../temp/osx/hge;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+				SYMROOT = ../../../lib/osx/hge;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = OSX;
+				GCC_VERSION = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../source,
+					../../../third_party,
+				);
+				OBJROOT = ../../../temp/osx/hge;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+				SYMROOT = ../../../lib/osx/hge;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "hge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
