@@ -548,7 +548,8 @@ bool CALL HGE_Impl::System_Start()
 			// Ensure we have at least 1ms time step
 			// to not confuse user's code with 0
 			
-			do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
+			// do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
+			do { dt= round (CFAbsoluteTimeGetCurrent ()*1000.f- t0); } while(dt < 1);
 			
 			// If we reached the time for the next frame
 			// or we just run in unlimited FPS mode, then
@@ -558,7 +559,7 @@ bool CALL HGE_Impl::System_Start()
 			{
 				// fDeltaTime = time step in seconds returned by Timer_GetDelta
 				
-				fDeltaTime=dt;
+				fDeltaTime=dt/1000.0f;
 				
 				// Cap too large time steps usually caused by lost focus to avoid jerks
 				
@@ -574,8 +575,8 @@ bool CALL HGE_Impl::System_Start()
 				// Store current time for the next frame
 				// and count FPS
 				
-				t0=CFAbsoluteTimeGetCurrent ();
-				if(t0-t0fps <= 1) cfps++;
+				t0=CFAbsoluteTimeGetCurrent ()*1000;
+				if(t0-t0fps <= 1000) cfps++;
 				else
 				{
 					nFPS=cfps; cfps=0; t0fps=t0;
