@@ -6,27 +6,6 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-@interface GLView : NSOpenGLView 
-
-// - (void) drawRect:(NSRect)dirtyRect;
-- (void) mouseDown:(NSEvent *)theEvent;
-- (void) keyDown:(NSEvent *)theEvent;
-- (BOOL) canBecomeKeyView;
-- (BOOL) acceptsFirstResponder;
-- (BOOL) becomeFirstResponder;
-- (BOOL) resignFirstResponder;
-- (void) rightMouseDown:(NSEvent *)event;
-- (BOOL)canBecomeKeyWindow;
-@end
-
-@interface JJApplicationDelegate : NSObject
-{
-//	GLView *renderer;
-//	NSWindow *window;
-}
-
-@end
-
 
 @interface JJMenuPopulator : NSObject
 {
@@ -61,13 +40,13 @@
 	NSEvent *event;
 }
 
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication;
+
 - (void) preRun;
 - (void) run;
 - (bool) isRunning;
 - (NSEvent *) eventGet;
 - (void) handleEvent;
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication;
-
 
 @end
 

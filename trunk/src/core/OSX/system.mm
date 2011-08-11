@@ -1,11 +1,11 @@
-//
-//  system.cpp
-//  hgecore_osx
-//
-// Created by Andrew Onofreytchuk (a.onofreytchuk@gmail.com) on 5/3/10.
-// Copyright 2010 Andrew Onofreytchuk. All rights reserved.
-//
-//
+/*
+ *  system.cpp
+ *  hgecore_osx
+ *
+ *  Created by Andrew Pepper on 5/3/10.
+ *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *
+ */
 
 #include "main.h"
 
@@ -14,7 +14,6 @@ HGE_Impl*	pHGE=0;
 
 /*
  TODO:
-	Implement bTextureClamp from cabestan engine
 	Implement nPowerStatus 
  */
 
@@ -52,8 +51,7 @@ HGE_Impl::HGE_Impl()
 	bGLAppleFenceSupported = false;
 	nGLMaxTexUnits = 0;
 	nGLMaxTexSize = 0;
-
-	
+	bKeepDesktopMode = false;	
 	
 	/*hBass=0;
 	bSilent=false;
@@ -89,6 +87,7 @@ HGE_Impl::HGE_Impl()
 	bTextureFilter=true;
 	szLogFile[0]=0;
 	szIniFile[0]=0;
+	szAppPath[0]=0;
 	bUseSound=true;
 	nSampleRate=44100;
 	nFXVolume=100;
@@ -98,6 +97,8 @@ HGE_Impl::HGE_Impl()
 	bHideMouse=true;
 	bDontSuspend=false;
 	// hwndParent=0;
+	
+	bTextureClamp = false;
 	
 	/*nPowerStatus=HGEPWR_UNSUPPORTED;
 	hKrnl32 = NULL;
@@ -115,6 +116,19 @@ HGE_Impl::HGE_Impl()
 	strcat (szAppPath, "/");
 	
 	[pool release];
+	
+	// Get byteorder
+	char prop_buff [1024] = {};
+	int prop [2], be_res;
+	unsigned int *p_res = (unsigned int *) prop_buff;
+	size_t prop_buf_size;
+	long gs_result;	
+	prop_buf_size = sizeof (prop_buff);
+	
+	prop [0] = CTL_HW; prop [1] = HW_BYTEORDER;
+	prop_buf_size = sizeof (prop_buff);
+	be_res = sysctl (prop, 2, prop_buff, &prop_buf_size, NULL, 0);
+	nByteOrder = *p_res;	
 }
 
 HGE_Impl* HGE_Impl::_Interface_Get()
@@ -138,7 +152,7 @@ bool CALL HGE_Impl::System_Initiate()
 	System_Log("OS: Mac OS X");
 	
 	application = [Application sharedApplication];
-	[application setDelegate:[[JJApplicationDelegate alloc] init]];	
+	[application setDelegate:application];	
 	[application preRun];
 	
 	// Cerate window	
@@ -156,14 +170,13 @@ bool CALL HGE_Impl::System_Initiate()
 	}
 	
 	fTime=0.0f;
-	t0=t0fps=CFAbsoluteTimeGetCurrent ()*1000;
+	t0=t0fps=CFAbsoluteTimeGetCurrent ();
 	dt=cfps=0;
 	nFPS=0;	
 	
 	System_Log("Init done.\n");	
 	
 	[pool release];
-	
 	return true;
 }
 
@@ -172,7 +185,7 @@ void CALL HGE_Impl::_CreateWindow ()
 	if (bWindowed)
 	{	
 		NSRect frame = NSMakeRect(0, 0, nScreenWidth, nScreenHeight);
-		NSUInteger styleMask = NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask;
+		unsigned int styleMask = NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask;
 		// Corretct frame size with given content rect
 		// frame = [NSWindow frameRectForContentRect: frame styleMask: styleMask];
 		rect = frame;
@@ -183,13 +196,14 @@ void CALL HGE_Impl::_CreateWindow ()
 			return;
 		}	
 		
-		[hwnd setBackgroundColor:[NSColor blueColor]];
+		[hwnd setBackgroundColor:[NSColor blackColor]];
 		NSString* title = [[NSString alloc] initWithBytes:szWinTitle length:strlen(szWinTitle) encoding:NSASCIIStringEncoding];		
 		[hwnd setTitle: title];
 		[hwnd display];
 		[hwnd center];
 		[hwnd makeKeyAndOrderFront: hwnd];
 		[hwnd setAcceptsMouseMovedEvents: YES];
+		[hwnd makeMainWindow];
 	}
 	else
 	{
@@ -202,15 +216,15 @@ void CALL HGE_Impl::System_SetStateBool (hgeBoolState state, bool value)
 {
 	switch(state)
 	{
-		case HGE_WINDOWED:		
-			if(VertArray /*|| hwndParent*/) break;
+		case HGE_WINDOWED:
+
+			if(VertArray) break;
 			if((glContextWindowed || glContextFullscreen) && bWindowed != value)
 			{
 				bWindowed=value;
 				_GfxRestore();
-				// _AdjustWindow();
 			}
-			// else bWindowed=value;
+			else bWindowed=value;
 			break;
 			
 		case HGE_ZBUFFER:		
@@ -249,6 +263,7 @@ void CALL HGE_Impl::System_SetStateBool (hgeBoolState state, bool value)
 #ifdef DEMO
 		case HGE_SHOWSPLASH:	bDMO=value; break;
 #endif
+		case HGE_TEXTURECLAMP:  bTextureClamp = value; break;
 	}
 
 }
@@ -365,13 +380,17 @@ bool CALL HGE_Impl::System_GetStateBool(hgeBoolState state)
 		case HGE_USESOUND:		return bUseSound;
 		case HGE_DONTSUSPEND:	return bDontSuspend;
 		case HGE_HIDEMOUSE:		return bHideMouse;
+		case HGE_BYTEORDER:
+			if (1234 == nByteOrder) return false;
+				else return true;
+		break;			
 			
 #ifdef DEMO
 		case HGE_SHOWSPLASH:	return bDMO;
 #endif
 			
 			/* HGE_MODIFY: (Texture clamping) { */
-		// case HGE_TEXTURECLAMP:  return bTextureClamp;
+		 case HGE_TEXTURECLAMP:  return bTextureClamp;
 			/* } */
 	}
 	
@@ -425,10 +444,9 @@ const char* CALL HGE_Impl::System_GetStateString(hgeStringState state) {
 	switch(state) {
 		case HGE_ICON:			return szIcon;
 		case HGE_TITLE:			return szWinTitle;
-		case HGE_INIFILE:		if(szIniFile[0]) return szIniFile;
-		else return 0;
-		case HGE_LOGFILE:		if(szLogFile[0]) return szLogFile;
-		else return 0;
+		case HGE_INIFILE:		if (szIniFile[0]) return szIniFile;	else return NULL;
+		case HGE_LOGFILE:		if (szLogFile[0]) return szLogFile;	else return NULL;
+		case HGE_APPPATH:		if (szAppPath[0]) return szAppPath; else return NULL;
 	}
 	
 	return NULL;
@@ -471,18 +489,19 @@ void CALL HGE_Impl::System_Shutdown()
 	System_Log("\nFinishing..");
 	
 	/*timeEndPeriod(1);
-	if(hSearch) { FindClose(hSearch); hSearch=0; }*/
+	if(hSearch) { FindClose(hSearch); hSearch=0; }
 	_ClearQueue();
-	// _SoundDone();
+	_SoundDone();
 	_GfxDone();
-	// _DonePowerStatus();
+	_DonePowerStatus();
 	
-	/*if(hwnd)
+	if(hwnd)
 	{
 		DestroyWindow(hwnd);
 		hwnd=0;
-	}*/
+	}
 	
+	if(hInstance) UnregisterClass(WINDOW_CLASS_NAME, hInstance);*/
 	
 	System_Log("The End.");
 }
@@ -511,9 +530,14 @@ bool CALL HGE_Impl::System_Start()
 	do
 	{
 		// Get messages
-		[application run];
-		if (!_ProcessMessage ([application eventGet])) [application handleEvent];			
-		
+		NSEvent *event = 0;
+		do
+		{
+			[application run];				
+			event = [application eventGet];
+			if (0 != event && !_ProcessMessage (event)) [application handleEvent];
+		} while (event);
+
 		// Check if mouse is over HGE window for Input_IsMouseOver		
 		_UpdateMouse();
 		
@@ -524,6 +548,7 @@ bool CALL HGE_Impl::System_Start()
 			// Ensure we have at least 1ms time step
 			// to not confuse user's code with 0
 			
+			// do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
 			do { dt= round (CFAbsoluteTimeGetCurrent ()*1000.f- t0); } while(dt < 1);
 			
 			// If we reached the time for the next frame
@@ -586,7 +611,9 @@ bool CALL HGE_Impl::System_Start()
 			
 			else
 			{
-				if(nFixedDelta && dt+3 < nFixedDelta) [NSThread sleepForTimeInterval:0.001];
+				if(nFixedDelta && dt+3 < nFixedDelta)
+					usleep (10);
+					// [NSThread sleepForTimeInterval:0.001];				
 			}
 		}
 		
@@ -607,7 +634,7 @@ void CALL HGE_Impl::Release()
 	
 	if(!nRef)
 	{
-		if(pHGE->hwnd) pHGE->System_Shutdown();
+		// if(pHGE->hwnd) pHGE->System_Shutdown();
 		// Resource_RemoveAllPacks();
 		delete pHGE;
 		pHGE=0;
@@ -662,11 +689,19 @@ POINT HGE_Impl::_GetMousePos ()
 
 bool HGE_Impl::_ProcessMessage (NSEvent *event)
 {
-	
 	if (nil != event)
 	{	
+//		[hwnd makeKeyAndOrderFront: hwnd];
+		
 		switch ([event type])
 		{
+//			case NSAppKitDefined:
+//				if ([event subtype] == NSApplicationActivatedEventType || [event subtype] == NSApplicationDeactivatedEventType)
+//				{
+//					[hwnd makeKeyAndOrderFront: hwnd];					
+//					return false;
+//				}
+//			break;
 			// Mouse Left button
 			case NSLeftMouseDown:
 			{
@@ -674,8 +709,9 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				if (-1 != mousePos.x && -1 != mousePos.y)
 				{
 					if (1 == [event clickCount]) pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, 0, mousePos.x, mousePos.y);
-						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);					
-					return true;
+						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);
+					hwKeyz[HGEK_LBUTTON] = 1;
+					return false;
 				}
 			}
 			break;
@@ -685,7 +721,8 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				POINT mousePos = _GetMousePos ();
 				if (-1 != mousePos.x && -1 != mousePos.y)
 					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_LBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return true;
+				hwKeyz[HGEK_LBUTTON] = 0;
+				return false;
 			}	
 			break;
 				
@@ -697,9 +734,10 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				{
 					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);
 					if (1 == [event clickCount]) pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);
-						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);					
+						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);
+					hwKeyz[HGEK_RBUTTON] = 1;
 				}
-				return true;
+				return false;
 			}
 			break;
 				
@@ -708,7 +746,8 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				POINT mousePos = _GetMousePos ();
 				if (-1 != mousePos.x && -1 != mousePos.y)
 					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return true;
+				hwKeyz[HGEK_RBUTTON] = 0;
+				return false;
 			}	
 			break;	
 				
@@ -718,7 +757,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				POINT mousePos = _GetMousePos ();
 				if (-1 != mousePos.x && -1 != mousePos.y)
 					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_MBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return true;
+				return false;
 			}
 			break;
 			case NSOtherMouseUp:
@@ -726,17 +765,19 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 				POINT mousePos = _GetMousePos ();
 				if (-1 != mousePos.x && -1 != mousePos.y)
 					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_MBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return true;
+				return false;
 			}
 			break;
 				
 			// Mouse moving	
 			case NSMouseMoved:
+			case NSLeftMouseDragged:
+			case NSRightMouseDragged:
 			{
 				POINT mousePos = _GetMousePos ();
 				if (-1 != mousePos.x && -1 != mousePos.y)	
 					pHGE->_BuildEvent(INPUT_MOUSEMOVE, 0, 0, 0, mousePos.x, mousePos.y);
-				return true;
+				return false;
 			}
 			break;
 				
@@ -748,7 +789,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 					POINT mousePos = _GetMousePos ();
 					if (-1 != mousePos.x && -1 != mousePos.y)
 						pHGE->_BuildEvent(INPUT_MOUSEWHEEL, [event deltaY], 0, 0, mousePos.x, mousePos.y);
-					return true;
+					return false;
 				}
 			}
 			break;				
@@ -757,7 +798,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 			case NSKeyDown:
 			{
 				// Check for spec keys
-				NSUInteger fkMask = [event modifierFlags];
+				unsigned int fkMask = [event modifierFlags];
 				if (NSControlKeyMask & fkMask || NSCommandKeyMask & fkMask) return false;
 				
 				int macKey = [event keyCode], winKey = -1;
@@ -784,7 +825,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 			case NSKeyUp:
 			{
 				// Check for spec keys
-				NSUInteger fkMask = [event modifierFlags];
+				unsigned int fkMask = [event modifierFlags];
 				if (NSControlKeyMask & fkMask || NSCommandKeyMask & fkMask) return false;
 				
 				int macKey = [event keyCode], winKey = -1;
@@ -813,6 +854,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 	}
 	 
 	return false;
-	
 }
+
+
 

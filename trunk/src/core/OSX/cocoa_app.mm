@@ -2,66 +2,11 @@
 //  cocoa_app.m
 //  hgecore_osx
 //
-// Created by Andrew Onofreytchuk (a.onofreytchuk@gmail.com) on 5/3/10.
-// Copyright 2010 Andrew Onofreytchuk. All rights reserved.
+//  Created by Andrew Pepper on 5/19/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #include "main.h"
-
-@implementation GLView
-
-
--(void)mouseDown:(NSEvent *)theEvent
-{
-	// return YES;
-}
-
--(void)keyDown:(NSEvent *)theEvent
-{	
-	
-}
-
-- (BOOL)canBecomeKeyWindow
-{
-	return YES;
-}
-
-- (BOOL)canBecomeKeyView
-{
-	return YES;
-}
-
-- (BOOL) acceptsFirstResponder
-{
-	return YES;
-}
-
-- (BOOL) becomeFirstResponder
-{
-	return YES;
-}
-
-- (BOOL) resignFirstResponder
-{
-	return YES;
-}
-
--(void)rightMouseDown:(NSEvent *)event
-{
-	NSLog(@"rightMouseDown");
-}
-
-
-@end
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------------------------
-@implementation JJApplicationDelegate
-
-#pragma mark NSApplication delegate
-
-@end
 
 // ------------------------------------------------------------------------------------------------------------------------------------------
 @implementation JJConstants
@@ -396,6 +341,14 @@ extern Application *application;
 // ------------------------------------------------------------------------------------------------------------------------------------------
 @implementation Application
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+{
+	return YES;
+}
+
+
+
+
 - (void) preRun
 {
 	NSAutoreleasePool *pool=[NSAutoreleasePool new];
@@ -411,14 +364,13 @@ extern Application *application;
 -(void)run 
 {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	
+		
 	event =[self nextEventMatchingMask:NSAnyEventMask
-							 untilDate:nil inMode:NSDefaultRunLoopMode dequeue:YES];
-	
-	
+			untilDate:nil inMode:NSDefaultRunLoopMode dequeue:YES];	
+		
 	// [self _checkForReleasedWindows];
 	// [self _checkForTerminate];
-	
+
 	[pool release];
 }
 
@@ -437,17 +389,13 @@ extern Application *application;
 	if (nil == event) return;
 	
 	NS_DURING
-	[self sendEvent:event];
-	
+		[self sendEvent:event];
+			
 	NS_HANDLER
-	[self reportException:localException];
+		[self reportException:localException];
 	NS_ENDHANDLER	
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
-{
-	return YES;
-}
 
 
 @end

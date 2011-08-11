@@ -1,25 +1,21 @@
-//
-//  hge_impl.h
-//  hgecore_osx
-//
-// Created by Andrew Onofreytchuk (a.onofreytchuk@gmail.com) on 5/3/10.
-// Copyright 2010 Andrew Onofreytchuk. All rights reserved.
-//
-//
-
 /*
- ** Haaf's Game Engine 1.8
- ** Copyright (C) 2003-2007, Relish Games
- ** hge.relishgames.com
- **
+ *  hge_impl.h
+ *  hgecore_osx
+ *
+ *  Created by Andrew Pepper on 5/3/10.
+ *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *
  */
-
 
 
 #ifndef HGE_IMPL_H
 #define HGE_IMPL_H
 
 #include "../../../include/hge.h"
+
+#include <assert.h>
+
+#define ASSERT assert
 
 #define VERTEX_BUFFER_SIZE 4000
 
@@ -40,13 +36,21 @@ struct CRenderTargetList
 	CRenderTargetList*	next;
 };
 
+struct CTextureLockInfo
+{
+	bool				readonly;
+	Rect				lockRect;
+	void				*data;
+};
+
 struct CTextureList
 {
 	HTEXTURE			tex;
-	int					width;
-	int					height;
+	int					width, realWidth;
+	int					height, realHeight;
 	int					bpp;
 	GLenum				internalFormat, format, type;
+	CTextureLockInfo	lockInfo;
 	CTextureList*		next;
 };
 
@@ -110,25 +114,26 @@ public:
 	virtual const char*	CALL	System_GetStateString(hgeStringState);
 	virtual char*		CALL	System_GetErrorMessage();
 	virtual	void		CALL	System_Log(const char *format, ...);
-//	virtual bool		CALL	System_Launch(const char *url);
-//	virtual void		CALL	System_Snapshot(const char *filename=0);
+	virtual bool		CALL	System_Launch(const char *url) {ASSERT(0);};
+	virtual void		CALL	System_Snapshot(const char *filename=0) {ASSERT(0);};
 //	
 	virtual void*		CALL	Resource_Load(const char *filename, DWORD *size=0);
 	virtual void		CALL	Resource_Free(void *res);
-//	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0);
-//	virtual void		CALL	Resource_RemovePack(const char *filename);
-//	virtual void		CALL	Resource_RemoveAllPacks();
+	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0) {ASSERT(0);};
+	virtual void		CALL	Resource_RemovePack(const char *filename) {ASSERT(0);};
+	virtual void		CALL	Resource_RemoveAllPacks() {ASSERT(0);};
 	virtual char*		CALL	Resource_MakePath(const char *filename=0);
-//	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0);
-//	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0);
+	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0) {ASSERT(0);};
+	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0) {ASSERT(0);};
 //	
-//	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value);
-//	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val);
-//	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value);
-//	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val);
-//	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value);
-//	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val);
-//	
+	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
+	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return 1;} // {ASSERT(0);};
+	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value) {} // {ASSERT(0);};
+	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val) {return 1;} // {ASSERT(0);};
+	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value) {} // {ASSERT(0);};
+	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val) {return 0;} // {ASSERT(0);};
+
+	//	
 	virtual void		CALL	Random_Seed(int seed=0);
 	virtual int			CALL	Random_Int(int min, int max);
 	virtual float		CALL	Random_Float(float min, float max);
@@ -139,41 +144,41 @@ public:
 //	
 	virtual HEFFECT		CALL	Effect_Load(const char *filename, DWORD size=0);
 	virtual void		CALL	Effect_Free(HEFFECT eff);
-//	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff);
-//	virtual HCHANNEL	CALL 	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false);
+	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff) {ASSERT(0);};
+	virtual HCHANNEL	CALL 	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false) {ASSERT(0);};
 //	
 	virtual HMUSIC		CALL 	Music_Load(const char *filename, DWORD size=0);
 	virtual void		CALL	Music_Free(HMUSIC mus);
-//	virtual HCHANNEL	CALL 	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = 0, int row = 0);
+	virtual HCHANNEL	CALL 	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = 0, int row = 0) {ASSERT(0);};
 	virtual void		CALL	Music_SetAmplification(HMUSIC music, int ampl);
-//	virtual int			CALL	Music_GetAmplification(HMUSIC music);
-//	virtual int			CALL	Music_GetLength(HMUSIC music);
-//	virtual void		CALL	Music_SetPos(HMUSIC music, int order, int row);
-//	virtual bool		CALL	Music_GetPos(HMUSIC music, int *order, int *row);
-//	virtual void		CALL	Music_SetInstrVolume(HMUSIC music, int instr, int volume);
-//	virtual int			CALL	Music_GetInstrVolume(HMUSIC music, int instr);
-//	virtual void		CALL	Music_SetChannelVolume(HMUSIC music, int channel, int volume);
-//	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel);
+	virtual int			CALL	Music_GetAmplification(HMUSIC music) {ASSERT(0);};
+	virtual int			CALL	Music_GetLength(HMUSIC music) {ASSERT(0);};
+	virtual void		CALL	Music_SetPos(HMUSIC music, int order, int row) {ASSERT(0);};
+	virtual bool		CALL	Music_GetPos(HMUSIC music, int *order, int *row) {ASSERT(0);};
+	virtual void		CALL	Music_SetInstrVolume(HMUSIC music, int instr, int volume) {ASSERT(0);};
+	virtual int			CALL	Music_GetInstrVolume(HMUSIC music, int instr) {ASSERT(0);};
+	virtual void		CALL	Music_SetChannelVolume(HMUSIC music, int channel, int volume) {ASSERT(0);};
+	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel) {ASSERT(0);};
 //	
 	virtual HSTREAM		CALL	Stream_Load(const char *filename, DWORD size=0);
 	virtual void		CALL	Stream_Free(HSTREAM stream);
-//	virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100);
+	virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100) {ASSERT(0);};
 //	
-//	virtual void		CALL 	Channel_SetPanning(HCHANNEL chn, int pan);
-//	virtual void		CALL 	Channel_SetVolume(HCHANNEL chn, int volume);
-//	virtual void		CALL 	Channel_SetPitch(HCHANNEL chn, float pitch);
-//	virtual void		CALL 	Channel_Pause(HCHANNEL chn);
-//	virtual void		CALL 	Channel_Resume(HCHANNEL chn);
-//	virtual void		CALL 	Channel_Stop(HCHANNEL chn);
-//	virtual void		CALL 	Channel_PauseAll();
-//	virtual void		CALL 	Channel_ResumeAll();
-//	virtual void		CALL 	Channel_StopAll();
-//	virtual bool		CALL	Channel_IsPlaying(HCHANNEL chn);
-//	virtual float		CALL	Channel_GetLength(HCHANNEL chn);
-//	virtual float		CALL	Channel_GetPos(HCHANNEL chn);
-//	virtual void		CALL	Channel_SetPos(HCHANNEL chn, float fSeconds);
-//	virtual void		CALL	Channel_SlideTo(HCHANNEL channel, float time, int volume, int pan = -101, float pitch = -1);
-//	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel);
+	virtual void		CALL 	Channel_SetPanning(HCHANNEL chn, int pan) {ASSERT(0);};
+	virtual void		CALL 	Channel_SetVolume(HCHANNEL chn, int volume) {ASSERT(0);};
+	virtual void		CALL 	Channel_SetPitch(HCHANNEL chn, float pitch) {ASSERT(0);};
+	virtual void		CALL 	Channel_Pause(HCHANNEL chn) {ASSERT(0);};
+	virtual void		CALL 	Channel_Resume(HCHANNEL chn) {ASSERT(0);};
+	virtual void		CALL 	Channel_Stop(HCHANNEL chn) {ASSERT(0);};
+	virtual void		CALL 	Channel_PauseAll() {ASSERT(0);};
+	virtual void		CALL 	Channel_ResumeAll() {ASSERT(0);};
+	virtual void		CALL 	Channel_StopAll() {ASSERT(0);};
+	virtual bool		CALL	Channel_IsPlaying(HCHANNEL chn) {ASSERT(0);};
+	virtual float		CALL	Channel_GetLength(HCHANNEL chn) {ASSERT(0);};
+	virtual float		CALL	Channel_GetPos(HCHANNEL chn) {ASSERT(0);};
+	virtual void		CALL	Channel_SetPos(HCHANNEL chn, float fSeconds) {ASSERT(0);};
+	virtual void		CALL	Channel_SlideTo(HCHANNEL channel, float time, int volume, int pan = -101, float pitch = -1) {ASSERT(0);};
+	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel) {ASSERT(0);};
 //	
 	virtual void		CALL	Input_GetMousePos(float *x, float *y);
 	virtual void		CALL	Input_SetMousePos(float x, float y);
@@ -194,10 +199,10 @@ public:
 	virtual void		CALL	Gfx_RenderLine(float x1, float y1, float x2, float y2, DWORD color=0xFFFFFFFF, float z=0.5f);
 	virtual void		CALL	Gfx_RenderTriple(const hgeTriple *triple);
 	virtual void		CALL	Gfx_RenderQuad(const hgeQuad *quad);
-	virtual hgeVertex*	CALL	Gfx_StartBatch(int prim_type, HTEXTURE tex, int blend, int *max_prim);
+	virtual hgeVertex*	CALL	Gfx_StartBatch(int prim_type, HTEXTURE tex, HTEXTURE tex_mask, int blend, int *max_prim);
 	virtual void		CALL	Gfx_FinishBatch(int nprim);
 	virtual void		CALL	Gfx_SetClipping(int x=0, int y=0, int w=0, int h=0);
-	virtual void		CALL	Gfx_SetTransform(float x=0, float y=0, float dx=0, float dy=0, float rot=0, float hscale=0, float vscale=0); 
+	virtual void		CALL	Gfx_SetTransform(float x=0, float y=0, float dx=0, float dy=0, float rot=0, float hscale=0, float vscale=0);
 
 	virtual HTARGET		CALL	Target_Create(int width, int height, bool zbuffer);
 	virtual void		CALL	Target_Free(HTARGET target);
@@ -211,22 +216,23 @@ public:
 	virtual DWORD*		CALL	Texture_Lock(HTEXTURE tex, bool bReadOnly=true, int left=0, int top=0, int width=0, int height=0);
 	virtual void		CALL	Texture_Unlock(HTEXTURE tex);
 	
-	void				_CreateWindow ();
+	bool				_ProcessMessage (NSEvent *event);
 	bool				_GfxInit();
-	void				_GfxDone();
+	void				_CreateWindow ();
+//	void				_GfxDone();
 	bool				_GfxRestore();
 //	void				_AdjustWindow();
 //	void				_Resize(int width, int height);
 	bool				_init_lost();
 	void				_OpeGLCapsGet ();
-	bool				_GfxContextCreate();	
+	bool				_GfxContextCreate();
+	POINT				_GetMousePos ();
+	
 	
 	void				_render_batch(bool bEndScene=false);
 //	int					_format_id(D3DFORMAT fmt);
 	void				_SetBlendMode(int blend);
 	void				_SetProjectionMatrix(int width, int height, bool flip);
-	bool				_ProcessMessage (NSEvent *event);
-	POINT				_GetMousePos ();
 	
 	
 	//////// Implementation ////////
@@ -245,6 +251,7 @@ public:
 	// System States
 	bool				bRendererInit;
 	bool				bSoundInit;
+	int					nByteOrder;
 	bool				(*procFrameFunc)();
 	bool				(*procRenderFunc)();
 	bool				(*procFocusLostFunc)();
@@ -273,9 +280,10 @@ public:
 	
 	// Graphix
 	bool				bGLInitDone;
+	bool				bKeepDesktopMode;
 	int					mDesktopWidth, mDesktopHeight, mDesktopBPP, mDesktopRR;
 	NSWindow*			window;
-	GLView*				glView;
+	NSOpenGLView*		glView;
 	NSOpenGLContext*	glContextWindowed, *glContextFullscreen;
 	CTextureList*		textures;
 	hgeVertex*			VertArray;
@@ -305,7 +313,7 @@ public:
 	float				fDeltaTime;
 	DWORD				nFixedDelta;
 	int					nFPS;
-	DWORD				t0, t0fps, dt;
+	double				t0, t0fps, dt;
 	int					cfps;
 	
 	int					VKey;
@@ -323,6 +331,8 @@ public:
 	void				_ClearQueue();
 	void				_BuildEvent(int type, int key, int scan, int flags, int x, int y);
 	
+	bool				bTextureClamp;
+	
 #ifdef DEMO
 	bool				bDMO;
 #endif
@@ -330,7 +340,8 @@ public:
 private:
 	HGE_Impl();
 	
-};	
+};
+
 
 const tVkeyMap MapVkey [] =
 {
@@ -338,14 +349,14 @@ const tVkeyMap MapVkey [] =
 	/*rbKeyDown*/                   {125, 0x28, 108},
 	/*rbKeyLeft*/                   {123, 0x25, 105},
 	/*rbKeyRight*/                  {124, 0x27, 106},
-	/*rbKeyBackspace*/              {117, 0x8, 14},
+	/*rbKeyDelete*/					{117, 0x2e, 111},
 	/*rbKeyEnter*/                  {76, -1, 28},
 	/*rbKeyHome*/                   {115, 0x24, 102},
 	/*rbKeyEnd*/                    {119, 0x23, 107},
 	/*rbKeyPageDown*/               {121, 0x22, 109},
 	/*rbKeyPageUp*/                 {116, 0x21, 104},
 	/*rbKeyReturn*/                 {36, 0xd, -1},
-	/*rbKeyDelete*/                 {51, 0x2e, 111},
+	/*rbKeyBackspace*/              {51, 0x08, 14},
 	/*rbKeyTab*/                    {48, 0x9, 15},
 	/*rbKeySpacebar*/               {49, 0x20, 57},
 	/*rbKeyShift*/                  {56, 0x10, -1},
@@ -428,6 +439,8 @@ const tVkeyMap MapVkey [] =
 	/*rbKeyDivide*/                 {75, 111, 98},  //      On numeric keypad or with NumLock
 	/*rbKeyDecimal*/                {65, 110, 83},  //      On numeric keypad or with NumLock
 	/*rbKeyNumEqual*/               {81, -1, 117},  //      On numeric keypad or with NumLock
+	/*grave*/						{50, 0xC0, -1},
+	/*grave*/						{10, 0xC0, -1},
 };
 
 

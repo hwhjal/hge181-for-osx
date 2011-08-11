@@ -2,17 +2,9 @@
 //  resource.mm
 //  hgecore_osx
 //
-// Created by Andrew Onofreytchuk (a.onofreytchuk@gmail.com) on 5/3/10.
-// Copyright 2010 Andrew Onofreytchuk. All rights reserved.
+//  Created by Andrew Pepper on 6/8/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
-
-/*
- ** Haaf's Game Engine 1.8
- ** Copyright (C) 2003-2007, Relish Games
- ** hge.relishgames.com
- **
- */
-
 
 
 #include "main.h"

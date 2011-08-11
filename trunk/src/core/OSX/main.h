@@ -10,25 +10,28 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+
 #define _HGE_TARGET_OSX_
 
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
-// Bass
-// #include "../Bass/bass.h"
-
 // System
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/sysctl.h>
+#include <assert.h>
 
 #import <OpenGL/gl.h>
 #import <OpenGl/glu.h>
 
+
 // HGE
 #import "cocoa_app.h"
 #include "hge_impl.h"
+
+
 
 
 #endif
