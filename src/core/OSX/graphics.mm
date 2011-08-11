@@ -20,6 +20,18 @@
 		+ Get native texture size
  */
 
+void CALL Texture_SizeToPow2 (int &width, int &height)
+{
+	// int w = *width, h = *height;
+	int w = 1, h = 1;
+	
+	while (w < width) {w = w << 1;}
+	while (h < height) {h = h << 1;}
+	
+	width = w;
+	height = h;
+}
+
 
 bool HGE_Impl::_GfxInit()
 {
@@ -54,9 +66,9 @@ void HGE_Impl::_OpeGLCapsGet ()
 	System_Log("OpenGL bGLVARSupported: %d", (unsigned long)bGLVARSupported);
 	System_Log("OpenGL bGLAppleFenceSupported: %d", (unsigned long)bGLAppleFenceSupported);
 	System_Log("OpenGL nGLMaxTexUnits: %d", nGLMaxTexUnits);
-	System_Log("OpenGL nGLMaxTexSize: %d", nGLMaxTexSize);	
-
-	// bGLVARSupported = false;
+	System_Log("OpenGL nGLMaxTexSize: %d", nGLMaxTexSize);
+	
+	bGLVARSupported = false;
 }
 
 bool HGE_Impl::_GfxContextCreate()
@@ -71,21 +83,22 @@ bool HGE_Impl::_GfxContextCreate()
 			NSOpenGLPFAAccelerated,
 			NSOpenGLPFANoRecovery,
 			NSOpenGLPFADoubleBuffer,	
-			NSOpenGLPFAColorSize, nScreenBPP,
+			NSOpenGLPFAColorSize, (NSOpenGLPixelFormatAttribute)nScreenBPP,
 			NSOpenGLPFAWindow,
 			NSOpenGLPFAMinimumPolicy,	// ????
 			NSOpenGLPFAClosestPolicy,
-			0 };  
+			(NSOpenGLPixelFormatAttribute)0 };
+		
 		NSOpenGLPixelFormatAttribute attributes_Z [] = { 
 			NSOpenGLPFAAccelerated,
 			NSOpenGLPFANoRecovery,
 			NSOpenGLPFADoubleBuffer,	
-			NSOpenGLPFAColorSize, nScreenBPP,
+			NSOpenGLPFAColorSize, (NSOpenGLPixelFormatAttribute)nScreenBPP,
 			NSOpenGLPFAWindow,
-			NSOpenGLPFADepthSize, 16,
+			NSOpenGLPFADepthSize, (NSOpenGLPixelFormatAttribute)16,
 			NSOpenGLPFAMinimumPolicy,	// ????
 			NSOpenGLPFAClosestPolicy,
-			0 };		
+			(NSOpenGLPixelFormatAttribute)0 };
 		
 		NSOpenGLPixelFormatAttribute *attr = attributes;
 		if (bZBuffer) attr = attributes_Z;
@@ -98,7 +111,7 @@ bool HGE_Impl::_GfxContextCreate()
 			return false;			
 		}
 		
-		glView = [[GLView alloc] initWithFrame:rect pixelFormat:format];
+		glView = [[NSOpenGLView alloc] initWithFrame:rect pixelFormat:format];
 		
 		if (!glView)
 		{
@@ -122,32 +135,31 @@ bool HGE_Impl::_GfxContextCreate()
 		
 		[hwnd setContentView:glView];
 		[glContextWindowed makeCurrentContext]; 
-		
-		
 	}
 	else
 	{
-		[hwnd setContentView:nil];
-
-		CGDisplayErr err;
+		if (0 != hwnd)
+			[hwnd setContentView:nil];
+		
 		// Pixelformat
 		NSOpenGLPixelFormatAttribute attributes [] = {
 			NSOpenGLPFAFullScreen,
 			NSOpenGLPFAScreenMask,
-			CGDisplayIDToOpenGLDisplayMask(kCGDirectMainDisplay),
-			NSOpenGLPFAColorSize, nScreenBPP,
+			(NSOpenGLPixelFormatAttribute)CGDisplayIDToOpenGLDisplayMask(kCGDirectMainDisplay),
+			NSOpenGLPFAColorSize, (NSOpenGLPixelFormatAttribute)nScreenBPP,
 			NSOpenGLPFADoubleBuffer,
 			NSOpenGLPFAAccelerated,
-			0 };
+			(NSOpenGLPixelFormatAttribute)0 };
+		
 		NSOpenGLPixelFormatAttribute attributes_Z [] = {
 			NSOpenGLPFAFullScreen,
 			NSOpenGLPFAScreenMask,
-			CGDisplayIDToOpenGLDisplayMask(kCGDirectMainDisplay),
-			NSOpenGLPFAColorSize, nScreenBPP,
-			NSOpenGLPFADepthSize, 16,
+			(NSOpenGLPixelFormatAttribute)CGDisplayIDToOpenGLDisplayMask(kCGDirectMainDisplay),
+			NSOpenGLPFAColorSize, (NSOpenGLPixelFormatAttribute)nScreenBPP,
+			NSOpenGLPFADepthSize, (NSOpenGLPixelFormatAttribute)16,
 			NSOpenGLPFADoubleBuffer,
 			NSOpenGLPFAAccelerated,
-			0 };
+			(NSOpenGLPixelFormatAttribute)0 };
 		NSOpenGLPixelFormatAttribute *attr = attributes;
 		if (bZBuffer) attr = attributes_Z;
 		
@@ -161,7 +173,6 @@ bool HGE_Impl::_GfxContextCreate()
 				[glContextWindowed release];
 				glContextWindowed = nil;
 			}
-
 		
 		if (!glContextFullscreen)
 		{
@@ -173,29 +184,29 @@ bool HGE_Impl::_GfxContextCreate()
 		[format release];
 		format = nil;
 		
-		// Get display res
-		mDesktopWidth = CGDisplayPixelsWide (kCGDirectMainDisplay);
-		mDesktopHeight = CGDisplayPixelsHigh (kCGDirectMainDisplay);
-		mDesktopBPP = CGDisplayBitsPerPixel (kCGDirectMainDisplay);
-		mDesktopRR = 0;
-		
-		// Capture main display
-		err = CGDisplayCapture (kCGDirectMainDisplay); 
-		if (err != CGDisplayNoErr)
+		if (!bKeepDesktopMode)
 		{
-			_PostError ("CGCaptureAllDisplays failed");
-			[glContextFullscreen release];
-			glContextFullscreen = nil;
-			return false;
+			// Get display res
+			mDesktopWidth = CGDisplayPixelsWide (kCGDirectMainDisplay);
+			mDesktopHeight = CGDisplayPixelsHigh (kCGDirectMainDisplay);
+			mDesktopBPP = CGDisplayBitsPerPixel (kCGDirectMainDisplay);
+			mDesktopRR = 0;
+			
+			// Capture main display
+			if (CGDisplayNoErr != CGDisplayCapture (kCGDirectMainDisplay)) 
+			{
+				_PostError ("CGCaptureAllDisplays failed");				
+				[glContextFullscreen release];
+				glContextFullscreen = nil;
+				return false;
+			}
+			CFDictionaryRef displayMode;
+			boolean_t exactMatch;
+			
+			displayMode = CGDisplayBestModeForParametersAndRefreshRate (kCGDirectMainDisplay,
+																		nScreenBPP, nScreenWidth, nScreenHeight, 0, &exactMatch);
+			CGDisplaySwitchToMode (kCGDirectMainDisplay, displayMode);
 		}
-		
-		CFDictionaryRef displayMode;
-		boolean_t exactMatch;
-		
-		// CGDisplayCapture (kCGDirectMainDisplay);
-		displayMode = CGDisplayBestModeForParametersAndRefreshRate (kCGDirectMainDisplay,
-													  nScreenBPP, nScreenWidth, nScreenHeight, 0, &exactMatch);
-		CGDisplaySwitchToMode (kCGDirectMainDisplay, displayMode);
 		
 		[glContextFullscreen setFullScreen];
 		[glContextFullscreen makeCurrentContext]; 
@@ -250,18 +261,14 @@ void HGE_Impl::_SetBlendMode(int blend)
 
 void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 {
-	glDisable (GL_SCISSOR_TEST);
+	glDisable (GL_SCISSOR_TEST);	
 	glMatrixMode (GL_PROJECTION);
 	glLoadIdentity ();
 	glMatrixMode (GL_MODELVIEW);
-	GLint mvStackDepth = 1;
-	glGetIntegerv(GL_MODELVIEW_STACK_DEPTH, &mvStackDepth);
-	if (mvStackDepth > 1) glPopMatrix();
 	glLoadIdentity ();
 	if (!flip) glScalef (2.0f / (float)width, 2.0f / (float)height, 1.0f);
 		else glScalef (2.0f / (float)width, -2.0f / (float)height, 1.0f);
 	glTranslatef (-((float)width / 2.0f), -((float)height / 2.0f), 0.0f);
-	glPushMatrix();
 	glViewport (0, 0, width, height);
 	
 	// Displacement trick for exact pixelization
@@ -282,8 +289,6 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 	{
 		if(target)
 		{
-			// target->pTex->GetSurfaceLevel(0, &pSurf);
-			// pDepth=target->pDepth;
 			glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, target->framebuffer);
 		}
 		else
@@ -291,15 +296,8 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 			// pSurf=pScreenSurf;
 			// pDepth=pScreenDepth;
 		}
-		/*if(FAILED(pD3DDevice->SetRenderTarget(pSurf, pDepth)))
-		{
-			if(target) pSurf->Release();
-			_PostError("Gfx_BeginScene: Can't set render target");
-			return false;
-		}*/
 		if(target)
 		{
-			/*pSurf->Release();*/
 			if(target->bDepth)
 			{	
 				glEnable (GL_DEPTH_TEST);
@@ -364,9 +362,8 @@ void HGE_Impl::Gfx_Clear (DWORD color)
 void CALL HGE_Impl::Gfx_EndScene()
 {
 	_render_batch (true);
-
 	// glFlush ();
-	glFinish ();
+	glFinish();
 	if (bWindowed) [glContextWindowed flushBuffer];
 		else [glContextFullscreen flushBuffer];
 }
@@ -440,7 +437,7 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 	}
 }
 
-hgeVertex* CALL HGE_Impl::Gfx_StartBatch(int prim_type, HTEXTURE tex, int blend, int *max_prim)
+hgeVertex* CALL HGE_Impl::Gfx_StartBatch(int prim_type, HTEXTURE tex, HTEXTURE tex_mask, int blend, int *max_prim)
 {
 	if(VertArray)
 	{
@@ -465,28 +462,43 @@ void CALL HGE_Impl::Gfx_FinishBatch(int nprim)
 	nPrim=nprim;
 }
 
-
-
 void HGE_Impl::_render_batch (bool bEndScene)
 {
 	if(VertArray)
-	{
+	{	
+
 		if(nPrim)
 		{
-			hgeVertex* pVert = glVertexBuffer;			
-			for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
-			{
-				unsigned char r = pVert->col & 0xff;
-				unsigned char b = (pVert->col >> 16) & 0xff;
-				unsigned char *pc = (unsigned char *) &pVert->col;
-				*(pc+0) = b; 
-				*(pc+2) = r; 
-				pVert++;
-			}
+			hgeVertex* pVert = glVertexBuffer;
+			if (1234 == nByteOrder)
+				for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
+				{
+					unsigned char r = pVert->col & 0xff;
+					unsigned char b = (pVert->col >> 16) & 0xff;
+					unsigned char *pc = (unsigned char *) &pVert->col;
+					*(pc+0) = b; 
+					*(pc+2) = r; 
+					pVert++;
+				}
+					else
+						for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
+						{
+							unsigned char r = pVert->col & 0xff;
+							unsigned char b = (pVert->col >> 16) & 0xff;
+							unsigned char g = (pVert->col >> 8) & 0xff;
+							unsigned char a = (pVert->col >> 24) & 0xff;							
+							unsigned char *pc = (unsigned char *) &pVert->col;
+							*pc = b; 
+							*(pc+1) = g; 
+							*(pc+2) = r; 
+							*(pc+3) = a; 
+							pVert++;
+						}
+			// nByteOrder
 			if (bGLVARSupported)
 			{
-				memcpy (glVertexBufferCopy, glVertexBuffer, nVertexBufferSize/1);
-				glFlushVertexArrayRangeAPPLE (nVertexBufferSize/1, (void *) glVertexBufferCopy);
+				memcpy (glVertexBufferCopy, glVertexBuffer, nVertexBufferSize);
+				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBufferCopy);
 			}
 			
 			switch(CurPrimType)
@@ -500,7 +512,7 @@ void HGE_Impl::_render_batch (bool bEndScene)
 					break;
 					
 				case HGEPRIM_LINES:
-					glDrawArrays (GL_LINES, 0, nPrim); // *2
+					glDrawArrays (GL_LINES, 0, nPrim * 2);
 					break;
 			}
 			
@@ -514,79 +526,31 @@ void HGE_Impl::_render_batch (bool bEndScene)
 	} 
 }
 
-void HGE_Impl::_GfxDone()
-{
-	CRenderTargetList *target=pTargets, *next_target;
-	
-	while(textures)	Texture_Free(textures->tex);	
-
-	while(target)
-	{
-		if(target->framebuffer)
-		{
-			glDeleteTextures(1, &target->texture);
-			glDeleteFramebuffersEXT(1, &target->framebuffer);				
-		}
-		next_target=target->next;
-		delete target;
-		target=next_target;
-	}
-	pTargets=0;
-
-	// Drop resources
-	glDisableClientState (GL_VERTEX_ARRAY);
-	glDisableClientState (GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState (GL_COLOR_ARRAY);			
-	
-    // Release Vertex & Index Buffers
-	if (bGLVARSupported)
-	{
-		// Disable Vertex Array Range extension
-		glDisableClientState (GL_VERTEX_ARRAY_RANGE_APPLE);		
-	}
-	
-	// Release display if in fullscreen mode
-	if (nil != glContextFullscreen) CGDisplayRelease (kCGDirectMainDisplay);
-	glContextFullscreen = nil;
-	if (nil != glContextWindowed) [glContextWindowed release];
-	glContextWindowed = nil;
-	
-	// Vertex buffer
-	if (0 != glVertexBuffer) free (glVertexBuffer);
-	if (0 != glVertexBufferCopy) free (glVertexBufferCopy);
-	if (0 != glIndexBuffer) free (glIndexBuffer);
-	glVertexBuffer = glVertexBufferCopy = 0;
-	glIndexBuffer = 0;	
-}
-
-
 bool HGE_Impl::_GfxRestore()
 {
-	// Delete render targets - Not nessesary on OpenGL?
-	
 	// Drop resources
 	glDisableClientState (GL_VERTEX_ARRAY);
+	
 	glDisableClientState (GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState (GL_COLOR_ARRAY);			
+	glDisableClientState (GL_COLOR_ARRAY);
 	
     // Release Vertex & Index Buffers
 	if (bGLVARSupported)
 	{
 		// Disable Vertex Array Range extension
-		glDisableClientState (GL_VERTEX_ARRAY_RANGE_APPLE);		
+		glDisableClientState (GL_VERTEX_ARRAY_RANGE_APPLE);
 	}
 	
 	// Release display if in fullscreen mode
-	if (nil != glContextFullscreen)
+	if (nil != glContextFullscreen && !bKeepDesktopMode)
 	{
 		CFDictionaryRef displayMode;
-		CFNumberRef number;
-		boolean_t exactMatch;		
+		boolean_t exactMatch;
 		displayMode = CGDisplayBestModeForParametersAndRefreshRate (kCGDirectMainDisplay,
 																	mDesktopBPP, mDesktopWidth, mDesktopHeight, 0, &exactMatch);
-		CGDisplaySwitchToMode (kCGDirectMainDisplay, displayMode);		
+		CGDisplaySwitchToMode (kCGDirectMainDisplay, displayMode);
 		CGDisplayRelease (kCGDirectMainDisplay);
-	} 	
+	}
 	
 	// Reinit gfx
 	if(!_init_lost()) return false;
@@ -665,9 +629,8 @@ void CALL HGE_Impl::Gfx_SetClipping (int x, int y, int w, int h)
 		if(!pCurTarget) glScissor (vpX, scr_height-(vpY+vpHeight), vpWidth, vpHeight);
 			else glScissor (vpX, vpY, vpWidth, vpHeight);
 	}
-		else glDisable (GL_SCISSOR_TEST);
+	else glDisable (GL_SCISSOR_TEST);
 }
-
 
 bool HGE_Impl::_init_lost()
 {
@@ -757,15 +720,23 @@ bool HGE_Impl::_init_lost()
 	// glEnable(GL_COLOR_MATERIAL);
 
 	// Texture params
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST); 
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);	
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); 
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, bTextureClamp ? GL_CLAMP : GL_REPEAT);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, bTextureClamp ? GL_CLAMP : GL_REPEAT);
 	// EF_DEFAULT
 	glEnable (GL_BLEND);
 	glTexEnvi (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glDepthFunc (GL_LEQUAL);	
+	glDepthFunc (GL_LEQUAL);
+	
+	// Set data alignment and byte order
+	glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
+	if (nByteOrder != 1234)
+	{
+		glPixelStorei (GL_PACK_SWAP_BYTES, GL_TRUE);
+		glPixelStorei (GL_UNPACK_SWAP_BYTES, GL_TRUE);
+	}	
 	
 	return true;
 }
@@ -775,56 +746,32 @@ bool HGE_Impl::_init_lost()
 int CALL HGE_Impl::Texture_GetWidth(HTEXTURE tex, bool bOriginal)
 {
 	CTextureList *texItem=textures;
-	// bOriginal = true;
 	
-	if(bOriginal)
+	while(texItem)
 	{
-		while(texItem)
+		if (texItem->tex==tex)
 		{
-			if(texItem->tex==tex) return texItem->width;
-			texItem=texItem->next;
+			return bOriginal ? texItem->width : texItem->realWidth;
 		}
-		return 0;
-		
-		// glGetTexParameteriv
+		texItem=texItem->next;
 	}
-	else
-	{
-		GLint tmpTexture;
-		glGetIntegerv(GL_TEXTURE_BINDING_2D, &tmpTexture);
-		glBindTexture(GL_TEXTURE_2D, (GLint) tex);
-		GLint param = 0;
-		glGetTexLevelParameteriv(GL_TEXTURE_2D, 0, GL_TEXTURE_WIDTH, &param);
-		glBindTexture(GL_TEXTURE_2D, tmpTexture);
-		return param;
-	}
+	return 0;
 }
 
 
 int CALL HGE_Impl::Texture_GetHeight(HTEXTURE tex, bool bOriginal)
 {
 	CTextureList *texItem=textures;
-	// bOriginal = true;
 	
-	if(bOriginal)
+	while(texItem)
 	{
-		while(texItem)
+		if (texItem->tex==tex)
 		{
-			if(texItem->tex==tex) return texItem->height;
-			texItem=texItem->next;
+			return bOriginal ? texItem->height : texItem->realHeight;
 		}
-		return 0;
+		texItem=texItem->next;
 	}
-	else
-	{
-		GLint tmpTexture;
-		glGetIntegerv(GL_TEXTURE_BINDING_2D, &tmpTexture);
-		glBindTexture(GL_TEXTURE_2D, (GLint) tex);
-		GLint param = 0;
-		glGetTexLevelParameteriv(GL_TEXTURE_2D, 0, GL_TEXTURE_HEIGHT, &param);
-		glBindTexture(GL_TEXTURE_2D, tmpTexture);
-		return param;
-	}
+	return 0;
 }
 
 
@@ -839,9 +786,30 @@ HTEXTURE CALL HGE_Impl::Texture_Create(int width, int height)
 		return NULL;
 	}
 	
+	int realWidth = width, realHeight = height;
+	Texture_SizeToPow2(realWidth, realHeight);
+	CTextureList *texItem = 0;
+
+	texItem=new CTextureList;
+	texItem->tex = HTEXTURE(name);
+	texItem->width=width;
+	texItem->height=height;
+
+	texItem->realWidth=realWidth;
+	texItem->realHeight=realHeight;
+	texItem->width=width;
+	texItem->height=height;	
+	
+	texItem->bpp = 32;
+	texItem->internalFormat = GL_RGBA;
+	texItem->format = GL_RGBA;
+	texItem->type = GL_UNSIGNED_INT_8_8_8_8_REV;	
+	texItem->next=textures;
+	texItem->lockInfo.data = 0;
+	textures=texItem;
+	
 	return (HTEXTURE)name;
 }
-
 
 HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMipmap)
 {
@@ -870,10 +838,10 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	 int bpp2 = [bitmap bitsPerSample];
 	 bool alpha = [bitmap hasAlpha];*/
 	
-	
 	GLint internalFormat = 0;
 	GLenum format = 0, type = 0;
-	switch ([bitmap bitsPerPixel])
+	int bitsPerPixel = [bitmap bitsPerPixel];
+	switch (bitsPerPixel)
 	{
 		case 16:
 			if ([bitmap hasAlpha])
@@ -889,7 +857,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 			break;
 			
 		case 24:
-			internalFormat = 3; format = GL_RGB; type = GL_UNSIGNED_BYTE;			
+			internalFormat = GL_RGB8; format = GL_RGB; type = GL_UNSIGNED_BYTE;			
 			break;
 			
 		case 32:
@@ -902,6 +870,18 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 			{	
 				internalFormat = 4;
 				format = GL_RGBA; type = GL_UNSIGNED_BYTE;
+			}
+			break;
+		case 64:
+			if ([bitmap hasAlpha])
+			{
+				internalFormat = GL_RGBA;
+				format = GL_RGBA; type = GL_UNSIGNED_SHORT;
+			}
+			else
+			{	
+				internalFormat = GL_RGBA;
+				format = GL_RGBA; type = GL_UNSIGNED_SHORT;
 			}
 			break;
 	}
@@ -921,22 +901,44 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	}
 	glBindTexture (GL_TEXTURE_2D, name);	
 	// Texture option
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST); 
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); 
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, bTextureClamp ? GL_CLAMP : GL_REPEAT);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, bTextureClamp ? GL_CLAMP : GL_REPEAT);
 	// Pixeldata
-	glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, [bitmap pixelsWide], [bitmap pixelsHigh], 0, format, type, [bitmap bitmapData]);
+	int realWidth = [bitmap pixelsWide], realHeight = [bitmap pixelsHigh];
+	Texture_SizeToPow2(realWidth, realHeight);
+	
+	// Manage memory blocks
+	if (realWidth != [bitmap pixelsWide] || realHeight != [bitmap pixelsHigh])
+	{
+		void *pbuff = malloc (realWidth * realHeight * bitsPerPixel);
+		int y = 0, origLineSize = [bitmap bytesPerRow], realLineSize = realWidth * (bitsPerPixel>>3);
+		while (y < [bitmap pixelsHigh])
+		{
+			memcpy ((void *) ((unsigned long) pbuff + y*realLineSize),
+					(void *) ((unsigned long) [bitmap bitmapData] + y*origLineSize),
+					origLineSize);
+			y++;
+		}
+		glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, pbuff);
+		free(pbuff);		
+	}
+		else
+			glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, [bitmap bitmapData]);
 	
 	texItem=new CTextureList;
 	texItem->tex=(HTEXTURE)name;
+	texItem->realWidth=realWidth;
+	texItem->realHeight=realHeight;
 	texItem->width=[bitmap pixelsWide];
 	texItem->height=[bitmap pixelsHigh];
-	texItem->bpp = [bitmap bitsPerPixel];
+	texItem->bpp = bitsPerPixel;
 	texItem->internalFormat = internalFormat;
 	texItem->format = format;
 	texItem->type = type;	
 	texItem->next=textures;
+	texItem->lockInfo.data = 0;
 	textures=texItem;
 	
 	// Release data
@@ -948,10 +950,11 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	return (HTEXTURE) name;
 }
 
+
 DWORD * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int top, int width, int height)
 {
 	CTextureList *texItem=textures, *texFind=0;
-	while(texItem && 0!= texFind)
+	while(texItem && 0 == texFind)
 	{
 		if(texItem->tex==tex) texFind = texItem;
 		texItem=texItem->next;
@@ -962,26 +965,67 @@ DWORD * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int 
 		return 0;
 	}
 	
+	int texture = 0;
+	if (0!=texFind) texture = texFind->tex;
+		else texture = tex;
 	
 	GLint tmpTexture;
-	void *data = 0;
+	int bytesPerPixel = texFind->bpp>>3;
+	
+	if (0 == texFind->lockInfo.data)
+		texFind->lockInfo.data = malloc (texFind->realWidth * texFind->realHeight * bytesPerPixel);
+	
 	glGetIntegerv(GL_TEXTURE_BINDING_2D, &tmpTexture);
-	glBindTexture(GL_TEXTURE_2D, texFind->tex);
-	glGetTexImage( GL_TEXTURE_2D , 0 , texFind->format , texFind->type, data);
-	if (0 == data)
+	if (0 == texFind->lockInfo.data)
 	{
 		glBindTexture(GL_TEXTURE_2D, tmpTexture);
 		_PostError("Can't lock texture");
 		return 0;
 	}
-	glBindTexture(GL_TEXTURE_2D, tmpTexture);	
-	data = (void *) ((unsigned long) data + (top * texFind->bpp + left * texFind->bpp));	
-	return (DWORD *) data;
+	texFind->lockInfo.readonly = bReadOnly;
+	texFind->lockInfo.lockRect.top = top;
+	texFind->lockInfo.lockRect.left = left;
+	texFind->lockInfo.lockRect.right = left+width;
+	texFind->lockInfo.lockRect.bottom = top+height;
+	
+	glBindTexture(GL_TEXTURE_2D, texture);
+	glGetTexImage( GL_TEXTURE_2D , 0 , texFind->format, texFind->type, texFind->lockInfo.data);
+	glBindTexture(GL_TEXTURE_2D, tmpTexture);
+	
+	void *res = (unsigned char *)texFind->lockInfo.data + (top*texFind->realWidth + left)*bytesPerPixel;
+	return (DWORD *) res;
 }
 
 
 void CALL HGE_Impl::Texture_Unlock(HTEXTURE tex)
 {
+
+	CTextureList *texItem=textures, *texFind=0;
+	while(texItem && 0 == texFind)
+	{
+		if(texItem->tex==tex) texFind = texItem;
+		texItem=texItem->next;
+	}
+	if (0 == texFind || 0 == texFind->tex)
+	{
+		_PostError("Can't lock texture");
+		return;
+	}
+	
+	if (!texFind->lockInfo.readonly)
+	{
+		glBindTexture(GL_TEXTURE_2D, tex);
+		
+		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); 
+		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, bTextureClamp ? GL_CLAMP : GL_REPEAT);
+		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, bTextureClamp ? GL_CLAMP : GL_REPEAT);
+
+		glTexImage2D (GL_TEXTURE_2D, 0, texFind->internalFormat,
+					  texFind->realWidth, texFind->realHeight, 0,
+					  texFind->format, texFind->type, texFind->lockInfo.data);
+	}
+	// free(texFind->lockInfo.data);
 }
 
 void CALL HGE_Impl::Texture_Free(HTEXTURE tex)
@@ -995,6 +1039,8 @@ void CALL HGE_Impl::Texture_Free(HTEXTURE tex)
 	{
 		if(texItem->tex==tex)
 		{
+			if (0 != texItem->lockInfo.data)
+				free (texItem->lockInfo.data);
 			if(texPrev) texPrev->next=texItem->next;
 			else textures=texItem->next;
 			delete texItem;
@@ -1032,8 +1078,7 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 		delete pTarget;
 		glDeleteTextures (1, &pTarget->texture);
 		return 0;		
-	}	
-	
+	}
 	
 	pTarget->width=width;
 	pTarget->height=height;	
@@ -1042,16 +1087,6 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 
 	// Make the window the target
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-	
-/*
- // Make the window the target
- glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
- //Your code to use the contents of the FBO
- // ...
- //Tear down the FBO and texture attachment
- glDeleteTextures(1, &texture);
- glDeleteFramebuffersEXT(1, &framebuffer);
- */	
 	
 	return (HTARGET)pTarget;
 }

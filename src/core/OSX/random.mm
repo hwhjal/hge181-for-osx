@@ -7,7 +7,7 @@
  */
 
 
-#include "hge_impl.h"
+#include "main.h"
 
 
 unsigned int g_seed=0;
@@ -16,6 +16,7 @@ void CALL HGE_Impl::Random_Seed(int seed)
 {
 	if(!seed) g_seed=round(CFAbsoluteTimeGetCurrent ()); // timeGetTime();
 	else g_seed=seed;
+	srand(g_seed);
 }
 
 int CALL HGE_Impl::Random_Int(int min, int max)

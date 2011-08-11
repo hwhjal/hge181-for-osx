@@ -2,9 +2,11 @@
 //  sound.mm
 //  hgecore_osx
 //
-// Created by Andrew Onofreytchuk (a.onofreytchuk@gmail.com) on 5/3/10.
-// Copyright 2010 Andrew Onofreytchuk. All rights reserved.
+//  Created by Andrew Pepper on 6/12/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
+
+#include "main.h"
 
 HEFFECT CALL HGE_Impl::Effect_Load(const char *filename, DWORD size)
 {
