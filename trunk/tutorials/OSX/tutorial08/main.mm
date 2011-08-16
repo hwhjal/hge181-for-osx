@@ -18,7 +18,7 @@
 HGE			*hge=0;
 hgeFont		*fnt=0;
 
-// Simulation constants
+// Simulation constants1
 
 #define SCREEN_WIDTH	1280
 #define SCREEN_HEIGHT	1024

@@ -1063,7 +1063,10 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 	glGenFramebuffersEXT (1, &pTarget->framebuffer);
 	// Set up the FBO with one texture attachment
 	glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, pTarget->framebuffer);
-	glGenTextures(1, &pTarget->texture);
+	// glGenTextures(1, &pTarget->texture);
+	pTarget->texture = Texture_Create (width, height);	
+	
+	
 	glBindTexture(GL_TEXTURE_2D, pTarget->texture);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -1114,7 +1117,8 @@ void CALL HGE_Impl::Target_Free(HTARGET target)
 			
 			if(pTarget->framebuffer)
 			{
-				glDeleteTextures(1, &pTarget->texture);
+				// glDeleteTextures(1, &pTarget->texture);
+				Texture_Free (pTarget->texture);
 				glDeleteFramebuffersEXT(1, &pTarget->framebuffer);				
 			}
 			
