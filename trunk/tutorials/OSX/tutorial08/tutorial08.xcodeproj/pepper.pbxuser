@@ -2,9 +2,9 @@
 {
 	089C165DFE840E0CC02AAC07 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {956, 801}}";
-			sepNavSelRange = "{200, 0}";
-			sepNavVisRange = "{0, 200}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 788}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 0}";
 			sepNavWindowFrame = "{{15, 68}, {1127, 929}}";
 		};
 	};
@@ -78,6 +78,18 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					847,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
 			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
@@ -100,15 +112,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 334710099;
-			PBXWorkspaceStateSaveDate = 334710099;
+			PBXPerProjectTemplateStateSaveDate = 335215012;
+			PBXWorkspaceStateSaveDate = 335215012;
 		};
 		perUserProjectItems = {
-			56530C9811E0FDE800D46DAC = 56530C9811E0FDE800D46DAC /* PBXTextBookmark */;
-			56530D0211E1003E00D46DAC = 56530D0211E1003E00D46DAC /* PBXTextBookmark */;
-			569B46D311E142F7008FCE3B = 569B46D311E142F7008FCE3B /* PBXTextBookmark */;
-			56C5EE6211EB947500A962AC = 56C5EE6211EB947500A962AC /* PBXTextBookmark */;
-			56F2CF5411E65EF600F57FCA = 56F2CF5411E65EF600F57FCA /* PBXTextBookmark */;
+			5618F3C713F48664007BA885 /* PlistBookmark */ = 5618F3C713F48664007BA885 /* PlistBookmark */;
+			5618F42813F48866007BA885 /* PBXTextBookmark */ = 5618F42813F48866007BA885 /* PBXTextBookmark */;
+			56BF185113FAE9920068AD1B /* PBXTextBookmark */ = 56BF185113FAE9920068AD1B /* PBXTextBookmark */;
+			56F46C1413FAF9F2004298EC /* PBXTextBookmark */ = 56F46C1413FAF9F2004298EC /* PBXTextBookmark */;
+			56F46C1513FAF9F2004298EC /* PBXTextBookmark */ = 56F46C1513FAF9F2004298EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -116,47 +128,38 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {956, 6604}}";
-			sepNavSelRange = "{5142, 0}";
-			sepNavVisRange = "{4129, 1443}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 6552}}";
+			sepNavSelRange = "{10764, 0}";
+			sepNavVisRange = "{9944, 1367}";
 		};
 	};
-	56530C9811E0FDE800D46DAC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 56530C9911E0FDE800D46DAC /* hgesprite.h */;
-		name = "hgesprite.h: 59";
-		rLen = 7;
-		rLoc = 1919;
-		rType = 0;
-		vrLen = 1928;
-		vrLoc = 141;
+	5618F3C713F48664007BA885 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* tutorial01-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/OSX/tutorial08/tutorial01-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
 	};
-	56530C9911E0FDE800D46DAC /* hgesprite.h */ = {
+	5618F42813F48866007BA885 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	5618F49813F48A0F007BA885 /* main.mm */ = {
 		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = hgesprite.h;
-		path = /Volumes/MacData/Work/hge181/include/hgesprite.h;
+		lastKnownFileType = sourcecode.cpp.objcpp;
+		name = main.mm;
+		path = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/OSX/tutorial01/main.mm";
 		sourceTree = "<absolute>";
-	};
-	56530D0211E1003E00D46DAC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 56BE54C111DDB868004C93F2 /* hge_tut08.cpp */;
-		name = "hge_tut08.cpp: 21";
-		rLen = 0;
-		rLoc = 422;
-		rType = 0;
-		vrLen = 1356;
-		vrLoc = 293;
-	};
-	569B46D311E142F7008FCE3B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 231";
-		rLen = 0;
-		rLoc = 5142;
-		rType = 0;
-		vrLen = 1443;
-		vrLoc = 4129;
 	};
 	56A7979C11970AF500D63247 /* tutorial08 */ = {
 		isa = PBXExecutable;
@@ -206,46 +209,32 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	56BE54C111DDB868004C93F2 /* hge_tut08.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = hge_tut08.cpp;
-		path = /Volumes/MacData/Work/hge181/tutorials/Win32/tutorial08/hge_tut08.cpp;
-		sourceTree = "<absolute>";
-	};
-	56C557D111E2FD8D00B40942 /* hge_tut05.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = hge_tut05.cpp;
-		path = /Volumes/MacData/Work/hge181/tutorials/Win32/tutorial05/hge_tut05.cpp;
-		sourceTree = "<absolute>";
-	};
-	56C5EE6211EB947500A962AC /* PBXTextBookmark */ = {
+	56BF185113FAE9920068AD1B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 56C5EE6311EB947500A962AC /* hge_tut05.cpp */;
-		name = "hge_tut05.cpp: 39";
+		fRef = 5618F49813F48A0F007BA885 /* main.mm */;
+		name = "main.mm: 21";
 		rLen = 0;
-		rLoc = 848;
+		rLoc = 432;
 		rType = 0;
-		vrLen = 1182;
-		vrLoc = 369;
+		vrLen = 1149;
+		vrLoc = 0;
 	};
-	56C5EE6311EB947500A962AC /* hge_tut05.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = hge_tut05.cpp;
-		path = /Volumes/MacData/Work/hge181/tutorials/Win32/tutorial05/hge_tut05.cpp;
-		sourceTree = "<absolute>";
-	};
-	56F2CF5411E65EF600F57FCA /* PBXTextBookmark */ = {
+	56F46C1413FAF9F2004298EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 56C557D111E2FD8D00B40942 /* hge_tut05.cpp */;
-		name = "hge_tut05.cpp: 81";
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		rLen = 1;
+		rLoc = 468;
+		rType = 1;
+	};
+	56F46C1513FAF9F2004298EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 485";
 		rLen = 0;
-		rLoc = 1659;
+		rLoc = 10764;
 		rType = 0;
-		vrLen = 1511;
-		vrLoc = 1167;
+		vrLen = 1367;
+		vrLoc = 9944;
 	};
 	8D1107260486CEB800E47090 /* tutorial08 */ = {
 		activeExec = 0;

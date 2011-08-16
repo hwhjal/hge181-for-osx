@@ -193,9 +193,11 @@ float GetTime()
 	tmp=SysTime.wSecond;
 	tmp=SysTime.wMinute+tmp/60.0f;
 	tmp=SysTime.wHour+tmp/60.0f;*/
-	// return tmp;
 	
-	return CFAbsoluteTimeGetCurrent ()/10000000;	
+	
+	return CFAbsoluteTimeGetCurrent ()/10000000;
+	
+	// return tmp;
 }
 
 
