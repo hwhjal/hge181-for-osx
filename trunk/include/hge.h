@@ -1,33 +1,34 @@
 /*
-** Haaf's Game Engine 1.8
-** Copyright (C) 2003-2007, Relish Games
-** hge.relishgames.com
-**
-** System layer API
-*/
+ ** Haaf's Game Engine 1.8
+ ** Copyright (C) 2003-2007, Relish Games
+ ** hge.relishgames.com
+ **
+ ** System layer API
+ */
 
 
 #ifndef HGE_H
 #define HGE_H
 
-// Win32
-#ifdef _HGE_TARGET_WINDOWS_
-	#include <windows.h>
-	#define CALL  __stdcall
+
+#if defined (WIN32)
+#	include <windows.h>
+#	define CALL  __stdcall
+
+#elif defined (_HGE_TARGET_OSX_)
+#	define CALL 
+typedef	void* HWND;
+#	define _MAX_PATH	512
+#	define MAX_PATH	512
+#	define _vsnprintf vsnprintf
+#	define ZeroMemory(_a_, _b_) memset(_a_, 0, _b_);
+#	define min(x,y) ((x) < (y)) ? (x) : (y)
+#	define max(x,y) ((x) > (y)) ? (x) : (y)
+#	define HCURSOR unsigned int
+#define NULL 0
 #endif
 
-// OS X
-#ifdef _HGE_TARGET_OSX_
-	#define CALL 
-	typedef	void* HWND;
-	#define _MAX_PATH	512
-	#define MAX_PATH	512
-	#define _vsnprintf vsnprintf
-	#define ZeroMemory(_a_, _b_) memset(_a_, 0, _b_);
-	#define min(x,y) ((x) < (y)) ? (x) : (y)
-	#define max(x,y) ((x) > (y)) ? (x) : (y)
-	#define HCURSOR unsigned int
-#endif
+// #include "core/core.h"
 
 #define HGE_VERSION 0x180
 
@@ -37,26 +38,24 @@
 #define EXPORT
 #endif
 
-
-
 #ifdef __BORLANDC__
- #define floorf (float)floor
- #define sqrtf (float)sqrt
- #define acosf (float)acos
- #define atan2f (float)atan2
- #define cosf (float)cos
- #define sinf (float)sin
- #define powf (float)pow
- #define fabsf (float)fabs
+#define floorf (float)floor
+#define sqrtf (float)sqrt
+#define acosf (float)acos
+#define atan2f (float)atan2
+#define cosf (float)cos
+#define sinf (float)sin
+#define powf (float)pow
+#define fabsf (float)fabs
 
- #define min(x,y) ((x) < (y)) ? (x) : (y)
- #define max(x,y) ((x) > (y)) ? (x) : (y)
+#define min(x,y) ((x) < (y)) ? (x) : (y)
+#define max(x,y) ((x) > (y)) ? (x) : (y)
 #endif
 
 
 /*
-** Common data types
-*/
+ ** Common data types
+ */
 #ifndef DWORD
 typedef unsigned long       DWORD;
 typedef unsigned short      WORD;
@@ -65,8 +64,8 @@ typedef unsigned char       BYTE;
 
 
 /*
-** Common math constants
-*/
+ ** Common math constants
+ */
 #ifndef M_PI
 #define M_PI	3.14159265358979323846f
 #define M_PI_2	1.57079632679489661923f
@@ -77,8 +76,8 @@ typedef unsigned char       BYTE;
 
 
 /*
-** HGE Handle types
-*/
+ ** HGE Handle types
+ */
 typedef DWORD HTEXTURE;
 typedef DWORD HTARGET;
 typedef DWORD HEFFECT;
@@ -88,8 +87,8 @@ typedef DWORD HCHANNEL;
 
 
 /*
-** Hardware color macros
-*/
+ ** Hardware color macros
+ */
 #define ARGB(a,r,g,b)	((DWORD(a)<<24) + (DWORD(r)<<16) + (DWORD(g)<<8) + DWORD(b))
 #define GETA(col)		((col)>>24)
 #define GETR(col)		(((col)>>16) & 0xFF)
@@ -102,8 +101,8 @@ typedef DWORD HCHANNEL;
 
 
 /*
-** HGE Blending constants
-*/
+ ** HGE Blending constants
+ */
 #define	BLEND_COLORADD		1
 #define	BLEND_COLORMUL		0
 #define	BLEND_ALPHABLEND	2
@@ -114,10 +113,39 @@ typedef DWORD HCHANNEL;
 #define BLEND_DEFAULT		(BLEND_COLORMUL | BLEND_ALPHABLEND | BLEND_NOZWRITE)
 #define BLEND_DEFAULT_Z		(BLEND_COLORMUL | BLEND_ALPHABLEND | BLEND_ZWRITE)
 
+// HGE_MODIFY (X-blend constatns) {
+#define BLEND_DX 8
+
+#define BLEND_SRC_ZERO 16
+#define BLEND_SRC_ONE 32
+#define BLEND_SRC_SRCCOLOR	64
+#define BLEND_SRC_INVSRCCOLOR	128
+#define BLEND_SRC_SRCALPHA	256
+#define BLEND_SRC_INVSRCALPHA	512
+#define BLEND_SRC_DESTALPHA	1024
+#define BLEND_SRC_INVDESTALPHA	2048
+#define BLEND_SRC_DESTCOLOR	4096
+#define BLEND_SRC_INVDESTCOLOR	8192
+
+#define BLEND_DEST_ZERO	16384
+#define BLEND_DEST_ONE 32768
+#define BLEND_DEST_SRCCOLOR	65536
+#define BLEND_DEST_INVSRCCOLOR 131072
+#define BLEND_DEST_SRCALPHA	262144
+#define BLEND_DEST_INVSRCALPHA 524288
+#define BLEND_DEST_DESTALPHA 1048576
+#define BLEND_DEST_INVDESTALPHA 2097152
+#define BLEND_DEST_DESTCOLOR 4194304
+#define BLEND_DEST_INVDESTCOLOR 8388608
+
+#define BLEND_LIGHTMASK (BLEND_DX | BLEND_SRC_ZERO | BLEND_DEST_SRCCOLOR)
+// }
+
+#define HGE_MODIFY_STATE_OFFSET 50
 
 /*
-** HGE System state constants
-*/
+ ** HGE System state constants
+ */
 enum hgeBoolState
 {
 	HGE_WINDOWED		= 1,    // bool		run in window?		(default: false)
@@ -128,20 +156,31 @@ enum hgeBoolState
 	
 	HGE_DONTSUSPEND		= 5,	// bool		focus lost:suspend?	(default: false)
 	HGE_HIDEMOUSE		= 6,	// bool		hide system cursor?	(default: true)
-
+	
 	HGE_SHOWSPLASH		= 7,	// bool		hide system cursor?	(default: true)
-
+	
+	HGE_BYTEORDER		= 8,	// bool		big/little endian (false if bigendian CPU, true if little endian CPU)
+	
+	/* HGE_MODIFY: (Texture clamping) { */
+	HGE_TEXTURECLAMP	= HGE_MODIFY_STATE_OFFSET + 1,	// bool     clamp textures?     (default: false)
+    HGE_ADAPTIVE_DELTA  = HGE_MODIFY_STATE_OFFSET + 2,
+	/* } */
+	
 	HGEBOOLSTATE_FORCE_DWORD = 0x7FFFFFFF
 };
 
 enum hgeFuncState
 {
-	HGE_FRAMEFUNC		= 8,    // bool*()	frame function		(default: NULL) (you MUST set this)
-	HGE_RENDERFUNC		= 9,    // bool*()	render function		(default: NULL)
-	HGE_FOCUSLOSTFUNC	= 10,   // bool*()	focus lost function	(default: NULL)
-	HGE_FOCUSGAINFUNC	= 11,   // bool*()	focus gain function	(default: NULL)
-	HGE_GFXRESTOREFUNC	= 12,   // bool*()	exit function		(default: NULL)
-	HGE_EXITFUNC		= 13,   // bool*()	exit function		(default: NULL)
+	HGE_FRAMEFUNC		        = 8,    // bool*()	frame function		(default: NULL) (you MUST set this)
+	HGE_RENDERFUNC		        = 9,    // bool*()	render function		(default: NULL)
+	HGE_FOCUSLOSTFUNC	        = 10,   // bool*()	focus lost function	(default: NULL)
+	HGE_FOCUSGAINFUNC	        = 11,   // bool*()	focus gain function	(default: NULL)
+	HGE_GFXRESTOREFUNC	        = 12,   // bool*()	exit function		(default: NULL)
+	HGE_EXITFUNC		        = 13,   // bool*()	exit function		(default: NULL)
+    HGE_FULLSCREENFUNC          = 14,
+    HGE_SHOUDFULLSCREENFUNC     = HGE_MODIFY_STATE_OFFSET + 3,
+	
+    // todo make hgeSystemDelegate for all that stuff
 	
 	HGEFUNCSTATE_FORCE_DWORD = 0x7FFFFFFF
 };
@@ -166,7 +205,7 @@ enum hgeIntState
 	HGE_STREAMVOLUME	= 23,   // int		global music volume	(default: 100)
 	
 	HGE_FPS				= 24,	// int		fixed fps			(default: HGEFPS_UNLIMITED)
-
+	
 	HGE_POWERSTATUS		= 25,   // int		battery life percent + status
 	
 	HGEINTSTATE_FORCE_DWORD = 0x7FFFFFF
@@ -179,49 +218,42 @@ enum hgeStringState
 	
 	HGE_INIFILE			= 28,   // char*	ini file			(default: NULL) (meaning no file)
 	HGE_LOGFILE			= 29,   // char*	log file			(default: NULL) (meaning no file)
-
+	HGE_APPPATH			= 30,	// char*	app path			WIN32:module file name, OSX: resource path
+	
 	HGESTRINGSTATE_FORCE_DWORD = 0x7FFFFFFF
 };
 
 /*
-** Callback protoype used by HGE
-*/
+ ** Callback protoype used by HGE
+ */
 typedef bool (*hgeCallback)();
 
 
 /*
-** HGE_FPS system state special constants
-*/
+ ** HGE_FPS system state special constants
+ */
 #define HGEFPS_UNLIMITED	0
 #define HGEFPS_VSYNC		-1
 
 
 /*
-** HGE_POWERSTATUS system state special constants
-*/
+ ** HGE_POWERSTATUS system state special constants
+ */
 #define HGEPWR_AC			-1
 #define HGEPWR_UNSUPPORTED	-2
 
 
 /*
-** HGE Primitive type constants
-*/
+ ** HGE Primitive type constants
+ */
 #define HGEPRIM_LINES		2
 #define HGEPRIM_TRIPLES		3
 #define HGEPRIM_QUADS		4
 
 
 /*
-** HGE Vertex structure
-*/
-/*struct hgeVertex
-{
-	float			x, y;		// screen position    
-	float			z;			// Z-buffer depth 0..1
-	DWORD			col;		// color
-	float			tx, ty;		// texture coordinates
-};*/
-
+ ** HGE Vertex structure
+ */
 struct hgeVertex
 {
 	hgeVertex() :
@@ -237,7 +269,7 @@ struct hgeVertex
 	
 	float			x, y;					// screen position    
 	float			z;						// Z-buffer depth 0..1
-	unsigned long	col;					// color
+	DWORD			col;					// color
 	float			tx, ty;					// texture coordinates
 	
 	// HGE_MODIFY (Single Pass Multitexturing) {
@@ -246,10 +278,9 @@ struct hgeVertex
 };
 
 
-
 /*
-** HGE Triple structure
-*/
+ ** HGE Triple structure
+ */
 struct hgeTriple
 {
 	hgeVertex		v[3];
@@ -259,19 +290,37 @@ struct hgeTriple
 
 
 /*
-** HGE Quad structure
-*/
+ ** HGE Quad structure
+ */
 struct hgeQuad
 {
+	hgeQuad() :
+	tex(NULL),
+	tex_mask(NULL),
+	x_mask_offset(0.f),
+	y_mask_offset(0.f),
+	x_mask_scale(1.f),
+	y_mask_scale(1.f)
+	//, mask_angle(0.f)
+	{}
+	
 	hgeVertex		v[4];
 	HTEXTURE		tex;
 	int				blend;
+	
+	// HGE_MODIFY (Single Pass Multitexturing) {
+	HTEXTURE		tex_mask;
+	int				blend_mask;
+	float			x_mask_offset, y_mask_offset;
+	float			x_mask_scale, y_mask_scale;
+	//float			mask_angle;
+	// }
 };
 
 
 /*
-** HGE Input Event structure
-*/
+ ** HGE Input Event structure
+ */
 struct hgeInputEvent
 {
 	int		type;			// event type
@@ -285,8 +334,8 @@ struct hgeInputEvent
 
 
 /*
-** HGE Input Event type constants
-*/
+ ** HGE Input Event type constants
+ */
 #define INPUT_KEYDOWN		1
 #define INPUT_KEYUP			2
 #define INPUT_MBUTTONDOWN	3
@@ -296,8 +345,8 @@ struct hgeInputEvent
 
 
 /*
-** HGE Input Event flags
-*/
+ ** HGE Input Event flags
+ */
 #define HGEINP_SHIFT		1
 #define HGEINP_CTRL			2
 #define HGEINP_ALT			4
@@ -308,21 +357,21 @@ struct hgeInputEvent
 
 
 /*
-** HGE Interface class
-*/
+ ** HGE Interface class
+ */
 class HGE
 {
 public:
 	virtual	void		CALL	Release() = 0;
-
+	
 	virtual bool		CALL	System_Initiate() = 0;
 	virtual void		CALL	System_Shutdown() = 0;
 	virtual bool		CALL	System_Start() = 0;
 	virtual char*		CALL	System_GetErrorMessage() = 0;
 	virtual	void		CALL	System_Log(const char *format, ...) = 0;
-	/*virtual bool		CALL	System_Launch(const char *url) = 0;
-	virtual void		CALL	System_Snapshot(const char *filename=0) = 0;*/
-
+	virtual bool		CALL	System_Launch(const char *url) = 0;
+	virtual void		CALL	System_Snapshot(const char *filename=0) = 0;
+	
 private:
 	virtual void		CALL	System_SetStateBool  (hgeBoolState   state, bool        value) = 0;
 	virtual void		CALL	System_SetStateFunc  (hgeFuncState   state, hgeCallback value) = 0;
@@ -334,7 +383,7 @@ private:
 	virtual HWND		CALL	System_GetStateHwnd  (hgeHwndState   state) = 0;
 	virtual int			CALL	System_GetStateInt   (hgeIntState    state) = 0;
 	virtual const char*	CALL	System_GetStateString(hgeStringState state) = 0;
-
+	
 public:
 	inline void					System_SetState(hgeBoolState   state, bool        value) { System_SetStateBool  (state, value); }
 	inline void					System_SetState(hgeFuncState   state, hgeCallback value) { System_SetStateFunc  (state, value); }
@@ -349,51 +398,50 @@ public:
 	
 	virtual void*		CALL	Resource_Load(const char *filename, DWORD *size=0) = 0;
 	virtual void		CALL	Resource_Free(void *res) = 0;
-	/*virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0) = 0;
+	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0) = 0;
 	virtual void		CALL	Resource_RemovePack(const char *filename) = 0;
 	virtual void		CALL	Resource_RemoveAllPacks() = 0;
 	virtual char*		CALL	Resource_MakePath(const char *filename=0) = 0;
 	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0) = 0;
 	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0) = 0;
-
+	
 	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) = 0;
 	virtual	int			CALL	Ini_GetInt(const char *section, const char *name, int def_val) = 0;
 	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value) = 0;
 	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val) = 0;
 	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value) = 0;
 	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val) = 0;
-*/
-
+	
 	virtual void		CALL	Random_Seed(int seed=0) = 0;
 	virtual int			CALL	Random_Int(int min, int max) = 0;
 	virtual float		CALL	Random_Float(float min, float max) = 0;
-
+	
 	virtual float		CALL	Timer_GetTime() = 0;
 	virtual float		CALL	Timer_GetDelta() = 0;
 	virtual int			CALL	Timer_GetFPS() = 0;
-
+	
 	virtual HEFFECT		CALL	Effect_Load(const char *filename, DWORD size=0) = 0;
 	virtual void		CALL	Effect_Free(HEFFECT eff) = 0;
-	/*virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff) = 0;
-	virtual HCHANNEL	CALL	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false) = 0;*/
-
+	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff) = 0;
+	virtual HCHANNEL	CALL	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false) = 0;
+	
 	virtual HMUSIC		CALL	Music_Load(const char *filename, DWORD size=0) = 0;
 	virtual void		CALL	Music_Free(HMUSIC mus) = 0;
-	// virtual HCHANNEL	CALL	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = -1, int row = -1) = 0;
+	virtual HCHANNEL	CALL	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = -1, int row = -1) = 0;
 	virtual void		CALL	Music_SetAmplification(HMUSIC music, int ampl) = 0;
-	/*virtual int			CALL	Music_GetAmplification(HMUSIC music) = 0;
+	virtual int			CALL	Music_GetAmplification(HMUSIC music) = 0;
 	virtual int			CALL	Music_GetLength(HMUSIC music) = 0;
 	virtual void		CALL	Music_SetPos(HMUSIC music, int order, int row) = 0;
 	virtual bool		CALL	Music_GetPos(HMUSIC music, int *order, int *row) = 0;
 	virtual void		CALL	Music_SetInstrVolume(HMUSIC music, int instr, int volume) = 0;
 	virtual int			CALL	Music_GetInstrVolume(HMUSIC music, int instr) = 0;
 	virtual void		CALL	Music_SetChannelVolume(HMUSIC music, int channel, int volume) = 0;
-	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel) = 0;*/
-
+	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel) = 0;
+	
 	virtual HSTREAM		CALL	Stream_Load(const char *filename, DWORD size=0) = 0;
 	virtual void		CALL	Stream_Free(HSTREAM stream) = 0;
-	/*virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100) = 0;
-
+	virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100) = 0;
+	
 	virtual void		CALL	Channel_SetPanning(HCHANNEL chn, int pan) = 0;
 	virtual void		CALL 	Channel_SetVolume(HCHANNEL chn, int volume) = 0;
 	virtual void		CALL 	Channel_SetPitch(HCHANNEL chn, float pitch) = 0;
@@ -408,8 +456,8 @@ public:
 	virtual float		CALL	Channel_GetPos(HCHANNEL chn) = 0;
 	virtual void		CALL	Channel_SetPos(HCHANNEL chn, float fSeconds) = 0;
 	virtual void		CALL	Channel_SlideTo(HCHANNEL channel, float time, int volume, int pan = -101, float pitch = -1) = 0;
-	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel) = 0;*/
-
+	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel) = 0;
+	
 	virtual void		CALL	Input_GetMousePos(float *x, float *y) = 0;
 	virtual void		CALL	Input_SetMousePos(float x, float y) = 0;
 	virtual int			CALL	Input_GetMouseWheel() = 0;
@@ -421,31 +469,33 @@ public:
 	virtual int			CALL	Input_GetKey() = 0;
 	virtual int			CALL	Input_GetChar() = 0;
 	virtual bool		CALL	Input_GetEvent(hgeInputEvent *event) = 0;
-    virtual void        CALL    Input_SetCursor(HCURSOR cursor) = 0;	
-
+    virtual void        CALL    Input_SetCursor(HCURSOR cursor) = 0;
+	
 	virtual bool		CALL	Gfx_BeginScene(HTARGET target=0) = 0;
 	virtual void		CALL	Gfx_EndScene() = 0;
 	virtual void		CALL	Gfx_Clear(DWORD color) = 0;
 	virtual void		CALL	Gfx_RenderLine(float x1, float y1, float x2, float y2, DWORD color=0xFFFFFFFF, float z=0.5f) = 0;
 	virtual void		CALL	Gfx_RenderTriple(const hgeTriple *triple) = 0;
 	virtual void		CALL	Gfx_RenderQuad(const hgeQuad *quad) = 0;
-	virtual hgeVertex*	CALL	Gfx_StartBatch(int prim_type, HTEXTURE tex, int blend, int *max_prim) = 0;
+	
+	// HGE_MODIFY (Single Pass Multitexturing) {
+	virtual hgeVertex*	CALL	Gfx_StartBatch(int prim_type, HTEXTURE tex, HTEXTURE tex_mask, int blend, int *max_prim) = 0;
+	// }
+	
 	virtual void		CALL	Gfx_FinishBatch(int nprim) = 0;
 	virtual void		CALL	Gfx_SetClipping(int x=0, int y=0, int w=0, int h=0) = 0;
 	virtual void		CALL	Gfx_SetTransform(float x=0, float y=0, float dx=0, float dy=0, float rot=0, float hscale=0, float vscale=0) = 0; 
-	 
-
+	
 	virtual HTARGET		CALL	Target_Create(int width, int height, bool zbuffer) = 0;
 	virtual void		CALL	Target_Free(HTARGET target) = 0;
 	virtual HTEXTURE	CALL	Target_GetTexture(HTARGET target) = 0;
-
-
+	
 	virtual HTEXTURE	CALL	Texture_Create(int width, int height) = 0;
 	virtual HTEXTURE	CALL	Texture_Load(const char *filename, DWORD size=0, bool bMipmap=false) = 0;
 	virtual void		CALL	Texture_Free(HTEXTURE tex) = 0;
 	virtual int			CALL	Texture_GetWidth(HTEXTURE tex, bool bOriginal=false) = 0;
 	virtual int			CALL	Texture_GetHeight(HTEXTURE tex, bool bOriginal=false) = 0;
-	virtual DWORD*		CALL	Texture_Lock(HTEXTURE tex, bool bReadOnly=true, int left=0, int top=0, int width=0, int height=0) = 0;
+	virtual void*		CALL	Texture_Lock(HTEXTURE tex, bool bReadOnly=true, int left=0, int top=0, int width=0, int height=0) = 0;
 	virtual void		CALL	Texture_Unlock(HTEXTURE tex) = 0;
 };
 
@@ -453,8 +503,8 @@ extern "C" { EXPORT HGE * CALL hgeCreate(int ver); }
 
 
 /*
-** HGE Virtual-key codes
-*/
+ ** HGE Virtual-key codes
+ */
 #define HGEK_LBUTTON	0x01
 #define HGEK_RBUTTON	0x02
 #define HGEK_MBUTTON	0x04

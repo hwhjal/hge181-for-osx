@@ -121,7 +121,7 @@ bool RenderFunc()
 	hge->Gfx_BeginScene();
 	hge->Gfx_Clear(0); 
 
-	hge->Gfx_SetClipping (50, 50, 700, 500);
+	// hge->Gfx_SetClipping (50, 50, 700, 500);
 	
 	hge->Gfx_RenderQuad(&quad);
 	gui->Render();
@@ -151,9 +151,9 @@ int main (int argc, char * const argv[])
 	{
 
 		// Load sound and textures
-		quad.tex=hge->Texture_Load("Data/bg.png");
-		tex=hge->Texture_Load("Data/cursor.png");
-		snd=hge->Effect_Load("Data/menu.wav");
+		quad.tex=hge->Texture_Load("bg.png");
+		tex=hge->Texture_Load("cursor.png");
+		snd=hge->Effect_Load("menu.wav");
 		if(!quad.tex || !tex /*|| !snd*/)
 		{
 			// If one of the data files is not found, display
@@ -182,7 +182,7 @@ int main (int argc, char * const argv[])
 
 
 		// Load the font, create the cursor sprite
-		fnt=new hgeFont("Data/font1.fnt");
+		fnt=new hgeFont("font1.fnt");
 		spr=new hgeSprite(tex,0,0,32,32);
 
 		// Create and initialize the GUI

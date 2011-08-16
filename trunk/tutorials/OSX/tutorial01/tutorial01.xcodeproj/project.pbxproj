@@ -7,46 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5618F46813F4894D007BA885 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F45B13F4894D007BA885 /* bg.png */; };
+		5618F46913F4894D007BA885 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F45C13F4894D007BA885 /* bg2.png */; };
+		5618F46A13F4894D007BA885 /* cursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F45D13F4894D007BA885 /* cursor.png */; };
+		5618F46B13F4894D007BA885 /* font1.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 5618F45E13F4894D007BA885 /* font1.fnt */; };
+		5618F46C13F4894D007BA885 /* font1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F45F13F4894D007BA885 /* font1.png */; };
+		5618F46D13F4894D007BA885 /* font2.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46013F4894D007BA885 /* font2.fnt */; };
+		5618F46E13F4894D007BA885 /* font2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46113F4894D007BA885 /* font2.png */; };
+		5618F46F13F4894D007BA885 /* menu.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46213F4894D007BA885 /* menu.wav */; };
+		5618F47013F4894D007BA885 /* objects.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46313F4894D007BA885 /* objects.png */; };
+		5618F47113F4894D007BA885 /* particles.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46413F4894D007BA885 /* particles.png */; };
+		5618F47213F4894D007BA885 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46513F4894D007BA885 /* texture.jpg */; };
+		5618F47313F4894D007BA885 /* trail.psi in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46613F4894D007BA885 /* trail.psi */; };
+		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
-		56C5581211E2FE7000B40942 /* libhge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C5580B11E2FE6900B40942 /* libhge.a */; };
-		56C5581311E2FE7200B40942 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C5581111E2FE6900B40942 /* libhgehelp.a */; };
-		56C5581F11E2FE9D00B40942 /* libcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C5581E11E2FE9700B40942 /* libcore.a */; };
-		56C5586B11E2FF3400B40942 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C5586A11E2FF3200B40942 /* libzlib.a */; };
+		56C0907A13FAF202008F178E /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C0907913FAF202008F178E /* libhgecore.a */; };
+		56C090A813FAF2E7008F178E /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C090A713FAF2E7008F178E /* libhgehelp.a */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		56C5580A11E2FE6900B40942 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56C5580011E2FE6900B40942 /* hge.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = hge;
-		};
-		56C5581011E2FE6900B40942 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56C5580311E2FE6900B40942 /* hgehelp.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = hgehelp;
-		};
-		56C5581D11E2FE9700B40942 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56C5581611E2FE9700B40942 /* core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = core;
-		};
-		56C5586911E2FF3200B40942 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56C5586211E2FF3200B40942 /* zlib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = zlib;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,11 +36,22 @@
 		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5618F45B13F4894D007BA885 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../Data/bg.png; sourceTree = SOURCE_ROOT; };
+		5618F45C13F4894D007BA885 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = ../../Data/bg2.png; sourceTree = SOURCE_ROOT; };
+		5618F45D13F4894D007BA885 /* cursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cursor.png; path = ../../Data/cursor.png; sourceTree = SOURCE_ROOT; };
+		5618F45E13F4894D007BA885 /* font1.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font1.fnt; path = ../../Data/font1.fnt; sourceTree = SOURCE_ROOT; };
+		5618F45F13F4894D007BA885 /* font1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font1.png; path = ../../Data/font1.png; sourceTree = SOURCE_ROOT; };
+		5618F46013F4894D007BA885 /* font2.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = font2.fnt; path = ../../Data/font2.fnt; sourceTree = SOURCE_ROOT; };
+		5618F46113F4894D007BA885 /* font2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font2.png; path = ../../Data/font2.png; sourceTree = SOURCE_ROOT; };
+		5618F46213F4894D007BA885 /* menu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = menu.wav; path = ../../Data/menu.wav; sourceTree = SOURCE_ROOT; };
+		5618F46313F4894D007BA885 /* objects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = objects.png; path = ../../Data/objects.png; sourceTree = SOURCE_ROOT; };
+		5618F46413F4894D007BA885 /* particles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particles.png; path = ../../Data/particles.png; sourceTree = SOURCE_ROOT; };
+		5618F46513F4894D007BA885 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = texture.jpg; path = ../../Data/texture.jpg; sourceTree = SOURCE_ROOT; };
+		5618F46613F4894D007BA885 /* trail.psi */ = {isa = PBXFileReference; lastKnownFileType = file; name = trail.psi; path = ../../Data/trail.psi; sourceTree = SOURCE_ROOT; };
+		5618F46713F4894D007BA885 /* zazaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zazaka.png; path = ../../Data/zazaka.png; sourceTree = SOURCE_ROOT; };
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		56C5580011E2FE6900B40942 /* hge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hge.xcodeproj; path = ../../../../wharf/third_party/hge/xcode/hge.xcodeproj; sourceTree = SOURCE_ROOT; };
-		56C5580311E2FE6900B40942 /* hgehelp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hgehelp.xcodeproj; path = ../../../../wharf/third_party/hge/xcode/hgehelp.xcodeproj; sourceTree = SOURCE_ROOT; };
-		56C5581611E2FE9700B40942 /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../../../wharf/source/core/core.xcodeproj; sourceTree = SOURCE_ROOT; };
-		56C5586211E2FF3200B40942 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../../../wharf/third_party/zlib/xcode/zlib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		56C0907913FAF202008F178E /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
+		56C090A713FAF2E7008F178E /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/lib/OSX/libhgehelp.a"; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,10 +63,8 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */,
-				56C5581211E2FE7000B40942 /* libhge.a in Frameworks */,
-				56C5581311E2FE7200B40942 /* libhgehelp.a in Frameworks */,
-				56C5581F11E2FE9D00B40942 /* libcore.a in Frameworks */,
-				56C5586B11E2FF3400B40942 /* libzlib.a in Frameworks */,
+				56C0907A13FAF202008F178E /* libhgecore.a in Frameworks */,
+				56C090A813FAF2E7008F178E /* libhgehelp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +101,6 @@
 		29B97314FDCFA39411CA2CEA /* tutorial01 */ = {
 			isa = PBXGroup;
 			children = (
-				566468DC11DD25F00018A9F4 /* wharf */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -133,6 +121,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5618F45A13F4894D007BA885 /* Data */,
 				8D1107310486CEB800E47090 /* tutorial01-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -144,70 +133,50 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				56C0907913FAF202008F178E /* libhgecore.a */,
+				56C090A713FAF2E7008F178E /* libhgehelp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		566468DC11DD25F00018A9F4 /* wharf */ = {
+		5618F45A13F4894D007BA885 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				56C5586211E2FF3200B40942 /* zlib.xcodeproj */,
-				56C5581611E2FE9700B40942 /* core.xcodeproj */,
-				56C5580011E2FE6900B40942 /* hge.xcodeproj */,
-				56C5580311E2FE6900B40942 /* hgehelp.xcodeproj */,
+				5618F45B13F4894D007BA885 /* bg.png */,
+				5618F45C13F4894D007BA885 /* bg2.png */,
+				5618F45D13F4894D007BA885 /* cursor.png */,
+				5618F45E13F4894D007BA885 /* font1.fnt */,
+				5618F45F13F4894D007BA885 /* font1.png */,
+				5618F46013F4894D007BA885 /* font2.fnt */,
+				5618F46113F4894D007BA885 /* font2.png */,
+				5618F46213F4894D007BA885 /* menu.wav */,
+				5618F46313F4894D007BA885 /* objects.png */,
+				5618F46413F4894D007BA885 /* particles.png */,
+				5618F46513F4894D007BA885 /* texture.jpg */,
+				5618F46613F4894D007BA885 /* trail.psi */,
+				5618F46713F4894D007BA885 /* zazaka.png */,
 			);
-			name = wharf;
-			sourceTree = "<group>";
-		};
-		56C5580111E2FE6900B40942 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				56C5580B11E2FE6900B40942 /* libhge.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		56C5580411E2FE6900B40942 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				56C5581111E2FE6900B40942 /* libhgehelp.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		56C5581711E2FE9700B40942 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				56C5581E11E2FE9700B40942 /* libcore.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		56C5586311E2FF3200B40942 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				56C5586A11E2FF3200B40942 /* libzlib.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
+			name = Data;
+			path = ../../Data;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* tutorial01 */ = {
+		8D1107260486CEB800E47090 /* tutorial08 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial01" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial08" */;
 			buildPhases = (
-				5624C29C11C03420001B9281 /* ShellScript */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				5624C29C11C03420001B9281 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = tutorial01;
+			name = tutorial08;
 			productInstallPath = "$(HOME)/Applications";
 			productName = tutorial01;
 			productReference = 8D1107320486CEB800E47090 /* tutorial01.app */;
@@ -230,61 +199,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* tutorial01 */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 56C5581711E2FE9700B40942 /* Products */;
-					ProjectRef = 56C5581611E2FE9700B40942 /* core.xcodeproj */;
-				},
-				{
-					ProductGroup = 56C5580111E2FE6900B40942 /* Products */;
-					ProjectRef = 56C5580011E2FE6900B40942 /* hge.xcodeproj */;
-				},
-				{
-					ProductGroup = 56C5580411E2FE6900B40942 /* Products */;
-					ProjectRef = 56C5580311E2FE6900B40942 /* hgehelp.xcodeproj */;
-				},
-				{
-					ProductGroup = 56C5586311E2FF3200B40942 /* Products */;
-					ProjectRef = 56C5586211E2FF3200B40942 /* zlib.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* tutorial01 */,
+				8D1107260486CEB800E47090 /* tutorial08 */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		56C5580B11E2FE6900B40942 /* libhge.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libhge.a;
-			remoteRef = 56C5580A11E2FE6900B40942 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		56C5581111E2FE6900B40942 /* libhgehelp.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libhgehelp.a;
-			remoteRef = 56C5581011E2FE6900B40942 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		56C5581E11E2FE9700B40942 /* libcore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libcore.a;
-			remoteRef = 56C5581D11E2FE9700B40942 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		56C5586A11E2FF3200B40942 /* libzlib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libzlib.a;
-			remoteRef = 56C5586911E2FF3200B40942 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -292,6 +212,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				5618F46813F4894D007BA885 /* bg.png in Resources */,
+				5618F46913F4894D007BA885 /* bg2.png in Resources */,
+				5618F46A13F4894D007BA885 /* cursor.png in Resources */,
+				5618F46B13F4894D007BA885 /* font1.fnt in Resources */,
+				5618F46C13F4894D007BA885 /* font1.png in Resources */,
+				5618F46D13F4894D007BA885 /* font2.fnt in Resources */,
+				5618F46E13F4894D007BA885 /* font2.png in Resources */,
+				5618F46F13F4894D007BA885 /* menu.wav in Resources */,
+				5618F47013F4894D007BA885 /* objects.png in Resources */,
+				5618F47113F4894D007BA885 /* particles.png in Resources */,
+				5618F47213F4894D007BA885 /* texture.jpg in Resources */,
+				5618F47313F4894D007BA885 /* trail.psi in Resources */,
+				5618F47413F4894D007BA885 /* zazaka.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcodebuild -project ../../../../wharf/source/core/core.xcodeproj -configuration ${CONFIGURATION}\nxcodebuild -project ../../../../wharf/third_party/zlib/xcode/zlib.xcodeproj -configuration ${CONFIGURATION}\nxcodebuild -project ../../../../wharf/third_party/hge/xcode/hge.xcodeproj -configuration ${CONFIGURATION}\nxcodebuild -project ../../../../wharf/third_party/hge/xcode/hgehelp.xcodeproj -configuration ${CONFIGURATION}\n";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -352,6 +285,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../lib/OSX\"",
+					"\"$(SRCROOT)/../../../../../hge181/lib/OSX\"",
 				);
 				PRODUCT_NAME = tutorial01;
 			};
@@ -370,6 +304,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../lib/OSX\"",
+					"\"$(SRCROOT)/../../../../../hge181/lib/OSX\"",
 				);
 				PRODUCT_NAME = tutorial01;
 			};
@@ -383,10 +318,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					../../../../wharf/third_party,
-					../../../../wharf/source,
-				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
@@ -400,10 +331,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					../../../../wharf/third_party,
-					../../../../wharf/source,
-				);
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};
@@ -412,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial01" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial08" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,

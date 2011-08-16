@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,7 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -309,8 +312,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -328,12 +329,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>564EB97113F48C3200A79AF2</string>
+										<string>56C0903B13FAEF9A008F178E</string>
 										<key>history</key>
 										<array>
 											<string>5618F20513F477F9007BA885</string>
-											<string>5618F25E13F479C7007BA885</string>
-											<string>564EB96213F48AE500A79AF2</string>
+											<string>564EB97113F48C3200A79AF2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -391,9 +391,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>564EB97213F48C3200A79AF2</string>
+				<string>56C0903C13FAEF9A008F178E</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>564EB97313F48C3200A79AF2</string>
+				<string>56C0903D13FAEF9A008F178E</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -532,7 +532,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>5618F0D213F4719A007BA885</string>
-		<string>/Users/pepper/Work/hge181GC/hge181-for-osx/src/core/OSX/hgecore.xcodeproj</string>
+		<string>/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/OSX/hgecore_osx.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 132 1280 870 0 0 1280 1002 </string>
@@ -573,6 +573,8 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -612,7 +614,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5618F0D213F4719A007BA885</string>
-				<string>564EB97413F48C3200A79AF2</string>
+				<string>56C0903A13FAEF96008F178E</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

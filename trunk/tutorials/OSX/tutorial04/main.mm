@@ -118,7 +118,6 @@ bool RenderFunc()
 	// Render graphics to the texture
 	hge->Gfx_BeginScene(target);
 	hge->Gfx_Clear(0);
-	// hge->Gfx_SetClipping (100, 100, 100, 100);	
 	par->Render();
 	spr->Render(x, y);
 	hge->Gfx_EndScene();
@@ -148,7 +147,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_GFXRESTOREFUNC, GfxRestoreFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 04 - Using render targets");
-	// hge->System_SetState(HGE_FPS, 60);
+	hge->System_SetState(HGE_FPS, 60);
 	hge->System_SetState(HGE_WINDOWED, FullScreen);
 	hge->System_SetState(HGE_SCREENWIDTH, 800);
 	hge->System_SetState(HGE_SCREENHEIGHT, 600);
@@ -160,7 +159,7 @@ int main (int argc, char * const argv[])
 	if(hge->System_Initiate()) 
 	{
 		// snd=hge->Effect_Load("menu.wav");
-		tex=hge->Texture_Load("Data/particles.png");
+		tex=hge->Texture_Load("particles.png");
 		if(/*!snd || */!tex)
 		{
 			// If one of the data files is not found, display
@@ -174,12 +173,12 @@ int main (int argc, char * const argv[])
 		spr->SetColor(0xFFFFA000);
 		spr->SetHotSpot(16,16);
 		
-		fnt=new hgeFont("Data/font1.fnt");
+		fnt=new hgeFont("font1.fnt");
 		
 		spt=new hgeSprite(tex, 32, 32, 32, 32);
 		spt->SetBlendMode(BLEND_COLORMUL | BLEND_ALPHAADD | BLEND_NOZWRITE);
 		spt->SetHotSpot(16,16);
-		par=new hgeParticleSystem("Data/trail.psi",spt);
+		par=new hgeParticleSystem("trail.psi",spt);
 		par->Fire();
 		
 		// Create a render target and a sprite for it

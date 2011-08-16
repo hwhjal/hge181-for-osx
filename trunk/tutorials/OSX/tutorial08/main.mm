@@ -161,7 +161,7 @@ int main (int argc, char * const argv[])
 	
 	if(hge->System_Initiate())
 	{
-		fnt=new hgeFont("Data/font2.fnt");
+		fnt=new hgeFont("font2.fnt");
 		
 		if(!InitSimulation())
 		{
@@ -193,11 +193,9 @@ float GetTime()
 	tmp=SysTime.wSecond;
 	tmp=SysTime.wMinute+tmp/60.0f;
 	tmp=SysTime.wHour+tmp/60.0f;*/
-	
-	
-	return CFAbsoluteTimeGetCurrent ()/10000000;
-	
 	// return tmp;
+	
+	return CFAbsoluteTimeGetCurrent ()/10000000;	
 }
 
 
@@ -205,7 +203,7 @@ bool InitSimulation()
 {
 	// Load texture
 	
-	texObjects=hge->Texture_Load("Data/objects.png");
+	texObjects=hge->Texture_Load("objects.png");
 	if(!texObjects) return false;
 	
 	// Create sprites
