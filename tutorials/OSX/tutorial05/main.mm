@@ -137,7 +137,7 @@ int main (int argc, char * const argv[])
 	if(hge->System_Initiate()) {
 		
 		// Load sound and texture
-		tex=hge->Texture_Load("Data/texture.jpg");
+		tex=hge->Texture_Load("texture.jpg");
 		if(!tex)
 		{
 			// If one of the data files is not found, display
@@ -156,7 +156,7 @@ int main (int argc, char * const argv[])
 		dis->Clear(0xFF000000);
 		
 		// Load a font
-		fnt=new hgeFont("Data/font1.fnt");
+		fnt=new hgeFont("font1.fnt");
 		
 		// Let's rock now!
 		hge->System_Start();

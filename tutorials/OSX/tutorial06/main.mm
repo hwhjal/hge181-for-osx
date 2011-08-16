@@ -120,9 +120,6 @@ bool RenderFunc()
 	// Render graphics
 	hge->Gfx_BeginScene();
 	hge->Gfx_Clear(0); 
-
-	// hge->Gfx_SetClipping (50, 50, 700, 500);
-	
 	hge->Gfx_RenderQuad(&quad);
 	gui->Render();
 	fnt->SetColor(0xFFFFFFFF);

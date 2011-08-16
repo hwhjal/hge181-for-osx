@@ -23,6 +23,7 @@
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
 		5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694895613F3457F000A3A69 /* libhgehelp.a */; };
+		56F46BB713FAF920004298EC /* menuitem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56F46BB613FAF920004298EC /* menuitem.mm */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -53,6 +54,8 @@
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5694895613F3457F000A3A69 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Users/pepper/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
 		56BE54A211DDB708004C93F2 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Volumes/MacData/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
+		56F46BB513FAF920004298EC /* menuitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuitem.h; sourceTree = "<group>"; };
+		56F46BB613FAF920004298EC /* menuitem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = menuitem.mm; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +120,8 @@
 			children = (
 				256AC3F00F4B6AF500CF3369 /* tutorial01_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.mm */,
+				56F46BB513FAF920004298EC /* menuitem.h */,
+				56F46BB613FAF920004298EC /* menuitem.mm */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -189,7 +194,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial08" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial06" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.mm in Sources */,
+				56F46BB713FAF920004298EC /* menuitem.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial08" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial06" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

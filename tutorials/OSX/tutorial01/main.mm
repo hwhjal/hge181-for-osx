@@ -12,6 +12,7 @@
 #include "../../../include/hgesprite.h"
 #include "../../../include/hgedistort.h"
 #include "../../../include/hgefont.h"
+#include "../../../include/hgeparticle.h"
 
 // Pointer to the HGE interface (helper classes require this to work)
 
