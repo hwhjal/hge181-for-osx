@@ -1,10 +1,10 @@
 /*
-** Haaf's Game Engine 1.8
-** Copyright (C) 2003-2007, Relish Games
-** hge.relishgames.com
-**
-** hge_tut06 - Creating menus
-*/
+ ** Haaf's Game Engine 1.8
+ ** Copyright (C) 2003-2007, Relish Games
+ ** hge.relishgames.com
+ **
+ ** hge_tut06 - Creating menus
+ */
 
 
 // Copy the files "menu.wav", "font1.fnt", "font1.png",
@@ -76,7 +76,7 @@ bool FrameFunc()
 		f1 = true;
 		f2 = false;
 	}
-
+	
 	if (hge->Input_GetKeyState(HGEK_F))
 	{
 		static bool fl = false;

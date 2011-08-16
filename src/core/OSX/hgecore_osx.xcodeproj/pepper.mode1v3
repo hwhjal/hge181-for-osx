@@ -270,14 +270,13 @@
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>56F46AD413FAF4FE004298EC</string>
-								<string>56F46AD513FAF4FE004298EC</string>
-								<string>56F46AD613FAF4FE004298EC</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>9</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -331,11 +330,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>56F46AD713FAF4FE004298EC</string>
+										<string>56F46C1713FAF9F4004298EC</string>
 										<key>history</key>
 										<array>
 											<string>5618F20513F477F9007BA885</string>
-											<string>56C0903B13FAEF9A008F178E</string>
+											<string>56F46C1613FAF9F4004298EC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -393,9 +392,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56F46ACD13FAF49D004298EC</string>
+				<string>56F46C1813FAF9F4004298EC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>56F46ACE13FAF49D004298EC</string>
+				<string>56F46C1913FAF9F4004298EC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -575,8 +574,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -616,7 +613,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5618F0D213F4719A007BA885</string>
-				<string>56F46ACB13FAF494004298EC</string>
+				<string>56F46C1A13FAF9F4004298EC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

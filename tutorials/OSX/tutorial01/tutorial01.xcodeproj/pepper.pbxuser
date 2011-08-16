@@ -126,12 +126,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335213959;
-			PBXWorkspaceStateSaveDate = 335213959;
+			PBXPerProjectTemplateStateSaveDate = 335215600;
+			PBXWorkspaceStateSaveDate = 335215600;
 		};
 		perUserProjectItems = {
-			56F46B2513FAF7E3004298EC /* PBXBookmark */ = 56F46B2513FAF7E3004298EC /* PBXBookmark */;
-			56F46B2613FAF7E3004298EC /* PBXTextBookmark */ = 56F46B2613FAF7E3004298EC /* PBXTextBookmark */;
+			56F46C8313FAFDA3004298EC /* PBXTextBookmark */ = 56F46C8313FAFDA3004298EC /* PBXTextBookmark */;
+			56F46C8413FAFDA3004298EC /* PBXTextBookmark */ = 56F46C8413FAFDA3004298EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -139,9 +139,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 5213}}";
-			sepNavSelRange = "{125, 0}";
-			sepNavVisRange = "{0, 1195}";
+			sepNavIntBoundsRect = "{{0, 0}, {1384, 5109}}";
+			sepNavSelRange = "{8307, 0}";
+			sepNavVisRange = "{5216, 1222}";
 		};
 	};
 	56A7979C11970AF500D63247 /* tutorial08 */ = {
@@ -192,19 +192,25 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	56F46B2513FAF7E3004298EC /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-	};
-	56F46B2613FAF7E3004298EC /* PBXTextBookmark */ = {
+	56F46C8313FAFDA3004298EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 10";
+		name = "main.mm: 26";
 		rLen = 0;
-		rLoc = 125;
+		rLoc = 519;
 		rType = 0;
-		vrLen = 1195;
-		vrLoc = 0;
+		vrLen = 1761;
+		vrLoc = 7515;
+	};
+	56F46C8413FAFDA3004298EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 344";
+		rLen = 0;
+		rLoc = 8307;
+		rType = 0;
+		vrLen = 1222;
+		vrLoc = 5216;
 	};
 	8D1107260486CEB800E47090 /* tutorial08 */ = {
 		activeExec = 0;
