@@ -147,7 +147,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_GFXRESTOREFUNC, GfxRestoreFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 04 - Using render targets");
-	// hge->System_SetState(HGE_FPS, 60);
+	hge->System_SetState(HGE_FPS, 60);
 	hge->System_SetState(HGE_WINDOWED, FullScreen);
 	hge->System_SetState(HGE_SCREENWIDTH, 800);
 	hge->System_SetState(HGE_SCREENHEIGHT, 600);
