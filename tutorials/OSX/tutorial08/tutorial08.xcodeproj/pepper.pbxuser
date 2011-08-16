@@ -112,15 +112,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335215645;
-			PBXWorkspaceStateSaveDate = 335215645;
+			PBXPerProjectTemplateStateSaveDate = 335217496;
+			PBXWorkspaceStateSaveDate = 335217496;
 		};
 		perUserProjectItems = {
 			5618F3C713F48664007BA885 /* PlistBookmark */ = 5618F3C713F48664007BA885 /* PlistBookmark */;
 			5618F42813F48866007BA885 /* PBXTextBookmark */ = 5618F42813F48866007BA885 /* PBXTextBookmark */;
 			56BF185113FAE9920068AD1B /* PBXTextBookmark */ = 56BF185113FAE9920068AD1B /* PBXTextBookmark */;
-			56F46C1513FAF9F2004298EC /* PBXTextBookmark */ = 56F46C1513FAF9F2004298EC /* PBXTextBookmark */;
 			56F46C6113FAFC21004298EC /* PBXTextBookmark */ = 56F46C6113FAFC21004298EC /* PBXTextBookmark */;
+			56F46E8713FB05E9004298EC /* PBXTextBookmark */ = 56F46E8713FB05E9004298EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -128,9 +128,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 6604}}";
-			sepNavSelRange = "{10764, 0}";
-			sepNavVisRange = "{0, 1252}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 6747}}";
+			sepNavSelRange = "{412, 0}";
+			sepNavVisRange = "{0, 1253}";
 		};
 	};
 	5618F3C713F48664007BA885 /* PlistBookmark */ = {
@@ -219,24 +219,24 @@
 		vrLen = 1149;
 		vrLoc = 0;
 	};
-	56F46C1513FAF9F2004298EC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 485";
-		rLen = 0;
-		rLoc = 10764;
-		rType = 0;
-		vrLen = 1367;
-		vrLoc = 9944;
-	};
 	56F46C6113FAFC21004298EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
 		name = "main.mm: 485";
 		rLen = 0;
-		rLoc = 10764;
+		rLoc = 10765;
 		rType = 0;
 		vrLen = 1252;
+		vrLoc = 0;
+	};
+	56F46E8713FB05E9004298EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 21";
+		rLen = 0;
+		rLoc = 412;
+		rType = 0;
+		vrLen = 1253;
 		vrLoc = 0;
 	};
 	8D1107260486CEB800E47090 /* tutorial08 */ = {

@@ -118,7 +118,6 @@ bool RenderFunc()
 	// Render graphics to the texture
 	hge->Gfx_BeginScene(target);
 	hge->Gfx_Clear(0);
-	// hge->Gfx_SetClipping (100, 100, 100, 100);	
 	par->Render();
 	spr->Render(x, y);
 	hge->Gfx_EndScene();
