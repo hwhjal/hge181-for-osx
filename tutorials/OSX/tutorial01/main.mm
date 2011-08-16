@@ -3,11 +3,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define OSX
-#include "hge/include/hge.h"
-#include "hge/include/hgesprite.h"
-#include "hge/include/hgefont.h"
-#include "hge/include/hgeparticle.h"
+#define _HGE_TARGET_OSX_
+
+#include <math.h>
+
+#include "../../../include/hge.h"
+#include "../../../include/hgecolor.h"
+#include "../../../include/hgesprite.h"
+#include "../../../include/hgedistort.h"
+#include "../../../include/hgefont.h"
+
+// Pointer to the HGE interface (helper classes require this to work)
 
 int SCREEN_WIDTH  = 1280;
 int SCREEN_HEIGHT = 1024;
@@ -160,7 +166,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 07 - Thousand of Hares");
 	hge->System_SetState(HGE_USESOUND, false);
 	hge->System_SetState(HGE_WINDOWED, false);
-	hge->System_SetState(HGE_FPS, 60);
+	// hge->System_SetState(HGE_FPS, 60);
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
@@ -170,8 +176,8 @@ int main (int argc, char * const argv[])
 		
 		// Load textures
 		
-		bgtex=hge->Texture_Load("Data/bg2.png");
-		tex=hge->Texture_Load("Data/zazaka.png");
+		bgtex=hge->Texture_Load("bg2.png");
+		tex=hge->Texture_Load("zazaka.png");
 		if(!bgtex || !tex)
 		{
 			// If one of the data files is not found,
@@ -184,7 +190,7 @@ int main (int argc, char * const argv[])
 		
 		// Load font, create sprites
 		
-		fnt=new hgeFont("Data/font2.fnt");
+		fnt=new hgeFont("font2.fnt");
 		spr=new hgeSprite(tex,0,0,64,64);
 		spr->SetHotSpot(32,32);
 		
@@ -350,7 +356,7 @@ int main (int argc, char * const argv[])
 //	
 //	if(hge->System_Initiate())
 //	{
-//		tex=hge->Texture_Load("Data/particles.png");
+//		tex=hge->Texture_Load("particles.png");
 //		
 //		// Create and set up a sprite
 //		spr=new hgeSprite(tex, 96, 64, 32, 32);
@@ -358,13 +364,13 @@ int main (int argc, char * const argv[])
 //		spr->SetHotSpot(16,16);
 //		
 //		// Load a font
-//		fnt=new hgeFont("Data/font1.fnt");
+//		fnt=new hgeFont("font1.fnt");
 //		
 //		// Create and set up a particle system
 //		spt=new hgeSprite(tex, 32, 32, 32, 32);
 //		spt->SetBlendMode(BLEND_COLORMUL | BLEND_ALPHAADD | BLEND_NOZWRITE);
 //		spt->SetHotSpot(16,16);
-//		par=new hgeParticleSystem("Data/trail.psi",spt);
+//		par=new hgeParticleSystem("trail.psi",spt);
 //		par->Fire();
 //		
 //		// Let's rock now!

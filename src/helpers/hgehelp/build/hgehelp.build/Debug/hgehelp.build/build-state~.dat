@@ -1,725 +1,0 @@
-Thgehelp
-v7
-r0
-t298751038.562789
-cCheck dependencies
-cProcessPCH++ /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch.gch hgehelp_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgesprite.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgerect.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgefont.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeparticle.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeanim.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgecolor.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgedistort.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgegui.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeguictrls.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgepmanager.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeresource.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgestrings.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgevector.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/parser.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/resources.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cLibtool /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a normal x86_64
-cPhaseScriptExecution "Run Script" /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Script-56CB34FC11C3C891006CA885.sh
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004B99A23900000000000000EE
-t1268359737
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/ctype.h
-c000000004AC326060000000000002C18
-t1254303238
-s11288
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
-c000000004AC320BA00000000000004F1
-t1254301882
-s1265
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004AC326060000000000004174
-t1254303238
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
-c000000004AC326060000000000002DF5
-t1254303238
-s11765
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
-c000000004AC326060000000000001731
-t1254303238
-s5937
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/strings.h
-c000000004AC326060000000000000DA4
-t1254303238
-s3492
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
-c000000004AC3266500000000000010DD
-t1254303333
-s4317
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/pepper/Work/hge181/include/hge.h
-c000000004C13AE2A0000000000004611
-t1276358186
-s17937
-i<windows.h>
-
-N/Users/pepper/Work/hge181/include/hgeanim.h
-c00000000462CAB000000000000000600
-t1177332480
-s1536
-i"hgesprite.h"
-
-N/Users/pepper/Work/hge181/include/hgecolor.h
-c00000000462605760000000000000E0B
-t1176896886
-s3595
-i"hge.h"
-
-N/Users/pepper/Work/hge181/include/hgedistort.h
-c00000000462605760000000000000667
-t1176896886
-s1639
-i"hge.h"
-
-N/Users/pepper/Work/hge181/include/hgefont.h
-c0000000046A0B12A000000000000090A
-t1184936234
-s2314
-i"hge.h"
-i"hgesprite.h"
-
-N/Users/pepper/Work/hge181/include/hgegui.h
-c000000004C16A2E100000000000009CF
-t1276551905
-s2511
-i"hge.h"
-i"hgesprite.h"
-i"hgerect.h"
-
-N/Users/pepper/Work/hge181/include/hgeguictrls.h
-c00000000462605760000000000000E6F
-t1176896886
-s3695
-i"hge.h"
-i"hgesprite.h"
-i"hgefont.h"
-i"hgerect.h"
-i"hgegui.h"
-
-N/Users/pepper/Work/hge181/include/hgeparticle.h
-c00000000466967500000000000000DB0
-t1181312848
-s3504
-i"hge.h"
-i"hgesprite.h"
-i"hgevector.h"
-i"hgecolor.h"
-i"hgerect.h"
-
-N/Users/pepper/Work/hge181/include/hgerect.h
-c00000000462605760000000000000324
-t1176896886
-s804
-
-N/Users/pepper/Work/hge181/include/hgeresource.h
-c0000000047B999F0000000000000078C
-t1203345904
-s1932
-i"hge.h"
-i"hgesprite.h"
-i"hgeanim.h"
-i"hgefont.h"
-i"hgeparticle.h"
-i"hgedistort.h"
-i"hgestrings.h"
-
-N/Users/pepper/Work/hge181/include/hgesprite.h
-c000000004C13F7020000000000000815
-t1276376834
-s2069
-i"hge.h"
-i"hgerect.h"
-
-N/Users/pepper/Work/hge181/include/hgestrings.h
-c000000004626057600000000000002B9
-t1176896886
-s697
-i"hge.h"
-
-N/Users/pepper/Work/hge181/include/hgevector.h
-c00000000462605760000000000000774
-t1176896886
-s1908
-i"hge.h"
-i<math.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp
-c000000004C139D0D0000000000000CB9
-t1276353805
-s3257
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeanim.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp
-c000000004C139D9500000000000006D9
-t1276353941
-s1753
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgecolor.h"
-i<math.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp
-c000000004C13A5100000000000001519
-t1276355856
-s5401
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgedistort.h"
-i<string.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp
-c000000004C13FB5F0000000000001AA9
-t1276377951
-s6825
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgefont.h"
-i<stdlib.h>
-i<string.h>
-i<stdio.h>
-i<stdarg.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp
-c000000004C16A3750000000000001BB9
-t1276552053
-s7097
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgegui.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp
-c000000004C16A3750000000000001B97
-t1276552053
-s7063
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeguictrls.h"
-i<string.h>
-i<stdio.h>
-i<stdlib.h>
-i<stdarg.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp
-c000000004C166C540000000000001CAD
-t1276537940
-s7341
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeparticle.h"
-i<string.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp
-c000000004C13A90B0000000000000675
-t1276356875
-s1653
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeparticle.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp
-c000000004C139BBF0000000000000311
-t1276353471
-s785
-i"../../include/hgerect.h"
-i<math.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp
-c000000004C13AC48000000000000182D
-t1276357704
-s6189
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeresource.h"
-i"parser.h"
-i"resources.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp
-c000000004C139BC000000000000019EB
-t1276353472
-s6635
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgesprite.h"
-i<string.h>
-i<math.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp
-c000000004C13AC760000000000000CF9
-t1276357750
-s3321
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgestrings.h"
-i<ctype.h>
-i<strings.h>
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp
-c000000004C13ACC3000000000000045B
-t1276357827
-s1115
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgevector.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp
-c000000004C13ACE400000000000012B7
-t1276357860
-s4791
-i"platform.h"
-i"../../include/hge.h"
-i"parser.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp
-c000000004C13AD060000000000005B72
-t1276357894
-s23410
-i"platform.h"
-i"../../include/hge.h"
-i"../../include/hgeresource.h"
-i"parser.h"
-i"resources.h"
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a
-t1277058238
-s520984
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeanim.o
-t1277058237
-s21784
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgecolor.o
-t1277058238
-s7308
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgedistort.o
-t1277058238
-s28988
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgefont.o
-t1277058238
-s34440
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgegui.o
-t1277058238
-s30552
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeguictrls.o
-t1277058238
-s69124
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgehelp.LinkFileList
-c000000004C1E5CBD0000000000000705
-t1277058237
-s1797
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeparticle.o
-t1277058238
-s44164
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgepmanager.o
-t1277058238
-s28332
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgerect.o
-t1277058237
-s4980
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeresource.o
-t1277058238
-s50592
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgesprite.o
-t1277058237
-s28680
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgestrings.o
-t1277058238
-s20216
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgevector.o
-t1277058238
-s7524
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/parser.o
-t1277058238
-s22188
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/resources.o
-t1277058238
-s106196
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Script-56CB34FC11C3C891006CA885.sh
-c000000004C1E5CBD0000000000000057
-t1277058237
-s87
-
-N/Users/pepper/Work/hge181/src/helpers/hgehelp/hgehelp_Prefix.pch
-c000000004C138F7F0000000000000092
-t1276350335
-s146
-i<Cocoa/Cocoa.h>
-
-N/Users/pepper/Work/hge181/src/helpers/parser.h
-c000000004C13A9CD00000000000007D4
-t1276357069
-s2004
-i"../../include/hge.h"
-i<string.h>
-i<stdlib.h>
-
-N/Users/pepper/Work/hge181/src/helpers/platform.h
-c000000004C139BF200000000000000CE
-t1276353522
-s206
-
-N/Users/pepper/Work/hge181/src/helpers/resources.h
-c000000004C13A9A10000000000001199
-t1276357025
-s4505
-i"../../include/hgeresource.h"
-i"parser.h"
-
-N/var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch.gch
-t1277058237
-s2523504
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies298751037#298751037#0(0"0(0#1#0"4300911832#0"0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeanim.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.921092
-e298751037.990653
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeanim.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp298751037#298751037#0(0"0(0#0#60"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp4300911832#1519"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeanim.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeanim.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgecolor.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.990779
-e298751038.064604
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgecolor.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@69"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp298751037#298751038#0(0"0(0#0#61"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp4300911832#1521"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgecolor.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgecolor.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgedistort.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.051770
-e298751038.149688
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgedistort.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp298751038#298751038#0(0"0(0#0#63"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp4300911832#1525"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgedistort.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgedistort.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgefont.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.367615
-e298751038.073770
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgefont.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp298751037#298751038#0(0"0(0#0#60"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp4300911832#1519"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgefont.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgefont.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgegui.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.064729
-e298751038.138790
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgegui.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp298751038#298751038#0(0"0(0#0#59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp4300911832#1517"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgegui.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgegui.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeguictrls.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.073912
-e298751038.223783
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeguictrls.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp298751038#298751038#0(0"0(0#0#64"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp4300911832#1527"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeguictrls.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeguictrls.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeparticle.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.888036
-e298751038.051558
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeparticle.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp298751037#298751038#0(0"0(0#0#64"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp4300911832#1527"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeparticle.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeparticle.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgepmanager.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.138890
-e298751038.212249
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgepmanager.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp298751038#298751038#0(0"0(0#0#64"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp4300911832#1527"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgepmanager.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgepmanager.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgerect.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.366880
-e298751037.887906
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgerect.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp298751037#298751037#0(0"0(0#0#60"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp4300911832#1519"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgerect.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgerect.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeresource.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.149797
-e298751038.304940
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeresource.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp298751038#298751038#0(0"0(0#0#64"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp4300911832#1527"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgeresource.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgeresource.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgesprite.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.366009
-e298751037.920984
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgesprite.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp298751037#298751037#0(0"0(0#0#62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp4300911832#1523"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgesprite.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgesprite.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgestrings.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.212363
-e298751038.315015
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgestrings.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp298751038#298751038#0(0"0(0#0#63"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp4300911832#1525"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgestrings.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgestrings.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgevector.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.223871
-e298751038.282095
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgevector.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp298751038#298751038#0(0"0(0#0#62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp4300911832#1523"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../hgevector.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgevector.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/parser.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.282195
-e298751038.349872
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/parser.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'
-lSLF07#2@67"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298751038#298751038#0(7366"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp:90: warning: deprecated conversion from string constant to 'char*'58(22@53"Deprecated conversion from string constant to 'char*'298751038#0#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#127#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#254#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#381#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#508#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#635#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#762#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#889#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1016#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1143#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1270#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1397#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1524#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1651#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1778#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1905#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2032#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2159#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2286#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2413#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2540#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2667#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2794#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2921#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3048#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3175#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3302#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3429#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3556#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3683#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3810#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3937#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4064#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4191#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4318#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4445#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4572#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4699#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4826#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#4953#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5080#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5207#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5334#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5461#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5588#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5715#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5842#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#5969#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6096#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6223#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6350#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6477#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6604#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6731#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6858#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#6985#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#7112#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#7239#127#0(6@59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp298050660#90#0#90#0#49"deprecated conversion from string constant to '*'0(0#0#59"/Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp4300911832#1517"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../parser.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/parser.o0#
-
-CCompileC build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/resources.o /Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751038.305033
-e298751038.509950
-r1
-xCompileC
-xbuild/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/resources.o
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'bool ScriptSkipToNextParameter(RScriptParser*, bool)':
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:55: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:55: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:61: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:61: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'void ScriptParseBlendMode(RScriptParser*, int*)':
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:145: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:145: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'void ScriptParseSpriteAnim(RScriptParser*, RSprite*, bool)':
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:257: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:257: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In static member function 'static void RScript::Parse(hgeResourceManager*, RScriptParser*, const char*, const char*)':
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:291: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:291: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:326: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:326: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:338: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:338: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:363: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:363: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:371: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:371: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:381: warning: deprecated conversion from string constant to 'char*'
-o/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:381: warning: deprecated conversion from string constant to 'char*'
-lSLF07#2@70"Compile /Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298751038#298751038#0(3196"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'bool ScriptSkipToNextParameter(RScriptParser*, bool)':/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:55: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:55: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:61: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:61: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'void ScriptParseBlendMode(RScriptParser*, int*)':/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:145: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:145: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In function 'void ScriptParseSpriteAnim(RScriptParser*, RSprite*, bool)':/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:257: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:257: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp: In static member function 'static void RScript::Parse(hgeResourceManager*, RScriptParser*, const char*, const char*)':/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:291: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:291: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:326: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:326: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:338: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:338: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:363: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:363: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:371: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:371: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:381: warning: deprecated conversion from string constant to 'char*'/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp:381: warning: deprecated conversion from string constant to 'char*'20(22@53"Deprecated conversion from string constant to 'char*'298751038#132#130#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#55#0#55#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#262#130#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#55#0#55#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#392#130#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#61#0#61#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#522#130#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#61#0#61#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#779#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#145#0#145#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#910#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#145#0#145#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1179#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#257#0#257#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1310#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#257#0#257#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1624#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#291#0#291#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1755#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#291#0#291#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#1886#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#326#0#326#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2017#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#326#0#326#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2148#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#338#0#338#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2279#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#338#0#338#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2410#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#363#0#363#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2541#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#363#0#363#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2672#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#371#0#371#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2803#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#371#0#371#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#2934#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#381#0#381#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'298751038#3065#131#0(6@62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp298050694#381#0#381#0#49"deprecated conversion from string constant to '*'0(0#0#62"/Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp4300911832#1523"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -include /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch -c /Users/pepper/Work/hge181/src/helpers/hgehelp/../resources.cpp -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/resources.o0#
-
-CLibtool /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a normal x86_64
-s298751038.510075
-e298751038.539375
-r1
-xLibtool
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a
-xnormal
-xx86_64
-lSLF07#2@46"Libtool build/Debug/libhgehelp.a normal x86_64298751038#298751038#0(0"0(0#0#0"4300911832#484"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -filelist /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgehelp.LinkFileList -framework Cocoa -o /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a0#
-
-CPhaseScriptExecution "Run Script" /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Script-56CB34FC11C3C891006CA885.sh
-s298751038.539521
-e298751038.562740
-r1
-xPhaseScriptExecution
-xRun Script
-x/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Script-56CB34FC11C3C891006CA885.sh
-lSLF07#2@36"Run custom shell script 'Run Script'298751038#298751038#0(0"0(0#0#0"4300911832#14765"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER pepper    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS x86_64    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386 ppc"    setenv ARCHS_STANDARD_32_BIT "i386 ppc"    setenv ARCHS_STANDARD_64_BIT x86_64    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build    setenv BUILD_ROOT /Users/pepper/Work/hge181/src/helpers/hgehelp/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug    setenv CACHE_ROOT /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/libhgehelp.a    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug    setenv CONFIGURATION_TEMP_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH x86_64    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/hgehelp.dst    setenv DWARF_DSYM_FILE_NAME libhgehelp.a.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLE_EXTENSION a    setenv EXECUTABLE_NAME libhgehelp.a    setenv EXECUTABLE_PATH libhgehelp.a    setenv EXECUTABLE_PREFIX lib    setenv EXECUTABLE_SUFFIX .a    setenv FILE_LIST /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/FixedFiles    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME libhgehelp.a    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD gnu99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SYMBOL_SEPARATION NO    setenv GCC_MODEL_TUNING G5    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER hgehelp_Prefix.pch    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION 4.2    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include\" "    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PREPROCESS NO    setenv INSTALL_DIR /tmp/hgehelp.dst/usr/local/lib    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER pepper    setenv INSTALL_PATH /usr/local/lib    setenv INSTALL_ROOT /tmp/hgehelp.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-LinkMap-normal-x86_64.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_x86_64 /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal/x86_64/hgehelp.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE staticlib    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_VERSION_ACTUAL 1062    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0602    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Objects-normal    setenv OBJROOT /Users/pepper/Work/hge181/src/helpers/hgehelp/build    setenv ONLY_ACTIVE_ARCH YES    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.static-library    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PFE_FILE_C_DIALECTS c++    setenv PKGINFO_FILE_PATH /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_NAME macosx    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH /usr/local/include    setenv PRODUCT_NAME hgehelp    setenv PRODUCT_SETTINGS_PATH     setenv PRODUCT_TYPE com.apple.product-type.library.static    setenv PROFILING_CODE NO    setenv PROJECT hgehelp    setenv PROJECT_DERIVED_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/DerivedSources    setenv PROJECT_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv PROJECT_FILE_PATH /Users/pepper/Work/hge181/src/helpers/hgehelp/hgehelp.xcodeproj    setenv PROJECT_NAME hgehelp    setenv PROJECT_TEMP_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build    setenv PUBLIC_HEADERS_FOLDER_PATH /usr/local/include    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/ResourceManagerResources    setenv REZ_EXECUTABLE YES    setenv REZ_OBJECTS_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_NAME macosx10.6    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP YES    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/DerivedSources    setenv SHARED_PRECOMPS_DIR /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv SRCROOT /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE debugging    setenv SYMBOL_REPOSITORY_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/SymbolRepositories    setenv SYMROOT /Users/pepper/Work/hge181/src/helpers/hgehelp/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME hgehelp    setenv TARGET_BUILD_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug    setenv TARGET_NAME hgehelp    setenv TARGET_TEMP_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build    setenv TEMP_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build    setenv TEMP_FILES_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build    setenv TEMP_FILE_DIR /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build    setenv TEMP_ROOT /Users/pepper/Work/hge181/src/helpers/hgehelp/build    setenv UID 501    setenv UNSTRIPPED_PRODUCT NO    setenv USER pepper    setenv USER_APPS_DIR /Users/pepper/Applications    setenv USER_LIBRARY_DIR /Users/pepper/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 ppc ppc64 ppc7400 ppc970 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSION_INFO_BUILDER pepper    setenv VERSION_INFO_FILE hgehelp_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:hgehelp  PROJECT:hgehelp-\""    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_VERSION_ACTUAL 0322    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/Script-56CB34FC11C3C891006CA885.sh0#
-
-CProcessPCH++ /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch.gch hgehelp_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
-s298751037.266556
-e298751037.365891
-r1
-xProcessPCH++
-x/var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch.gch
-xhgehelp_Prefix.pch
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@29"Precompile hgehelp_Prefix.pch298751037#298751037#0(0"0(0#0#64"/Users/pepper/Work/hge181/src/helpers/hgehelp/hgehelp_Prefix.pch4300911832#1407"    cd /Users/pepper/Work/hge181/src/helpers/hgehelp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-generated-files.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-own-target-headers.hmap -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-all-target-headers.hmap -iquote /Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/hgehelp-project-headers.hmap -F/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/Debug/include -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources/x86_64 -I/Users/pepper/Work/hge181/src/helpers/hgehelp/build/hgehelp.build/Debug/hgehelp.build/DerivedSources -c /Users/pepper/Work/hge181/src/helpers/hgehelp/hgehelp_Prefix.pch -o /var/folders/ls/lsxFq5tkGDe0bwjd4n1cZE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/hgehelp_Prefix-gztynoyhqqvjyzaofoatecsnaoqy/hgehelp_Prefix.pch.gch0#
-

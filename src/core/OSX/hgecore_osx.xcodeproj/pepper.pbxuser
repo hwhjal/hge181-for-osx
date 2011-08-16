@@ -52,20 +52,31 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 334793677;
-			PBXWorkspaceStateSaveDate = 334793677;
+			PBXPerProjectTemplateStateSaveDate = 335212426;
+			PBXWorkspaceStateSaveDate = 335212426;
 		};
 		perUserProjectItems = {
-			5618F20513F477F9007BA885 /* PBXTextBookmark */ = 5618F20513F477F9007BA885 /* PBXTextBookmark */;
-			5618F25E13F479C7007BA885 /* PBXTextBookmark */ = 5618F25E13F479C7007BA885 /* PBXTextBookmark */;
-			564EB96213F48AE500A79AF2 /* PBXTextBookmark */ = 564EB96213F48AE500A79AF2 /* PBXTextBookmark */;
-			564EB97113F48C3200A79AF2 /* PBXTextBookmark */ = 564EB97113F48C3200A79AF2 /* PBXTextBookmark */;
+			5618F20513F477F9007BA885 = 5618F20513F477F9007BA885 /* PBXTextBookmark */;
+			5618F25E13F479C7007BA885 = 5618F25E13F479C7007BA885 /* PBXTextBookmark */;
+			564EB96213F48AE500A79AF2 = 564EB96213F48AE500A79AF2 /* PBXTextBookmark */;
+			564EB97113F48C3200A79AF2 = 564EB97113F48C3200A79AF2 /* PBXTextBookmark */;
+			56C0903B13FAEF9A008F178E /* PBXTextBookmark */ = 56C0903B13FAEF9A008F178E /* PBXTextBookmark */;
+			56C0905413FAF087008F178E /* XCBuildMessageTextBookmark */ = 56C0905413FAF087008F178E /* XCBuildMessageTextBookmark */;
+			56C0905513FAF087008F178E /* PBXTextBookmark */ = 56C0905513FAF087008F178E /* PBXTextBookmark */;
+			56C0905D13FAF114008F178E /* XCBuildMessageTextBookmark */ = 56C0905D13FAF114008F178E /* XCBuildMessageTextBookmark */;
+			56C0905E13FAF114008F178E /* PBXTextBookmark */ = 56C0905E13FAF114008F178E /* PBXTextBookmark */;
 		};
 		sourceControlManager = 5618F0D413F4719A007BA885 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
 	32DBCF5E0370ADEE00C91783 /* hgecore_Prefix.pch */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hgecore_Prefix.pch;
+		path = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/OSX/hgecore_Prefix.pch";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1011, 521}}";
 			sepNavSelRange = "{162, 0}";
@@ -96,9 +107,17 @@
 	};
 	5618F1C013F47797007BA885 /* graphics.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1013, 14820}}";
-			sepNavSelRange = "{9528, 0}";
-			sepNavVisRange = "{9271, 1450}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 14859}}";
+			sepNavSelRange = "{9621, 0}";
+			sepNavVisRange = "{9271, 1449}";
+		};
+	};
+	5618F1EB13F477A9007BA885 /* system.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 11466}}";
+			sepNavSelRange = "{5234, 0}";
+			sepNavVisRange = "{5114, 693}";
+			sepNavWindowFrame = "{{15, 439}, {750, 558}}";
 		};
 	};
 	5618F20513F477F9007BA885 /* PBXTextBookmark */ = {
@@ -140,6 +159,54 @@
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 9271;
+	};
+	56C0903B13FAEF9A008F178E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1C013F47797007BA885 /* graphics.mm */;
+		name = "graphics.mm: 354";
+		rLen = 0;
+		rLoc = 9642;
+		rType = 0;
+		vrLen = 1449;
+		vrLoc = 9271;
+	};
+	56C0905413FAF087008F178E /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'HGE_APPPATH' was not declared in this scope";
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 448;
+		rType = 1;
+	};
+	56C0905513FAF087008F178E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		name = "system.mm: 449";
+		rLen = 0;
+		rLoc = 9783;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 9467;
+	};
+	56C0905D13FAF114008F178E /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'HGE_TEXTURECLAMP' was not declared in this scope";
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 265;
+		rType = 1;
+	};
+	56C0905E13FAF114008F178E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		name = "system.mm: 266";
+		rLen = 0;
+		rLoc = 5234;
+		rType = 0;
+		vrLen = 693;
+		vrLoc = 5114;
 	};
 	D2AAC07D0554694100DB518D /* hgecore */ = {
 		activeExec = 0;
