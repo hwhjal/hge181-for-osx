@@ -22,9 +22,6 @@
 #include "../../../include/hgegui.h"
 #include "../../../include/hgedistort.h"
 
-
-#include "menuitem.h"
-
 #include <math.h>
 
 // Pointer to the HGE interface.

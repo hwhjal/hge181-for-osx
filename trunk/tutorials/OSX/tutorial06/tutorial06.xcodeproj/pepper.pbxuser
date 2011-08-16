@@ -17,16 +17,16 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeExecutable = 56A7979C11970AF500D63247 /* tutorial08 */;
-		activeTarget = 8D1107260486CEB800E47090 /* tutorial08 */;
+		activeExecutable = 56A7979C11970AF500D63247 /* tutorial06 */;
+		activeTarget = 8D1107260486CEB800E47090 /* tutorial06 */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* tutorial08 */,
+			8D1107260486CEB800E47090 /* tutorial06 */,
 		);
 		breakpoints = (
 		);
 		codeSenseManager = 56A797B311970B0200D63247 /* Code sense */;
 		executables = (
-			56A7979C11970AF500D63247 /* tutorial08 */,
+			56A7979C11970AF500D63247 /* tutorial06 */,
 		);
 		expressions = (
 			pVert,
@@ -112,15 +112,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335214838;
-			PBXWorkspaceStateSaveDate = 335214838;
+			PBXPerProjectTemplateStateSaveDate = 335216592;
+			PBXWorkspaceStateSaveDate = 335216592;
 		};
 		perUserProjectItems = {
 			5618F3C713F48664007BA885 /* PlistBookmark */ = 5618F3C713F48664007BA885 /* PlistBookmark */;
 			5618F42813F48866007BA885 /* PBXTextBookmark */ = 5618F42813F48866007BA885 /* PBXTextBookmark */;
 			56BF185113FAE9920068AD1B /* PBXTextBookmark */ = 56BF185113FAE9920068AD1B /* PBXTextBookmark */;
-			56BF188513FAEA5E0068AD1B /* PBXTextBookmark */ = 56BF188513FAEA5E0068AD1B /* PBXTextBookmark */;
-			56F46BC713FAF93E004298EC /* PBXTextBookmark */ = 56F46BC713FAF93E004298EC /* PBXTextBookmark */;
+			56F46DCE13FB000C004298EC /* PBXTextBookmark */ = 56F46DCE13FB000C004298EC /* PBXTextBookmark */;
+			56F46DCF13FB000C004298EC /* PBXTextBookmark */ = 56F46DCF13FB000C004298EC /* PBXTextBookmark */;
+			56F46DD013FB000C004298EC /* PBXTextBookmark */ = 56F46DD013FB000C004298EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -128,9 +129,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2860}}";
-			sepNavSelRange = "{2536, 0}";
-			sepNavVisRange = "{2076, 1482}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2834}}";
+			sepNavSelRange = "{2841, 0}";
+			sepNavVisRange = "{2370, 1727}";
 		};
 	};
 	5618F3C713F48664007BA885 /* PlistBookmark */ = {
@@ -161,7 +162,7 @@
 		path = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/OSX/tutorial01/main.mm";
 		sourceTree = "<absolute>";
 	};
-	56A7979C11970AF500D63247 /* tutorial08 */ = {
+	56A7979C11970AF500D63247 /* tutorial06 */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -184,7 +185,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = tutorial08;
+		name = tutorial06;
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
@@ -219,30 +220,52 @@
 		vrLen = 1149;
 		vrLoc = 0;
 	};
-	56BF188513FAEA5E0068AD1B /* PBXTextBookmark */ = {
+	56F46D3213FAFF26004298EC /* hge_tut05.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hge_tut05.cpp;
+		path = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/Win32/tutorial05/hge_tut05.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2288}}";
+			sepNavSelRange = "{1101, 0}";
+			sepNavVisRange = "{612, 1301}";
+		};
+	};
+	56F46DCE13FB000C004298EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 56F46D3213FAFF26004298EC /* hge_tut05.cpp */;
+		name = "hge_tut05.cpp: 56";
+		rLen = 0;
+		rLoc = 1101;
+		rType = 0;
+		vrLen = 1301;
+		vrLoc = 612;
+	};
+	56F46DCF13FB000C004298EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 345";
+		name = "main.mm: 116";
 		rLen = 0;
-		rLoc = 5310;
+		rLoc = 2534;
 		rType = 0;
-		vrLen = 1833;
-		vrLoc = 1250;
+		vrLen = 1727;
+		vrLoc = 2370;
 	};
-	56F46BC713FAF93E004298EC /* PBXTextBookmark */ = {
+	56F46DD013FB000C004298EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 117";
+		name = "main.mm: 129";
 		rLen = 0;
-		rLoc = 2536;
+		rLoc = 2841;
 		rType = 0;
-		vrLen = 1482;
-		vrLoc = 2076;
+		vrLen = 1727;
+		vrLoc = 2370;
 	};
-	8D1107260486CEB800E47090 /* tutorial08 */ = {
+	8D1107260486CEB800E47090 /* tutorial06 */ = {
 		activeExec = 0;
 		executables = (
-			56A7979C11970AF500D63247 /* tutorial08 */,
+			56A7979C11970AF500D63247 /* tutorial06 */,
 		);
 	};
 	8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {
