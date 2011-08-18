@@ -2,8 +2,8 @@
 //  input.mm
 //  hgecore_osx
 //
-//  Created by Andrew Pepper on 6/12/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Andrew Onofreytchuk on 5/3/10.
+//  Copyright 2010 Andrew Onofreytchuk (a.onofreytchuk@gmail.com). All rights reserved.
 //
 
 

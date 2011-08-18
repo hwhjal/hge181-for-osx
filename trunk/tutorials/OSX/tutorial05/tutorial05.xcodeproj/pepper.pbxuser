@@ -16,6 +16,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 56A7979C11970AF500D63247 /* tutorial05 */;
 		activeTarget = 8D1107260486CEB800E47090 /* tutorial05 */;
@@ -95,7 +96,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					793,
+					301,
 					60,
 					20,
 					48,
@@ -112,15 +113,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335216563;
-			PBXWorkspaceStateSaveDate = 335216563;
+			PBXPerProjectTemplateStateSaveDate = 335391835;
+			PBXWorkspaceStateSaveDate = 335391835;
 		};
 		perUserProjectItems = {
-			5618F3C713F48664007BA885 /* PlistBookmark */ = 5618F3C713F48664007BA885 /* PlistBookmark */;
-			5618F42813F48866007BA885 /* PBXTextBookmark */ = 5618F42813F48866007BA885 /* PBXTextBookmark */;
-			56BF185113FAE9920068AD1B /* PBXTextBookmark */ = 56BF185113FAE9920068AD1B /* PBXTextBookmark */;
-			56F46D0913FAFEFE004298EC /* PBXTextBookmark */ = 56F46D0913FAFEFE004298EC /* PBXTextBookmark */;
-			56F46DBA13FAFFCC004298EC /* PBXTextBookmark */ = 56F46DBA13FAFFCC004298EC /* PBXTextBookmark */;
+			56A58E4A13FDACA400C081BE /* PBXBookmark */ = 56A58E4A13FDACA400C081BE /* PBXBookmark */;
+			56A58E4B13FDACA400C081BE /* PBXTextBookmark */ = 56A58E4B13FDACA400C081BE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -128,38 +126,24 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2353}}";
-			sepNavSelRange = "{567, 0}";
-			sepNavVisRange = "{0, 957}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2236}}";
+			sepNavSelRange = "{444, 0}";
+			sepNavVisRange = "{2584, 1393}";
 		};
 	};
-	5618F3C713F48664007BA885 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* tutorial01-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/OSX/tutorial08/tutorial01-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
+	56A58E4A13FDACA400C081BE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
 	};
-	5618F42813F48866007BA885 /* PBXTextBookmark */ = {
+	56A58E4B13FDACA400C081BE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 089C165DFE840E0CC02AAC07 /* English */;
-		name = "InfoPlist.strings: 1";
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 20";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 444;
 		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	5618F49813F48A0F007BA885 /* main.mm */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.objcpp;
-		name = main.mm;
-		path = "/Users/pepper/Work/hge181GC/hge181-for-osx/tutorials/OSX/tutorial01/main.mm";
-		sourceTree = "<absolute>";
+		vrLen = 1393;
+		vrLoc = 2584;
 	};
 	56A7979C11970AF500D63247 /* tutorial05 */ = {
 		isa = PBXExecutable;
@@ -208,36 +192,6 @@
 	56A797B311970B0200D63247 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	56BF185113FAE9920068AD1B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 5618F49813F48A0F007BA885 /* main.mm */;
-		name = "main.mm: 21";
-		rLen = 0;
-		rLoc = 432;
-		rType = 0;
-		vrLen = 1149;
-		vrLoc = 0;
-	};
-	56F46D0913FAFEFE004298EC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 141";
-		rLen = 0;
-		rLoc = 3243;
-		rType = 0;
-		vrLen = 1186;
-		vrLoc = 0;
-	};
-	56F46DBA13FAFFCC004298EC /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 25";
-		rLen = 0;
-		rLoc = 567;
-		rType = 0;
-		vrLen = 957;
-		vrLoc = 0;
 	};
 	8D1107260486CEB800E47090 /* tutorial05 */ = {
 		activeExec = 0;

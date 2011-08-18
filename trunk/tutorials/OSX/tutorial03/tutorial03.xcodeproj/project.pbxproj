@@ -21,23 +21,23 @@
 		5618F47313F4894D007BA885 /* trail.psi in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46613F4894D007BA885 /* trail.psi */; };
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
-		56A58DD813FDABCE00C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58DD713FDABCE00C081BE /* libbass.dylib */; };
-		56A58E1513FDAC3700C081BE /* libbass.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A58DD713FDABCE00C081BE /* libbass.dylib */; };
-		56C0907A13FAF202008F178E /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C0907913FAF202008F178E /* libhgecore.a */; };
-		56C090A813FAF2E7008F178E /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C090A713FAF2E7008F178E /* libhgehelp.a */; };
+		56A58E9913FDAEC600C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E9813FDAEC600C081BE /* libbass.dylib */; };
+		56A58E9B13FDAEC600C081BE /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E9A13FDAEC600C081BE /* libhgecore.a */; };
+		56A58E9D13FDAEC600C081BE /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E9C13FDAEC600C081BE /* libhgehelp.a */; };
+		56A58E9F13FDAED300C081BE /* libbass.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A58E9813FDAEC600C081BE /* libbass.dylib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		56A58E1E13FDAC4000C081BE /* CopyFiles */ = {
+		56A58EB813FDAEE700C081BE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				56A58E1513FDAC3700C081BE /* libbass.dylib in CopyFiles */,
+				56A58E9F13FDAED300C081BE /* libbass.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +65,10 @@
 		5618F46613F4894D007BA885 /* trail.psi */ = {isa = PBXFileReference; lastKnownFileType = file; name = trail.psi; path = ../../Data/trail.psi; sourceTree = SOURCE_ROOT; };
 		5618F46713F4894D007BA885 /* zazaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zazaka.png; path = ../../Data/zazaka.png; sourceTree = SOURCE_ROOT; };
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		56A58DD713FDABCE00C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
-		56C0907913FAF202008F178E /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
-		56C090A713FAF2E7008F178E /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = ../../../lib/OSX/libhgehelp.a; sourceTree = SOURCE_ROOT; };
+		56A58E9813FDAEC600C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
+		56A58E9A13FDAEC600C081BE /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
+		56A58E9C13FDAEC600C081BE /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = ../../../lib/OSX/libhgehelp.a; sourceTree = SOURCE_ROOT; };
+		56BE54A211DDB708004C93F2 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Volumes/MacData/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,9 +80,9 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */,
-				56C0907A13FAF202008F178E /* libhgecore.a in Frameworks */,
-				56C090A813FAF2E7008F178E /* libhgehelp.a in Frameworks */,
-				56A58DD813FDABCE00C081BE /* libbass.dylib in Frameworks */,
+				56A58E9913FDAEC600C081BE /* libbass.dylib in Frameworks */,
+				56A58E9B13FDAEC600C081BE /* libhgecore.a in Frameworks */,
+				56A58E9D13FDAEC600C081BE /* libhgehelp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +123,9 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				56A58E9813FDAEC600C081BE /* libbass.dylib */,
+				56A58E9A13FDAEC600C081BE /* libhgecore.a */,
+				56A58E9C13FDAEC600C081BE /* libhgehelp.a */,
 			);
 			name = tutorial01;
 			sourceTree = "<group>";
@@ -150,9 +154,7 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-				56C0907913FAF202008F178E /* libhgecore.a */,
-				56C090A713FAF2E7008F178E /* libhgehelp.a */,
-				56A58DD713FDABCE00C081BE /* libbass.dylib */,
+				56BE54A211DDB708004C93F2 /* libhgehelp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,21 +183,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* tutorial08 */ = {
+		8D1107260486CEB800E47090 /* tutorial03 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial08" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial03" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				5624C29C11C03420001B9281 /* ShellScript */,
-				56A58E1E13FDAC4000C081BE /* CopyFiles */,
+				56A58EB813FDAEE700C081BE /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = tutorial08;
+			name = tutorial03;
 			productInstallPath = "$(HOME)/Applications";
 			productName = tutorial01;
 			productReference = 8D1107320486CEB800E47090 /* tutorial01.app */;
@@ -206,7 +208,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial01" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial03" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -220,7 +222,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* tutorial08 */,
+				8D1107260486CEB800E47090 /* tutorial03 */,
 			);
 		};
 /* End PBXProject section */
@@ -358,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial08" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "tutorial03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -367,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial01" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "tutorial03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

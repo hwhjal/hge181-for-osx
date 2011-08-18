@@ -2,8 +2,8 @@
  *  main.h
  *  hgecore_osx
  *
- *  Created by Andrew Pepper on 5/4/10.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *  Created by Andrew Onofreytchuk on 5/3/10.
+ *  Copyright 2010 Andrew Onofreytchuk (a.onofreytchuk@gmail.com). All rights reserved.
  *
  */
 
@@ -26,12 +26,12 @@
 #import <OpenGL/gl.h>
 #import <OpenGl/glu.h>
 
+// Bass
+#include "../Bass/OSX/bass.h"
 
 // HGE
 #import "cocoa_app.h"
 #include "hge_impl.h"
 
 
-
-
-#endif
+#endif	// #ifndef _MAIN_H_

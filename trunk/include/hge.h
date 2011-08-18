@@ -29,6 +29,8 @@ typedef	void* HWND;
 #endif
 
 // #include "core/core.h"
+#include <stdint.h>
+
 
 #define HGE_VERSION 0x180
 
@@ -57,7 +59,7 @@ typedef	void* HWND;
  ** Common data types
  */
 #ifndef DWORD
-typedef unsigned long       DWORD;
+typedef uint32_t			DWORD;
 typedef unsigned short      WORD;
 typedef unsigned char       BYTE;
 #endif

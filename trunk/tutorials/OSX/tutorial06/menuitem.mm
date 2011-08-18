@@ -133,7 +133,7 @@ void hgeGUIMenuItem::Focus(bool bFocused)
 	
 	if(bFocused)
 	{
-		// hge->Effect_Play(snd);
+		hge->Effect_Play(snd);
 		scolor.SetHWColor(0xFFFFE060);
 		tcolor.SetHWColor(0xFFFFFFFF);
 		soffset=0;
@@ -171,7 +171,7 @@ bool hgeGUIMenuItem::MouseLButton(bool bDown)
 	}
 	else 
 	{
-		// hge->Effect_Play(snd);
+		hge->Effect_Play(snd);
 		offset=0;
 		return false;
 	}

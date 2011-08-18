@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeArchitecturePreference = x86_64;
+		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Debug;
 		activeSDKPreference = macosx10.5;
 		activeTarget = D2AAC07D0554694100DB518D /* hgehelp */;
@@ -70,8 +70,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335220315;
-			PBXWorkspaceStateSaveDate = 335220315;
+			PBXPerProjectTemplateStateSaveDate = 335391731;
+			PBXWorkspaceStateSaveDate = 335391731;
+		};
+		perUserProjectItems = {
+			56A58D8B13FDAA5F00C081BE /* PBXTextBookmark */ = 56A58D8B13FDAA5F00C081BE /* PBXTextBookmark */;
+			56A58DFD13FDABFA00C081BE /* PBXTextBookmark */ = 56A58DFD13FDABFA00C081BE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56CB34DC11C3C719006CA885 /* Source Control */;
 		userBuildSettings = {
@@ -83,6 +87,26 @@
 			sepNavSelRange = "{146, 0}";
 			sepNavVisRange = "{0, 146}";
 		};
+	};
+	56A58D8B13FDAA5F00C081BE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 56FBE28711C3E0A200469001 /* hgeresource.cpp */;
+		name = "hgeresource.cpp: 128";
+		rLen = 0;
+		rLoc = 2088;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 1893;
+	};
+	56A58DFD13FDABFA00C081BE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 56FBE28711C3E0A200469001 /* hgeresource.cpp */;
+		name = "hgeresource.cpp: 128";
+		rLen = 0;
+		rLoc = 2088;
+		rType = 0;
+		vrLen = 413;
+		vrLoc = 1893;
 	};
 	56CB34DC11C3C719006CA885 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -180,9 +204,9 @@
 	};
 	56FBE28711C3E0A200469001 /* hgeresource.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1012, 4225}}";
-			sepNavSelRange = "{160, 57}";
-			sepNavVisRange = "{0, 1035}";
+			sepNavIntBoundsRect = "{{0, 0}, {628, 4082}}";
+			sepNavSelRange = "{2088, 0}";
+			sepNavVisRange = "{1893, 413}";
 		};
 	};
 	56FBE30E11C3E3D400469001 /* hgestrings.cpp */ = {
