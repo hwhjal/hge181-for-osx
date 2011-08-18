@@ -151,7 +151,7 @@ int main (int argc, char * const argv[])
 		quad.tex=hge->Texture_Load("bg.png");
 		tex=hge->Texture_Load("cursor.png");
 		snd=hge->Effect_Load("menu.wav");
-		if(!quad.tex || !tex /*|| !snd*/)
+		if(!quad.tex || !tex || !snd)
 		{
 			// If one of the data files is not found, display
 			// an error message and shutdown.

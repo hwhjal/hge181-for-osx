@@ -42,6 +42,15 @@ float dx=0.0f, dy=0.0f;
 const float speed=190;
 const float friction=0.98f;
 
+// This function plays collision sound with
+// parameters based on sprite position and speed
+void boom() {
+	int pan=int((x-400)/4);
+	float pitch=(dx*dx+dy*dy)*0.0005f+0.2f;
+	hge->Effect_PlayEx(snd,100,pan,pitch);
+}
+
+
 bool FrameFunc()
 {
 	float dt=hge->Timer_GetDelta();	
@@ -74,10 +83,10 @@ bool FrameFunc()
 	
 	// Do some movement calculations and collision detection	
 	dx*=friction; dy*=friction; x+=dx; y+=dy;
-	if(x>scrDx) {x=scrDx-(x-scrDx);dx=-dx;}
-	if(x<16) {x=16+16-x;dx=-dx;}
-	if(y>scrDy) {y=scrDy-(y-scrDy);dy=-dy;}
-	if(y<16) {y=16+16-y;dy=-dy;}
+	if(x>scrDx) {x=scrDx-(x-scrDx);dx=-dx;boom();}
+	if(x<16) {x=16+16-x;dx=-dx;boom();}
+	if(y>scrDy) {y=scrDy-(y-scrDy);dy=-dy;boom();}
+	if(y<16) {y=16+16-y;dy=-dy;boom();}
 	
 	// Update particle system
 	par->info.nEmission=(int)(dx*dx+dy*dy)*2;
@@ -110,10 +119,10 @@ int main (int argc, char * const argv[])
 	hge = hgeCreate (HGE_VERSION);
 	
 	// Set up log file, frame function, render function and window title
-	hge->System_SetState(HGE_LOGFILE, "hge_tut03.log");
+	hge->System_SetState(HGE_LOGFILE, "hge_tut02.log");
 	hge->System_SetState(HGE_FRAMEFUNC, FrameFunc);
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
-	hge->System_SetState(HGE_TITLE, "HGE Tutorial 03 - Using helper classes");
+	hge->System_SetState(HGE_TITLE, "HGE Tutorial 02 - Using input, sound and rendering");
 	hge->System_SetState(HGE_FPS, 60);
 	
 	// Set up video mode 
@@ -125,7 +134,18 @@ int main (int argc, char * const argv[])
 	
 	if(hge->System_Initiate())
 	{
+		snd=hge->Effect_Load("menu.wav");
 		tex=hge->Texture_Load("particles.png");
+		if(!snd || !tex)
+		{
+			// If one of the data files is not found, display
+			// an error message and shutdown.
+			// MessageBox(NULL, "Can't load MENU.WAV or PARTICLES.PNG", "Error", MB_OK | MB_ICONERROR | MB_APPLMODAL);
+			hge->System_Shutdown();
+			hge->Release();
+			return 0;
+		}
+		
 		
 		// Create and set up a sprite
 		spr=new hgeSprite(tex, 96, 64, 32, 32);

@@ -2,8 +2,8 @@
  *  system.cpp
  *  hgecore_osx
  *
- *  Created by Andrew Pepper on 5/3/10.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *  Created by Andrew Onofreytchuk on 5/3/10.
+ *  Copyright 2010 Andrew Onofreytchuk (a.onofreytchuk@gmail.com). All rights reserved.
  *
  */
 
@@ -164,10 +164,19 @@ bool CALL HGE_Impl::System_Initiate()
 	// Gfx init
 	if (!_GfxInit())
 	{
+		System_Log("_GfxInit failed");	
 		System_Shutdown();
 		[pool release];
 		return false;
 	}
+	// Sound init
+	if (!_SoundInit())
+	{
+		System_Log("Bass didn`t load!");	
+		System_Shutdown();
+		[pool release];
+		return false;
+	}	
 	
 	fTime=0.0f;
 	t0=t0fps=CFAbsoluteTimeGetCurrent ();
@@ -248,13 +257,13 @@ void CALL HGE_Impl::System_SetStateBool (hgeBoolState state, bool value)
 			}
 			break;*/
 			
-		/*case HGE_USESOUND:		if(bUseSound!=value)
+		case HGE_USESOUND:		if(bUseSound!=value)
 		{
 			bUseSound=value;
 			if(bUseSound && hwnd) _SoundInit();
 			if(!bUseSound && hwnd) _SoundDone();
 		}
-			break;*/
+		break;
 			
 		case HGE_HIDEMOUSE:		bHideMouse=value; break;
 			
@@ -487,11 +496,11 @@ void HGE_Impl::_PostError(const char *error)
 void CALL HGE_Impl::System_Shutdown()
 {
 	System_Log("\nFinishing..");
+	_ClearQueue();
+	_SoundDone();
 	
 	/*timeEndPeriod(1);
 	if(hSearch) { FindClose(hSearch); hSearch=0; }
-	_ClearQueue();
-	_SoundDone();
 	_GfxDone();
 	_DonePowerStatus();
 	
@@ -499,9 +508,8 @@ void CALL HGE_Impl::System_Shutdown()
 	{
 		DestroyWindow(hwnd);
 		hwnd=0;
-	}
-	
-	if(hInstance) UnregisterClass(WINDOW_CLASS_NAME, hInstance);*/
+	}	
+	*/
 	
 	System_Log("The End.");
 }

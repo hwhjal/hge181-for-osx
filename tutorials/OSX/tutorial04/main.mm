@@ -52,7 +52,7 @@ void boom()
 {
 	int pan=int((x-256)/2.56f);
 	float pitch=(dx*dx+dy*dy)*0.0005f+0.2f;
-	// hge->Effect_PlayEx(snd,100,pan,pitch);
+	hge->Effect_PlayEx(snd,100,pan,pitch);
 }
 
 // This function will be called by HGE when
@@ -158,9 +158,9 @@ int main (int argc, char * const argv[])
 	
 	if(hge->System_Initiate()) 
 	{
-		// snd=hge->Effect_Load("menu.wav");
+		snd=hge->Effect_Load("menu.wav");
 		tex=hge->Texture_Load("particles.png");
-		if(/*!snd || */!tex)
+		if(!snd || !tex)
 		{
 			// If one of the data files is not found, display
 			// an error message and shutdown.
