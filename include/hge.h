@@ -59,7 +59,7 @@ typedef	void* HWND;
  ** Common data types
  */
 #ifndef DWORD
-typedef uint32_t			DWORD;
+typedef unsigned long		DWORD;
 typedef unsigned short      WORD;
 typedef unsigned char       BYTE;
 #endif

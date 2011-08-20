@@ -1,0 +1,442 @@
+Tzlib
+v7
+r0
+t335542958.345185
+cCheck dependencies
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/adler32.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/crc32.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inffast.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inflate.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inftrees.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/ioapi.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/trees.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/uncompr.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/unzip.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zutil.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c normal x86_64 c com.apple.compilers.gcc.4_2
+cLibtool /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a normal x86_64
+cPBXCp build/Debug/../../../../../../lib/OSX/libzlib.a build/Debug/libzlib.a
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004D5A274300000000000000EE
+t1297753923
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/errno.h
+c000000004BBD2CE900000000000003EB
+t1270689001
+s1003
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004BBD2CE90000000000002DF5
+t1270689001
+s11765
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004BBD2CE90000000000001731
+t1270689001
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004CC3DE680000000000002905
+t1287904872
+s10501
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004BBD2CE9000000000000563E
+t1270689001
+s22078
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004A11EB240000000000003197
+t1242688292
+s12695
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/crypt.h
+c00000000460A5968000000000000127A
+t1175083368
+s4730
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/deflate.h
+c00000000460A59680000000000002F34
+t1175083368
+s12084
+i"zutil.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/inffast.h
+c00000000460A59680000000000000194
+t1175083368
+s404
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/inflate.h
+c00000000460A59680000000000001407
+t1175083368
+s5127
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/inftrees.h
+c00000000460A59680000000000000881
+t1175083368
+s2177
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/ioapi.h
+c00000000460A596800000000000009DD
+t1175083368
+s2525
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/trees.h
+c00000000460A5968000000000000648F
+t1175083368
+s25743
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/unzip.h
+c00000000460A5968000000000000315B
+t1175083368
+s12635
+i"zlib.h"
+i"ioapi.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zconf.h
+c00000000460A596800000000000022EA
+t1175083368
+s8938
+i<windows.h>
+i<sys/types.h>
+i<unistd.h>
+i<unixio.h>
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib.h
+c00000000460A5968000000000000E52B
+t1175083368
+s58667
+i"zconf.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c
+c00000000460A59680000000000000478
+t1175083368
+s1144
+i"zlib.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c
+c00000000460A596800000000000067D0
+t1175083368
+s26576
+i"zutil.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c
+c00000000460A59680000000000001DE2
+t1175083368
+s7650
+i"zutil.h"
+i"inftrees.h"
+i"inflate.h"
+i"inffast.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c
+c00000000460A59680000000000008A51
+t1175083368
+s35409
+i"zutil.h"
+i"inftrees.h"
+i"inflate.h"
+i"inffast.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c
+c00000000460A59680000000000002EED
+t1175083368
+s12013
+i"zutil.h"
+i"inftrees.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c
+c00000000460A59680000000000000A7B
+t1175083368
+s2683
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i"zlib.h"
+i"ioapi.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c
+c00000000460A59680000000000007F46
+t1175083368
+s32582
+i"deflate.h"
+i"trees.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c
+c00000000460A59680000000000000849
+t1175083368
+s2121
+i"zlib.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c
+c00000000460A59680000000000009C97
+t1175083368
+s40087
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i"zlib.h"
+i"unzip.h"
+i<stddef.h>
+i<string.h>
+i<stdlib.h>
+i<errno.h>
+i"crypt.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c
+c00000000460A59680000000000000A8B
+t1175083368
+s2699
+i"zutil.h"
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/../../../../../../lib/OSX/libzlib.a
+t1313850158
+s138872
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/../../../../../lib/OSX/libzlib.a
+t1313850155
+s138872
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a
+t1313850031
+s138872
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/adler32.o
+t1313850030
+s3384
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/crc32.o
+t1313850030
+s13120
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inffast.o
+t1313850030
+s7960
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inflate.o
+t1313850031
+s24468
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inftrees.o
+t1313850031
+s6236
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/ioapi.o
+t1313850031
+s8412
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/trees.o
+t1313850031
+s36444
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/uncompr.o
+t1313850031
+s3880
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/unzip.o
+t1313850031
+s28076
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zlib.LinkFileList
+c000000004E4FC2AE0000000000000501
+t1313850030
+s1281
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zutil.o
+t1313850031
+s4792
+
+N/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zutil.h
+c00000000460A59680000000000000F06
+t1175083368
+s3846
+i"zlib.h"
+i<stddef.h>
+i<string.h>
+i<stdlib.h>
+i<errno.h>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies335542958#335542958#0(0"0(0#1#0"8640895232#0"0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/adler32.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.816780
+e335542830.950784
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/adler32.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c335542830#335542830#0(0"0(0#0#75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c8644633824#1489"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../adler32.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/adler32.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/crc32.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.817745
+e335542830.950963
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/crc32.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c335542830#335542830#0(0"0(0#0#73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c8644430272#1485"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../crc32.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/crc32.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inffast.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.818607
+e335542830.949389
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inffast.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c335542830#335542830#0(0"0(0#0#75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c8644241888#1489"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inffast.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inffast.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inflate.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.819540
+e335542831.022864
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inflate.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c: In function 'inflate':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:702: warning: passing argument 5 of 'inflate_table' from incompatible pointer type
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:744: warning: passing argument 5 of 'inflate_table' from incompatible pointer type
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:749: warning: passing argument 5 of 'inflate_table' from incompatible pointer type
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c: In function 'inflateSync':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:995: warning: passing argument 1 of 'syncsearch' from incompatible pointer type
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:999: warning: passing argument 1 of 'syncsearch' from incompatible pointer type
+lSLF07#2@83"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c335542830#335542831#0(993"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c: In function 'inflate':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:702: warning: passing argument 5 of 'inflate_table' from incompatible pointer type/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:744: warning: passing argument 5 of 'inflate_table' from incompatible pointer type/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:749: warning: passing argument 5 of 'inflate_table' from incompatible pointer type/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c: In function 'inflateSync':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:995: warning: passing argument 1 of 'syncsearch' from incompatible pointer type/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c:999: warning: passing argument 1 of 'syncsearch' from incompatible pointer type5(22@68"Passing argument 5 of 'inflate_table' from incompatible pointer type335542830#100#159#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c196776168#702#0#702#0#56"passing argument * of '*' from incompatible pointer type0(22@68"Passing argument 5 of 'inflate_table' from incompatible pointer type335542830#259#159#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c196776168#744#0#744#0#56"passing argument * of '*' from incompatible pointer type0(22@68"Passing argument 5 of 'inflate_table' from incompatible pointer type335542830#418#159#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c196776168#749#0#749#0#56"passing argument * of '*' from incompatible pointer type0(22@65"Passing argument 1 of 'syncsearch' from incompatible pointer type335542830#681#156#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c196776168#995#0#995#0#56"passing argument * of '*' from incompatible pointer type0(22@65"Passing argument 1 of 'syncsearch' from incompatible pointer type335542830#837#156#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c196776168#999#0#999#0#56"passing argument * of '*' from incompatible pointer type0(0#0#75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c8643913888#1489"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inflate.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inflate.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inftrees.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.949512
+e335542831.018817
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inftrees.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c335542830#335542831#0(0"0(0#0#76"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c8642003264#1491"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../inftrees.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/inftrees.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/ioapi.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.951056
+e335542831.017418
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/ioapi.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c: In function 'fill_fopen_filefunc':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c:102: warning: assignment from incompatible pointer type
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c:103: warning: assignment from incompatible pointer type
+lSLF07#2@81"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c335542830#335542831#0(370"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c: In function 'fill_fopen_filefunc':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c:102: warning: assignment from incompatible pointer type/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c:103: warning: assignment from incompatible pointer type2(22@41"Assignment from incompatible pointer type335542831#110#130#0(6@73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c196776168#102#0#102#0#41"assignment from incompatible pointer type0(22@41"Assignment from incompatible pointer type335542831#240#130#0(6@73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c196776168#103#0#103#0#41"assignment from incompatible pointer type0(0#0#73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c8640888544#1485"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../ioapi.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/ioapi.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/trees.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542830.952149
+e335542831.120244
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/trees.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c: In function '_tr_flush_block':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c:838: warning: comparison of distinct pointer types lacks a cast
+lSLF07#2@81"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c335542830#335542831#0(244"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c: In function '_tr_flush_block':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c:838: warning: comparison of distinct pointer types lacks a cast1(22@49"Comparison of distinct pointer types lacks a cast335542831#106#138#0(6@73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c196776168#838#0#838#0#0"0(0#0#73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c8637571296#1485"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../trees.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/trees.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/uncompr.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542831.017546
+e335542831.066886
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/uncompr.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c: In function 'uncompress':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c:52: warning: pointer targets in passing argument 2 of 'inflateInit_' differ in signedness
+lSLF07#2@83"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c335542831#335542831#0(269"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c: In function 'uncompress':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c:52: warning: pointer targets in passing argument 2 of 'inflateInit_' differ in signedness1(22@76"Pointer targets in passing argument 2 of 'inflateInit_' differ in signedness335542831#103#166#0(6@75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c196776168#52#0#52#0#65"pointer targets in passing argument * of '*' differ in signedness0(0#0#75"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c8634559584#1489"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../uncompr.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/uncompr.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/unzip.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542831.018899
+e335542831.167346
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/unzip.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c: In function 'unzOpenCurrentFile3':
+o/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c:1131: warning: pointer targets in passing argument 3 of 'inflateInit2_' differ in signedness
+lSLF07#2@81"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c335542831#335542831#0(277"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c: In function 'unzOpenCurrentFile3':/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c:1131: warning: pointer targets in passing argument 3 of 'inflateInit2_' differ in signedness1(22@77"Pointer targets in passing argument 3 of 'inflateInit2_' differ in signedness335542831#110#167#0(6@73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c196776168#1131#0#1131#0#65"pointer targets in passing argument * of '*' differ in signedness0(0#0#73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c8631951008#1485"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../unzip.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/unzip.o0#
+
+CCompileC build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zutil.o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c normal x86_64 c com.apple.compilers.gcc.4_2
+s335542831.022996
+e335542831.070097
+r1
+xCompileC
+xbuild/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zutil.o
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c335542831#335542831#0(0"0(0#0#73"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c8629209952#1485"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-generated-files.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-own-target-headers.hmap -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-all-target-headers.hmap -iquote /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/zlib-project-headers.hmap -F/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/include -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources/x86_64 -I/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/DerivedSources -c /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/../zutil.c -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zutil.o0#
+
+CLibtool /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a normal x86_64
+s335542831.167457
+e335542831.204521
+r1
+xLibtool
+x/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a
+xnormal
+xx86_64
+lSLF07#2@43"Libtool build/Debug/libzlib.a normal x86_64335542831#335542831#0(0"0(0#0#0"8643719392#523"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug -filelist /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/zlib.build/Debug/zlib.build/Objects-normal/x86_64/zlib.LinkFileList -o /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a0#
+
+CPBXCp build/Debug/../../../../../../lib/OSX/libzlib.a build/Debug/libzlib.a
+s335542958.330558
+e335542958.345120
+r1
+xPBXCp
+xbuild/Debug/../../../../../../lib/OSX/libzlib.a
+xbuild/Debug/libzlib.a
+lSLF07#2@26"Copy build/Debug/libzlib.a335542958#335542958#0(0"0(0#0#84"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a8613128576#418"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/../../../../../../lib/OSX0#
+
+CPBXCp build/Debug/../../../../../lib/OSX/libzlib.a build/Debug/libzlib.a
+s335542955.802900
+e335542955.816208
+r1
+xPBXCp
+xbuild/Debug/../../../../../lib/OSX/libzlib.a
+xbuild/Debug/libzlib.a
+lSLF07#2@26"Copy build/Debug/libzlib.a335542955#335542955#0(0"0(0#0#84"/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a8635621856#415"    cd /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/libzlib.a /Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/build/Debug/../../../../../lib/OSX0#
+

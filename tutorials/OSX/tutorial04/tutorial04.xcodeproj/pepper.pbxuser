@@ -130,12 +130,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335520364;
-			PBXWorkspaceStateSaveDate = 335520364;
+			PBXPerProjectTemplateStateSaveDate = 335523264;
+			PBXWorkspaceStateSaveDate = 335523264;
 		};
 		perUserProjectItems = {
-			56A3DEC513FFA2A100F54E5A /* PBXTextBookmark */ = 56A3DEC513FFA2A100F54E5A /* PBXTextBookmark */;
-			56A58D9E13FDAA8500C081BE /* PBXTextBookmark */ = 56A58D9E13FDAA8500C081BE /* PBXTextBookmark */;
+			56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */ = 56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */;
+			56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */ = 56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -143,9 +143,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2665}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2678}}";
 			sepNavSelRange = "{3055, 0}";
-			sepNavVisRange = "{2860, 1852}";
+			sepNavVisRange = "{2860, 1830}";
 		};
 	};
 	5618F46013F4894D007BA885 /* font2.fnt */ = {
@@ -155,14 +155,24 @@
 			sepNavVisRange = "{0, 957}";
 		};
 	};
-	56A3DEC513FFA2A100F54E5A /* PBXTextBookmark */ = {
+	56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
 		name = "main.mm: 134";
 		rLen = 0;
 		rLoc = 3055;
 		rType = 0;
-		vrLen = 1852;
+		vrLen = 1830;
+		vrLoc = 2860;
+	};
+	56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 134";
+		rLen = 0;
+		rLoc = 3055;
+		rType = 0;
+		vrLen = 1830;
 		vrLoc = 2860;
 	};
 	56A58CDF13FDA51700C081BE /* main.mm:159 */ = {
@@ -182,16 +192,6 @@
 		modificationTime = 335389989.028791;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
-	};
-	56A58D9E13FDAA8500C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 60";
-		rLen = 0;
-		rLoc = 1262;
-		rType = 0;
-		vrLen = 1636;
-		vrLoc = 852;
 	};
 	56A7979C11970AF500D63247 /* tutorial04 */ = {
 		isa = PBXExecutable;

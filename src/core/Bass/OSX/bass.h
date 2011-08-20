@@ -17,7 +17,7 @@ typedef unsigned __int64 QWORD;
 #define CALLBACK
 typedef uint8_t BYTE;
 typedef uint16_t WORD;
-typedef uint32_t DWORD;
+typedef unsigned long DWORD;
 typedef uint64_t QWORD;
 #ifndef __OBJC__
 typedef int BOOL;
