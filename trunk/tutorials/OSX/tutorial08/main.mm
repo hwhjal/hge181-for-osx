@@ -20,8 +20,8 @@ hgeFont		*fnt=0;
 
 // Simulation constants1
 
-#define SCREEN_WIDTH	1280
-#define SCREEN_HEIGHT	1024
+#define SCREEN_WIDTH	1024
+#define SCREEN_HEIGHT	768
 #define NUM_STARS		100
 #define SEA_SUBDIVISION 16
 
@@ -154,10 +154,11 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 08 - The Big Calm");
 	hge->System_SetState(HGE_USESOUND, false);
-	hge->System_SetState(HGE_WINDOWED, false);
+	hge->System_SetState(HGE_WINDOWED, true);
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
+	hge->System_SetState(HGE_FPS, 60);	
 	
 	if(hge->System_Initiate())
 	{

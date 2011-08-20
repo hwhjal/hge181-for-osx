@@ -17,7 +17,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 56A7979C11970AF500D63247 /* tutorial07 */;
 		activeTarget = 8D1107260486CEB800E47090 /* tutorial07 */;
 		addToTargets = (
@@ -113,11 +113,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335392647;
-			PBXWorkspaceStateSaveDate = 335392647;
+			PBXPerProjectTemplateStateSaveDate = 335520487;
+			PBXWorkspaceStateSaveDate = 335520487;
 		};
 		perUserProjectItems = {
-			56A58ED513FDAFC400C081BE /* PBXBookmark */ = 56A58ED513FDAFC400C081BE /* PBXBookmark */;
+			56A3DF2513FFA30700F54E5A /* PBXTextBookmark */ = 56A3DF2513FFA30700F54E5A /* PBXTextBookmark */;
 			56A58EE713FDAFCB00C081BE /* PBXTextBookmark */ = 56A58EE713FDAFCB00C081BE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
@@ -126,14 +126,20 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1384, 3159}}";
-			sepNavSelRange = "{5019, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1384, 3042}}";
+			sepNavSelRange = "{5025, 0}";
 			sepNavVisRange = "{4717, 1210}";
 		};
 	};
-	56A58ED513FDAFC400C081BE /* PBXBookmark */ = {
-		isa = PBXBookmark;
+	56A3DF2513FFA30700F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 201";
+		rLen = 0;
+		rLoc = 5025;
+		rType = 0;
+		vrLen = 1210;
+		vrLoc = 4717;
 	};
 	56A58EE713FDAFCB00C081BE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

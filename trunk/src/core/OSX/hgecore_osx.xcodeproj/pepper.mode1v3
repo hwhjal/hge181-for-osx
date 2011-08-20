@@ -275,8 +275,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -330,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>56A58E9613FDAEB700C081BE</string>
+										<string>56A3DE3D13FFA1B000F54E5A</string>
 										<key>history</key>
 										<array>
 											<string>5601444F13FC5F660079D4EA</string>
@@ -344,7 +342,7 @@
 											<string>56A58D1D13FDA7EE00C081BE</string>
 											<string>56A58DB913FDAB5700C081BE</string>
 											<string>56A58DBA13FDAB5700C081BE</string>
-											<string>56A58DBB13FDAB5700C081BE</string>
+											<string>56A3DDF613FFA10000F54E5A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -402,9 +400,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56A58CA213FDA3B400C081BE</string>
+				<string>56A3DE3E13FFA1B000F54E5A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>56A58CA313FDA3B400C081BE</string>
+				<string>56A3DE3F13FFA1B000F54E5A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -542,7 +540,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>5618F0D213F4719A007BA885</string>
 		<string>/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/OSX/hgecore_osx.xcodeproj</string>
 	</array>
@@ -563,14 +560,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>hge.h</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -626,7 +621,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5618F0D213F4719A007BA885</string>
-				<string>56A58C7913FDA1B900C081BE</string>
+				<string>56A3DE4013FFA1B000F54E5A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
