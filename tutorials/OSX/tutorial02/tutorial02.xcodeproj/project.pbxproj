@@ -21,6 +21,7 @@
 		5618F47313F4894D007BA885 /* trail.psi in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46613F4894D007BA885 /* trail.psi */; };
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
+		56A3DF8713FFA48700F54E5A /* tutorial01.app in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* tutorial01.app */; };
 		56A58E5413FDAD1800C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E5313FDAD1800C081BE /* libbass.dylib */; };
 		56A58E5613FDAD1800C081BE /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E5513FDAD1800C081BE /* libhgecore.a */; };
 		56A58E5813FDAD1800C081BE /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58E5713FDAD1800C081BE /* libhgehelp.a */; };
@@ -246,6 +247,7 @@
 				5618F47213F4894D007BA885 /* texture.jpg in Resources */,
 				5618F47313F4894D007BA885 /* trail.psi in Resources */,
 				5618F47413F4894D007BA885 /* zazaka.png in Resources */,
+				56A3DF8713FFA48700F54E5A /* tutorial01.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +350,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

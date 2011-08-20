@@ -17,7 +17,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 56A7979C11970AF500D63247 /* tutorial03 */;
 		activeTarget = 8D1107260486CEB800E47090 /* tutorial03 */;
 		addToTargets = (
@@ -55,6 +55,20 @@
 					PBXBreakpointsDataSource_ConditionID,
 					PBXBreakpointsDataSource_IgnoreCountID,
 					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					721,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
 				);
 			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -113,13 +127,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335392721;
-			PBXWorkspaceStateSaveDate = 335392721;
+			PBXPerProjectTemplateStateSaveDate = 335520971;
+			PBXWorkspaceStateSaveDate = 335520971;
 		};
 		perUserProjectItems = {
-			56A58EBD13FDAF7E00C081BE /* PBXTextBookmark */ = 56A58EBD13FDAF7E00C081BE /* PBXTextBookmark */;
-			56A58EC013FDAF7E00C081BE /* PBXTextBookmark */ = 56A58EC013FDAF7E00C081BE /* PBXTextBookmark */;
-			56A58F0213FDAFE100C081BE /* PBXTextBookmark */ = 56A58F0213FDAFE100C081BE /* PBXTextBookmark */;
+			56A3DE9D13FFA26500F54E5A /* PBXTextBookmark */ = 56A3DE9D13FFA26500F54E5A /* PBXTextBookmark */;
+			56A3DFCE13FFA5BF00F54E5A /* PBXTextBookmark */ = 56A3DFCE13FFA5BF00F54E5A /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -127,47 +140,30 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2314}}";
-			sepNavSelRange = "{3230, 0}";
-			sepNavVisRange = "{2590, 1709}";
+			sepNavIntBoundsRect = "{{0, 0}, {1258, 1859}}";
+			sepNavSelRange = "{2917, 0}";
+			sepNavVisRange = "{2263, 1234}";
 		};
 	};
-	56A58EBD13FDAF7E00C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 56A58EBE13FDAF7E00C081BE /* hge_tut03.cpp */;
-		name = "hge_tut03.cpp: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1499;
-		vrLoc = 97;
-	};
-	56A58EBE13FDAF7E00C081BE /* hge_tut03.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = hge_tut03.cpp;
-		path = /Users/pepper/Work/hge181/tutorials/Win32/tutorial03/hge_tut03.cpp;
-		sourceTree = "<absolute>";
-	};
-	56A58EC013FDAF7E00C081BE /* PBXTextBookmark */ = {
+	56A3DE9D13FFA26500F54E5A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 128";
+		name = "main.mm: 144";
 		rLen = 0;
-		rLoc = 3017;
-		rType = 0;
-		vrLen = 1668;
-		vrLoc = 2631;
-	};
-	56A58F0213FDAFE100C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 133";
-		rLen = 0;
-		rLoc = 3230;
+		rLoc = 327;
 		rType = 0;
 		vrLen = 1709;
 		vrLoc = 2590;
+	};
+	56A3DFCE13FFA5BF00F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 117";
+		rLen = 0;
+		rLoc = 2917;
+		rType = 0;
+		vrLen = 1234;
+		vrLoc = 2263;
 	};
 	56A7979C11970AF500D63247 /* tutorial03 */ = {
 		isa = PBXExecutable;

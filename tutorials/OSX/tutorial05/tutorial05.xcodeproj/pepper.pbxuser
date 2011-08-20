@@ -10,14 +10,14 @@
 	};
 	256AC3F00F4B6AF500CF3369 /* tutorial01_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1219, 260}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 601}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 151}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 56A7979C11970AF500D63247 /* tutorial05 */;
 		activeTarget = 8D1107260486CEB800E47090 /* tutorial05 */;
 		addToTargets = (
@@ -96,7 +96,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					301,
+					793,
 					60,
 					20,
 					48,
@@ -113,12 +113,19 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335391835;
-			PBXWorkspaceStateSaveDate = 335391835;
+			PBXPerProjectTemplateStateSaveDate = 335522365;
+			PBXWorkspaceStateSaveDate = 335522365;
 		};
 		perUserProjectItems = {
-			56A58E4A13FDACA400C081BE /* PBXBookmark */ = 56A58E4A13FDACA400C081BE /* PBXBookmark */;
-			56A58E4B13FDACA400C081BE /* PBXTextBookmark */ = 56A58E4B13FDACA400C081BE /* PBXTextBookmark */;
+			56A3DEE513FFA2C400F54E5A = 56A3DEE513FFA2C400F54E5A /* PBXTextBookmark */;
+			56A3E00113FFAA4200F54E5A /* PBXTextBookmark */ = 56A3E00113FFAA4200F54E5A /* PBXTextBookmark */;
+			56A3E01013FFAA4B00F54E5A /* PBXTextBookmark */ = 56A3E01013FFAA4B00F54E5A /* PBXTextBookmark */;
+			56A3E01513FFAA8C00F54E5A /* PBXTextBookmark */ = 56A3E01513FFAA8C00F54E5A /* PBXTextBookmark */;
+			56A3E01613FFAA8C00F54E5A /* PBXTextBookmark */ = 56A3E01613FFAA8C00F54E5A /* PBXTextBookmark */;
+			56A3E01713FFAA8C00F54E5A /* PBXBookmark */ = 56A3E01713FFAA8C00F54E5A /* PBXBookmark */;
+			56A3E01813FFAA8C00F54E5A /* PlistBookmark */ = 56A3E01813FFAA8C00F54E5A /* PlistBookmark */;
+			56A3E01C13FFAB1500F54E5A /* PlistBookmark */ = 56A3E01C13FFAB1500F54E5A /* PlistBookmark */;
+			56A58E4B13FDACA400C081BE = 56A58E4B13FDACA400C081BE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -126,14 +133,86 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2236}}";
-			sepNavSelRange = "{444, 0}";
-			sepNavVisRange = "{2584, 1393}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2171}}";
+			sepNavSelRange = "{2871, 0}";
+			sepNavVisRange = "{2584, 1390}";
 		};
 	};
-	56A58E4A13FDACA400C081BE /* PBXBookmark */ = {
-		isa = PBXBookmark;
+	56A3DEE513FFA2C400F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 139";
+		rLen = 0;
+		rLoc = 3248;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 2584;
+	};
+	56A3E00113FFAA4200F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 127";
+		rLen = 0;
+		rLoc = 2871;
+		rType = 0;
+		vrLen = 1386;
+		vrLoc = 2584;
+	};
+	56A3E01013FFAA4B00F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 127";
+		rLen = 0;
+		rLoc = 2871;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 2584;
+	};
+	56A3E01513FFAA8C00F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 127";
+		rLen = 0;
+		rLoc = 2871;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 2584;
+	};
+	56A3E01613FFAA8C00F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3F00F4B6AF500CF3369 /* tutorial01_Prefix.pch */;
+		name = "tutorial01_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 151;
+		vrLoc = 0;
+	};
+	56A3E01713FFAA8C00F54E5A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D1107310486CEB800E47090 /* tutorial01-Info.plist */;
+	};
+	56A3E01813FFAA8C00F54E5A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* tutorial01-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/tutorials/OSX/tutorial05/tutorial01-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	56A3E01C13FFAB1500F54E5A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* tutorial01-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/tutorials/OSX/tutorial05/tutorial01-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	56A58E4B13FDACA400C081BE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

@@ -2,7 +2,7 @@
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = D2AAC07D0554694100DB518D /* hgecore */;
 		addToTargets = (
 			D2AAC07D0554694100DB518D /* hgecore */,
@@ -55,11 +55,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335388992;
-			PBXWorkspaceStateSaveDate = 335388992;
+			PBXPerProjectTemplateStateSaveDate = 335520146;
+			PBXWorkspaceStateSaveDate = 335520146;
 		};
 		perUserProjectItems = {
 			5601444F13FC5F660079D4EA /* PBXTextBookmark */ = 5601444F13FC5F660079D4EA /* PBXTextBookmark */;
+			56A3DDF613FFA10000F54E5A /* PBXTextBookmark */ = 56A3DDF613FFA10000F54E5A /* PBXTextBookmark */;
+			56A3DE3D13FFA1B000F54E5A /* PBXTextBookmark */ = 56A3DE3D13FFA1B000F54E5A /* PBXTextBookmark */;
 			56A58C9E13FDA3B400C081BE /* PBXTextBookmark */ = 56A58C9E13FDA3B400C081BE /* PBXTextBookmark */;
 			56A58CA013FDA3B400C081BE /* PBXTextBookmark */ = 56A58CA013FDA3B400C081BE /* PBXTextBookmark */;
 			56A58D1613FDA7EE00C081BE /* PBXTextBookmark */ = 56A58D1613FDA7EE00C081BE /* PBXTextBookmark */;
@@ -69,8 +71,6 @@
 			56A58D1D13FDA7EE00C081BE /* PBXTextBookmark */ = 56A58D1D13FDA7EE00C081BE /* PBXTextBookmark */;
 			56A58DB913FDAB5700C081BE /* PBXTextBookmark */ = 56A58DB913FDAB5700C081BE /* PBXTextBookmark */;
 			56A58DBA13FDAB5700C081BE /* PBXTextBookmark */ = 56A58DBA13FDAB5700C081BE /* PBXTextBookmark */;
-			56A58DBB13FDAB5700C081BE /* PBXTextBookmark */ = 56A58DBB13FDAB5700C081BE /* PBXTextBookmark */;
-			56A58E9613FDAEB700C081BE /* PBXTextBookmark */ = 56A58E9613FDAEB700C081BE /* PBXTextBookmark */;
 			56AE3A3913FD71D300600AD1 /* PBXTextBookmark */ = 56AE3A3913FD71D300600AD1 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 5618F0D413F4719A007BA885 /* Source Control */;
@@ -166,9 +166,9 @@
 	};
 	5618F1EB13F477A9007BA885 /* system.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1092, 11388}}";
-			sepNavSelRange = "{12974, 11}";
-			sepNavVisRange = "{12760, 242}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 11557}}";
+			sepNavSelRange = "{11201, 0}";
+			sepNavVisRange = "{11121, 1504}";
 			sepNavWindowFrame = "{{15, 439}, {750, 558}}";
 		};
 	};
@@ -186,17 +186,32 @@
 		path = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/_experimental/core/win32/resource.cpp";
 		sourceTree = "<absolute>";
 	};
+	56A3DDF613FFA10000F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		name = "system.mm: 560";
+		rLen = 0;
+		rLoc = 11752;
+		rType = 0;
+		vrLen = 1648;
+		vrLoc = 11346;
+	};
+	56A3DE3D13FFA1B000F54E5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
+		name = "system.mm: 541";
+		rLen = 0;
+		rLoc = 11201;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 11121;
+	};
 	56A58C5F13FDA13700C081BE /* hge.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
 		name = hge.h;
 		path = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/OSX/../../../include/hge.h";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1219, 8723}}";
-			sepNavSelRange = "{1570, 1}";
-			sepNavVisRange = "{1231, 968}";
-		};
 	};
 	56A58C9E13FDA3B400C081BE /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -288,34 +303,12 @@
 		vrLen = 1338;
 		vrLoc = 0;
 	};
-	56A58DBB13FDAB5700C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
-		rLen = 11;
-		rLoc = 13577;
-		rType = 0;
-	};
-	56A58E9613FDAEB700C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 5618F1EB13F477A9007BA885 /* system.mm */;
-		name = "system.mm: 552";
-		rLen = 0;
-		rLoc = 11462;
-		rType = 0;
-		vrLen = 1629;
-		vrLoc = 11365;
-	};
 	56AE392813FD6A4300600AD1 /* sound.cpp */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.cpp.cpp;
 		name = sound.cpp;
 		path = /Users/pepper/Work/hge181/src/core/Win32/sound.cpp;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 7462}}";
-			sepNavSelRange = "{0, 12164}";
-			sepNavVisRange = "{0, 1522}";
-		};
 	};
 	56AE3A3913FD71D300600AD1 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
