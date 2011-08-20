@@ -269,15 +269,14 @@
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>56A3DF8B13FFA4B500F54E5A</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>0</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -328,10 +327,10 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>56A3DF8C13FFA4B500F54E5A</string>
+										<string>56A3E05C13FFAD4E00F54E5A</string>
 										<key>history</key>
 										<array>
-											<string>56A3DF7913FFA46900F54E5A</string>
+											<string>56A3E05113FFAD2500F54E5A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -343,14 +342,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 571}}</string>
+								<string>{{0, 0}, {1072, 558}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>571pt</string>
+							<string>558pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -363,14 +362,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 576}, {1072, 253}}</string>
+								<string>{{0, 563}, {1072, 266}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>253pt</string>
+							<string>266pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -389,9 +388,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56A3DF8D13FFA4B500F54E5A</string>
+				<string>56A3E05D13FFAD4E00F54E5A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>56A3DF8E13FFA4B500F54E5A</string>
+				<string>56A3E05E13FFAD4E00F54E5A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -610,7 +609,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>56A58E6613FDAD4100C081BE</string>
-				<string>56A3DF8F13FFA4B500F54E5A</string>
+				<string>56A3E05F13FFAD4E00F54E5A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

@@ -26,12 +26,17 @@
 #import <OpenGL/gl.h>
 #import <OpenGl/glu.h>
 
-// Bass
-#include "../Bass/OSX/bass.h"
-
 // HGE
 #import "cocoa_app.h"
 #include "hge_impl.h"
+
+#undef DWORD
+// Bass
+#include "../Bass/OSX/bass.h"
+
+#undef DWORD
+// Zlib
+#include "../ZLIB/unzip.h"
 
 
 #endif	// #ifndef _MAIN_H_

@@ -119,12 +119,12 @@ public:
 //	
 	virtual void*		CALL	Resource_Load(const char *filename, DWORD *size=0);
 	virtual void		CALL	Resource_Free(void *res);
-	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0) {ASSERT(0);};
-	virtual void		CALL	Resource_RemovePack(const char *filename) {ASSERT(0);};
-	virtual void		CALL	Resource_RemoveAllPacks() {ASSERT(0);};
+	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0);
+	virtual void		CALL	Resource_RemovePack(const char *filename);
+	virtual void		CALL	Resource_RemoveAllPacks();
 	virtual char*		CALL	Resource_MakePath(const char *filename=0);
-	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0) {ASSERT(0);};
-	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0) {ASSERT(0);};
+	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0);
+	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0);
 //	
 	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
 	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return 1;} // {ASSERT(0);};
