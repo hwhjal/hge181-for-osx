@@ -14,6 +14,7 @@
 
 #include <string.h>
 #include <ctype.h>
+
 #ifndef HAVE_STRUPR
 char *strupr(char *str)
 {
@@ -24,6 +25,34 @@ char *strupr(char *str)
 	return str;
 }
 #endif
+
+char *HGE_Impl::getNextSearchResult (NSString *fileType)
+{
+	if (!hSearch)
+		return 0;
+	
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	
+	while (searchIndex < fileSearcher.gl_matchc)
+	{
+		NSError *err = 0;
+		NSString *file = [[NSString alloc] initWithBytes:fileSearcher.gl_pathv[searchIndex] length:strlen(fileSearcher.gl_pathv[searchIndex]) encoding:NSASCIIStringEncoding];
+		searchIndex++;
+		NSDictionary *sourceDirectoryFileAttributes = [localFileManager attributesOfItemAtPath: file error:&err];			
+		NSString *sourceDirectoryFileType = [sourceDirectoryFileAttributes objectForKey:NSFileType];			
+		file = [file lastPathComponent];
+		if ([sourceDirectoryFileType isEqualToString:fileType] == YES)
+		{
+			memset(szFindFileData, 0, _MAX_PATH);
+			strcpy(szFindFileData, [file cStringUsingEncoding:NSASCIIStringEncoding]);
+			[pool release];
+			return szFindFileData;
+		}
+	}
+	[pool release];
+	return 0;
+}
 
 
 bool CALL HGE_Impl::Resource_AttachPack(const char *filename, const char *password)
@@ -231,51 +260,56 @@ char* CALL HGE_Impl::Resource_MakePath(const char *filename)
 
 char* CALL HGE_Impl::Resource_EnumFiles(const char *wildcard)
 {
-	/*if(wildcard)
+	if (wildcard)
 	{
-		if(hSearch) { FindClose(hSearch); hSearch=0; }
-		hSearch=FindFirstFile(Resource_MakePath(wildcard), &SearchData);
-		if(hSearch==INVALID_HANDLE_VALUE) { hSearch=0; return 0; }
-		
-		if(!(SearchData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) return SearchData.cFileName;
-		else return Resource_EnumFiles();
+		char* pattern = Resource_MakePath (wildcard);
+		if (hSearch) {globfree(&fileSearcher); hSearch = false; searchIndex = 0;}
+		if (glob(pattern, 0, NULL, &fileSearcher) == 0 && fileSearcher.gl_matchc > 0)
+		{
+			hSearch = true;
+			return getNextSearchResult (NSFileTypeRegular);
+		}
+		else {globfree(&fileSearcher); hSearch = false; searchIndex = 0; return 0;}
 	}
 	else
 	{
 		if(!hSearch) return 0;
-		for(;;)
+		
+		if(searchIndex >= fileSearcher.gl_matchc)
 		{
-			if(!FindNextFile(hSearch, &SearchData))	{ FindClose(hSearch); hSearch=0; return 0; }
-			if(!(SearchData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) return SearchData.cFileName;
+			globfree(&fileSearcher); hSearch = false; searchIndex = 0;	
+			return 0;			
 		}
-	}*/
+		return getNextSearchResult (NSFileTypeRegular);
+	}	
 	
 	return 0;
 }
 
 char* CALL HGE_Impl::Resource_EnumFolders(const char *wildcard)
 {
-/*	if(wildcard)
+	if (wildcard)
 	{
-		if(hSearch) { FindClose(hSearch); hSearch=0; }
-		hSearch=FindFirstFile(Resource_MakePath(wildcard), &SearchData);
-		if(hSearch==INVALID_HANDLE_VALUE) { hSearch=0; return 0; }
-		
-		if((SearchData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) &&
-		   strcmp(SearchData.cFileName,".") && strcmp(SearchData.cFileName,".."))
-			return SearchData.cFileName;
-		else return Resource_EnumFolders();
+		char* pattern = Resource_MakePath (wildcard);
+		if (hSearch) {globfree(&fileSearcher); hSearch = false; searchIndex = 0;}
+		if (glob(pattern, 0, NULL, &fileSearcher) == 0 && fileSearcher.gl_matchc > 0)
+		{
+			hSearch = true;
+			return getNextSearchResult (NSFileTypeDirectory);
+		}
+		else {globfree(&fileSearcher); hSearch = false; searchIndex = 0; return 0;}
 	}
 	else
 	{
 		if(!hSearch) return 0;
-		for(;;)
+		
+		if(searchIndex >= fileSearcher.gl_matchc)
 		{
-			if(!FindNextFile(hSearch, &SearchData))	{ FindClose(hSearch); hSearch=0; return 0; }
-			if((SearchData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) &&
-			   strcmp(SearchData.cFileName,".") && strcmp(SearchData.cFileName,".."))
-				return SearchData.cFileName;
+			globfree(&fileSearcher); hSearch = false; searchIndex = 0;	
+			return 0;			
 		}
-	}*/
+		return getNextSearchResult (NSFileTypeDirectory);
+	}	
+	
 	return 0;
 }

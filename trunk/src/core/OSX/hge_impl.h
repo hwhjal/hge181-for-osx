@@ -125,6 +125,7 @@ public:
 	virtual char*		CALL	Resource_MakePath(const char *filename=0);
 	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0);
 	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0);
+	char*						getNextSearchResult (NSString *fileType);
 //	
 	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
 	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return 1;} // {ASSERT(0);};
@@ -314,9 +315,15 @@ public:
 	
 	
 	// Resources
+	NSBundle			*mainBundle;
 	char				szTmpFilename[_MAX_PATH];
 	CResourceList*		res;
-	// HANDLE				hSearch;
+	glob_t				fileSearcher;
+	NSFileManager		*localFileManager;
+	bool				hSearch;
+	int					searchIndex;
+	char				szFindFileData[_MAX_PATH];
+
 	// WIN32_FIND_DATA		SearchData;	
 	
 	// Timer

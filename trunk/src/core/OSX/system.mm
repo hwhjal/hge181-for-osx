@@ -36,9 +36,6 @@ HGE_Impl::HGE_Impl()
 	bActive=false;
 	szError[0]=0;
 	
-	/*pD3D=0;
-	pD3DDevice=0;
-	d3dpp=0;*/
 	pTargets=0;
 	pCurTarget=0;
 	VertArray=0;
@@ -53,12 +50,12 @@ HGE_Impl::HGE_Impl()
 	nGLMaxTexSize = 0;
 	bKeepDesktopMode = false;	
 	
-	/*hBass=0;
+	hBass=0;
 	bSilent=false;
-	streams=0;*/
+	streams=0;
 	
-	/*hSearch=0;
-	res=0;*/
+	hSearch=false;
+	res=0;
 	
 	queue=0;
 	Char=VKey=Zpos=0;
@@ -110,7 +107,7 @@ HGE_Impl::HGE_Impl()
 	
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 
-	NSBundle *mainBundle = [NSBundle mainBundle];
+	mainBundle = [NSBundle mainBundle];
 	NSString *res = [mainBundle resourcePath];
 	[res getCString:szAppPath maxLength:sizeof(szAppPath) encoding:NSASCIIStringEncoding];
 	strcat (szAppPath, "/");
@@ -122,13 +119,16 @@ HGE_Impl::HGE_Impl()
 	int prop [2], be_res;
 	unsigned int *p_res = (unsigned int *) prop_buff;
 	size_t prop_buf_size;
-	long gs_result;	
 	prop_buf_size = sizeof (prop_buff);
 	
 	prop [0] = CTL_HW; prop [1] = HW_BYTEORDER;
 	prop_buf_size = sizeof (prop_buff);
 	be_res = sysctl (prop, 2, prop_buff, &prop_buf_size, NULL, 0);
-	nByteOrder = *p_res;	
+	nByteOrder = *p_res;
+	
+	// Search init
+	searchIndex = 0;
+	localFileManager = [NSFileManager defaultManager];
 }
 
 HGE_Impl* HGE_Impl::_Interface_Get()
@@ -498,9 +498,15 @@ void CALL HGE_Impl::System_Shutdown()
 	System_Log("\nFinishing..");
 	_ClearQueue();
 	_SoundDone();
+	[localFileManager release];
+	if (hSearch)
+	{
+		globfree(&fileSearcher);
+		hSearch = false;
+		searchIndex = 0;
+	}
 	
 	/*timeEndPeriod(1);
-	if(hSearch) { FindClose(hSearch); hSearch=0; }
 	_GfxDone();
 	_DonePowerStatus();
 	

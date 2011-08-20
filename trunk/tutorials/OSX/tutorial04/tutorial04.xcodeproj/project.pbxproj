@@ -21,6 +21,7 @@
 		5618F47313F4894D007BA885 /* trail.psi in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46613F4894D007BA885 /* trail.psi */; };
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
+		5676BFF414006204007CFD38 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676BFF314006204007CFD38 /* libzlib.a */; };
 		5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694895613F3457F000A3A69 /* libhgehelp.a */; };
 		56A58C9513FDA2C900C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58C9413FDA2C900C081BE /* libbass.dylib */; };
 		56A58CEB13FDA53900C081BE /* libbass.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A58C9413FDA2C900C081BE /* libbass.dylib */; };
@@ -65,12 +66,13 @@
 		5618F46613F4894D007BA885 /* trail.psi */ = {isa = PBXFileReference; lastKnownFileType = file; name = trail.psi; path = ../../Data/trail.psi; sourceTree = SOURCE_ROOT; };
 		5618F46713F4894D007BA885 /* zazaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zazaka.png; path = ../../Data/zazaka.png; sourceTree = SOURCE_ROOT; };
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5676BF88140060A8007CFD38 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5676BFF314006204007CFD38 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = ../../../lib/OSX/libzlib.a; sourceTree = SOURCE_ROOT; };
 		5694895613F3457F000A3A69 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Users/pepper/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
 		56A58C9413FDA2C900C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
 		56AE395913FD6B0800600AD1 /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
 		56BE54A211DDB708004C93F2 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Volumes/MacData/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = tutorial01.app; path = "/Users/pepper/Work/__hge_OSX/hge181-for-osx/tutorials/OSX/tutorial04/build/Release/tutorial01.app"; sourceTree = "<absolute>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */,
 				56AE395A13FD6B0800600AD1 /* libhgecore.a in Frameworks */,
 				56A58C9513FDA2C900C081BE /* libbass.dylib in Frameworks */,
+				5676BFF414006204007CFD38 /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +114,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				5676BF88140060A8007CFD38 /* tutorial01.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +129,7 @@
 				5694895613F3457F000A3A69 /* libhgehelp.a */,
 				56AE395913FD6B0800600AD1 /* libhgecore.a */,
 				56A58C9413FDA2C900C081BE /* libbass.dylib */,
+				5676BFF314006204007CFD38 /* libzlib.a */,
 			);
 			name = tutorial01;
 			sourceTree = "<group>";
@@ -199,7 +204,7 @@
 			name = tutorial04;
 			productInstallPath = "$(HOME)/Applications";
 			productName = tutorial01;
-			productReference = 8D1107320486CEB800E47090 /* tutorial01.app */;
+			productReference = 5676BF88140060A8007CFD38 /* tutorial01.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
