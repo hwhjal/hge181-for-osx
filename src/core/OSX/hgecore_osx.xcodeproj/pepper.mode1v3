@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>resource.mm</string>
+								<string>hge_impl.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,25 +324,25 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>resource.mm</string>
+										<string>hge_impl.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>5691F0AA1400004F00A899BF</string>
+										<string>5691F0C31400054600A899BF</string>
 										<key>history</key>
 										<array>
-											<string>5601444F13FC5F660079D4EA</string>
-											<string>56A58CA013FDA3B400C081BE</string>
-											<string>56A58D1713FDA7EE00C081BE</string>
 											<string>56A58D1B13FDA7EE00C081BE</string>
 											<string>56A58D1D13FDA7EE00C081BE</string>
 											<string>56A58DB913FDAB5700C081BE</string>
 											<string>56A58DBA13FDAB5700C081BE</string>
 											<string>56AC68F613FFF25C0074393F</string>
 											<string>56AC68F913FFF25C0074393F</string>
-											<string>5691F07413FFFCB900A899BF</string>
 											<string>5691F09B13FFFF0400A899BF</string>
-											<string>5691F0A91400004F00A899BF</string>
+											<string>5691F0BF1400054600A899BF</string>
+											<string>5691F0C01400054600A899BF</string>
+											<string>5691F0C11400054600A899BF</string>
+											<string>5691F0C21400054600A899BF</string>
+											<string>5691F07413FFFCB900A899BF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
