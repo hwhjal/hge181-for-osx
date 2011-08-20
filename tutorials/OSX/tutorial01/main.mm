@@ -67,6 +67,13 @@ int main (int argc, char * const argv[])
 	// happened can be read with System_GetErrorMessage().
 	if(hge->System_Initiate())
 	{
+		
+		char *file = hge->Resource_EnumFiles("Data/*");
+		if (file)
+		while (file)
+		{
+			file = hge->Resource_EnumFiles ();
+		}
 		// Starts running FrameFunc().
 		// Note that the execution "stops" here
 		// until "true" is returned from FrameFunc().

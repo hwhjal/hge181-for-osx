@@ -273,11 +273,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 815}}</string>
+							<string>{{0, 0}, {186, 811}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -289,14 +289,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 833}}</string>
+						<string>{{0, 0}, {203, 829}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 128 1280 874 0 0 1280 1002 </string>
+						<string>0 132 1280 870 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,14 +331,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 642}}</string>
+								<string>{{0, 0}, {1072, 639}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 128 1280 874 0 0 1280 1002 </string>
+								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>642pt</string>
+							<string>639pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -351,14 +351,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 647}, {1072, 186}}</string>
+								<string>{{0, 644}, {1072, 185}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 128 1280 874 0 0 1280 1002 </string>
+								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>186pt</string>
+							<string>185pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -377,9 +377,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>5691F05913FFFAE400A899BF</string>
+				<string>5676BD09140037FB007CFD38</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>5691F05A13FFFAE400A899BF</string>
+				<string>5676BD0A140037FB007CFD38</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -521,7 +521,7 @@
 		<string>/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/zlib.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 128 1280 874 0 0 1280 1002 </string>
+	<string>0 132 1280 870 0 0 1280 1002 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -598,7 +598,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5691EFFD13FFFA1D00A899BF</string>
-				<string>5691F05B13FFFAE400A899BF</string>
+				<string>5676BD0B140037FB007CFD38</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

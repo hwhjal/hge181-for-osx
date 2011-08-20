@@ -18,7 +18,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Release;
-		activeExecutable = 56A7979C11970AF500D63247 /* tutorial04 */;
+		activeExecutable = 5676BF89140060A8007CFD38 /* tutorial04 */;
 		activeTarget = 8D1107260486CEB800E47090 /* tutorial04 */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* tutorial04 */,
@@ -28,7 +28,7 @@
 		);
 		codeSenseManager = 56A797B311970B0200D63247 /* Code sense */;
 		executables = (
-			56A7979C11970AF500D63247 /* tutorial04 */,
+			5676BF89140060A8007CFD38 /* tutorial04 */,
 		);
 		expressions = (
 			pVert,
@@ -130,12 +130,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335523264;
-			PBXWorkspaceStateSaveDate = 335523264;
+			PBXPerProjectTemplateStateSaveDate = 335569403;
+			PBXWorkspaceStateSaveDate = 335569403;
 		};
 		perUserProjectItems = {
-			56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */ = 56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */;
-			56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */ = 56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */;
+			5676BF92140060B4007CFD38 /* PBXTextBookmark */ = 5676BF92140060B4007CFD38 /* PBXTextBookmark */;
+			5676C00714006212007CFD38 /* PBXTextBookmark */ = 5676C00714006212007CFD38 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -144,7 +144,7 @@
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1011, 2678}}";
-			sepNavSelRange = "{3055, 0}";
+			sepNavSelRange = "{3794, 0}";
 			sepNavVisRange = "{2860, 1830}";
 		};
 	};
@@ -155,45 +155,7 @@
 			sepNavVisRange = "{0, 957}";
 		};
 	};
-	56A3E09D13FFAE2600F54E5A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 134";
-		rLen = 0;
-		rLoc = 3055;
-		rType = 0;
-		vrLen = 1830;
-		vrLoc = 2860;
-	};
-	56A3E09E13FFAE2600F54E5A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 134";
-		rLen = 0;
-		rLoc = 3055;
-		rType = 0;
-		vrLen = 1830;
-		vrLoc = 2860;
-	};
-	56A58CDF13FDA51700C081BE /* main.mm:159 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		functionName = "main (int argc, char * const argv[])";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 159;
-		location = tutorial01;
-		modificationTime = 335389989.028791;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
-	};
-	56A7979C11970AF500D63247 /* tutorial04 */ = {
+	5676BF89140060A8007CFD38 /* tutorial04 */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -222,10 +184,44 @@
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
-		variableFormatDictionary = {
-			"col-unsigned int-HGE_Impl::_render_batch" = 1;
-			"y-float-HGE_Impl::_render_batch" = 1;
-		};
+	};
+	5676BF92140060B4007CFD38 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 137";
+		rLen = 0;
+		rLoc = 3167;
+		rType = 0;
+		vrLen = 1830;
+		vrLoc = 2860;
+	};
+	5676C00714006212007CFD38 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 157";
+		rLen = 0;
+		rLoc = 3794;
+		rType = 0;
+		vrLen = 1830;
+		vrLoc = 2860;
+	};
+	56A58CDF13FDA51700C081BE /* main.mm:159 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 159;
+		location = tutorial01;
+		modificationTime = 335389989.028791;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
 	};
 	56A797B211970B0200D63247 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -244,7 +240,7 @@
 	8D1107260486CEB800E47090 /* tutorial04 */ = {
 		activeExec = 0;
 		executables = (
-			56A7979C11970AF500D63247 /* tutorial04 */,
+			5676BF89140060A8007CFD38 /* tutorial04 */,
 		);
 	};
 	8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {

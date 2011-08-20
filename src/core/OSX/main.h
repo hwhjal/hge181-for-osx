@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <sys/sysctl.h>
 #include <assert.h>
+#include <glob.h>
 
 #import <OpenGL/gl.h>
 #import <OpenGl/glu.h>

@@ -18,6 +18,7 @@
 		5618F1F513F477A9007BA885 /* system.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1EB13F477A9007BA885 /* system.mm */; };
 		5618F1F613F477A9007BA885 /* timer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1EC13F477A9007BA885 /* timer.mm */; };
 		5618F20813F47851007BA885 /* libhgecore.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libhgecore.a */; };
+		566822AC14001018007539AD /* hge_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 566822AB14001018007539AD /* hge_impl.h */; };
 		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		5618F1EA13F477A9007BA885 /* sound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sound.mm; sourceTree = "<group>"; };
 		5618F1EB13F477A9007BA885 /* system.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = system.mm; sourceTree = "<group>"; };
 		5618F1EC13F477A9007BA885 /* timer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = timer.mm; sourceTree = "<group>"; };
+		566822AB14001018007539AD /* hge_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hge_impl.h; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libhgecore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhgecore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		5618F18413F4762B007BA885 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				566822AB14001018007539AD /* hge_impl.h */,
 				5618F1E613F477A9007BA885 /* input.mm */,
 				5618F1E713F477A9007BA885 /* main.h */,
 				5618F1E813F477A9007BA885 /* random.mm */,
@@ -151,6 +154,7 @@
 			files = (
 				5618F1BC13F4778A007BA885 /* cocoa_app.h in Headers */,
 				5618F1F113F477A9007BA885 /* main.h in Headers */,
+				566822AC14001018007539AD /* hge_impl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

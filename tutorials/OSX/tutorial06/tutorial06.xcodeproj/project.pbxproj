@@ -21,6 +21,7 @@
 		5618F47313F4894D007BA885 /* trail.psi in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46613F4894D007BA885 /* trail.psi */; };
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
+		5676C0331400623D007CFD38 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676C0321400623D007CFD38 /* libzlib.a */; };
 		5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694895613F3457F000A3A69 /* libhgehelp.a */; };
 		56A58D2A13FDA81900C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58D2913FDA81900C081BE /* libbass.dylib */; };
 		56A58D2C13FDA81900C081BE /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58D2B13FDA81900C081BE /* libhgecore.a */; };
@@ -66,6 +67,7 @@
 		5618F46613F4894D007BA885 /* trail.psi */ = {isa = PBXFileReference; lastKnownFileType = file; name = trail.psi; path = ../../Data/trail.psi; sourceTree = SOURCE_ROOT; };
 		5618F46713F4894D007BA885 /* zazaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zazaka.png; path = ../../Data/zazaka.png; sourceTree = SOURCE_ROOT; };
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5676C0321400623D007CFD38 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = ../../../lib/OSX/libzlib.a; sourceTree = SOURCE_ROOT; };
 		5694895613F3457F000A3A69 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = ../../../../../hge181/lib/OSX/libhgehelp.a; sourceTree = SOURCE_ROOT; };
 		56A58D2913FDA81900C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
 		56A58D2B13FDA81900C081BE /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
@@ -86,6 +88,7 @@
 				5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */,
 				56A58D2A13FDA81900C081BE /* libbass.dylib in Frameworks */,
 				56A58D2C13FDA81900C081BE /* libhgecore.a in Frameworks */,
+				5676C0331400623D007CFD38 /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +132,7 @@
 				5694895613F3457F000A3A69 /* libhgehelp.a */,
 				56A58D2913FDA81900C081BE /* libbass.dylib */,
 				56A58D2B13FDA81900C081BE /* libhgecore.a */,
+				5676C0321400623D007CFD38 /* libzlib.a */,
 			);
 			name = tutorial01;
 			sourceTree = "<group>";
