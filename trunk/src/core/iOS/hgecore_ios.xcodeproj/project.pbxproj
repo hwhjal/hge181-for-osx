@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5618F1C113F47797007BA885 /* graphics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1C013F47797007BA885 /* graphics.mm */; };
+		5618F1F013F477A9007BA885 /* input.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1E613F477A9007BA885 /* input.mm */; };
+		5618F1F113F477A9007BA885 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = 5618F1E713F477A9007BA885 /* main.h */; };
+		5618F1F213F477A9007BA885 /* random.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1E813F477A9007BA885 /* random.mm */; };
+		5618F1F313F477A9007BA885 /* resource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1E913F477A9007BA885 /* resource.mm */; };
+		5618F1F513F477A9007BA885 /* system.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1EB13F477A9007BA885 /* system.mm */; };
+		5618F1F613F477A9007BA885 /* timer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5618F1EC13F477A9007BA885 /* timer.mm */; };
+		5618F20813F47851007BA885 /* libhgecore.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libhgecore.a */; };
+		566822AC14001018007539AD /* hge_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 566822AB14001018007539AD /* hge_impl.h */; };
+		56C247A21449C94800D038EA /* viewcontroller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56C247A11449C94800D038EA /* viewcontroller.mm */; };
+		56DFD62A144971EE0078CFDE /* appdelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DFD626144971EE0078CFDE /* appdelegate.mm */; };
+		56DFD62B144971EE0078CFDE /* eaglview.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DFD627144971EE0078CFDE /* eaglview.h */; };
+		56DFD62C144971EE0078CFDE /* eaglview.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DFD628144971EE0078CFDE /* eaglview.mm */; };
+		56DFD62D144971EE0078CFDE /* viewcontroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DFD629144971EE0078CFDE /* viewcontroller.h */; };
+		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5618F20713F477F9007BA885 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../../../../../lib/iOS;
+			dstSubfolderSpec = 16;
+			files = (
+				5618F20813F47851007BA885 /* libhgecore.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5618F1C013F47797007BA885 /* graphics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = graphics.mm; sourceTree = "<group>"; };
+		5618F1E613F477A9007BA885 /* input.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = input.mm; sourceTree = "<group>"; };
+		5618F1E713F477A9007BA885 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		5618F1E813F477A9007BA885 /* random.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = random.mm; sourceTree = "<group>"; };
+		5618F1E913F477A9007BA885 /* resource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = resource.mm; sourceTree = "<group>"; };
+		5618F1EB13F477A9007BA885 /* system.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = system.mm; sourceTree = "<group>"; };
+		5618F1EC13F477A9007BA885 /* timer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = timer.mm; sourceTree = "<group>"; };
+		566822AB14001018007539AD /* hge_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hge_impl.h; sourceTree = "<group>"; };
+		56C247A11449C94800D038EA /* viewcontroller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = viewcontroller.mm; sourceTree = "<group>"; };
+		56DFD626144971EE0078CFDE /* appdelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = appdelegate.mm; sourceTree = "<group>"; };
+		56DFD627144971EE0078CFDE /* eaglview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eaglview.h; sourceTree = "<group>"; };
+		56DFD628144971EE0078CFDE /* eaglview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = eaglview.mm; sourceTree = "<group>"; };
+		56DFD629144971EE0078CFDE /* viewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewcontroller.h; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libhgecore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhgecore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libhgecore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* hgecore */ = {
+			isa = PBXGroup;
+			children = (
+				5618F18413F4762B007BA885 /* Source */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = hgecore;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E8BE07B2D77200F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		5618F18413F4762B007BA885 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				56C247A11449C94800D038EA /* viewcontroller.mm */,
+				56DFD626144971EE0078CFDE /* appdelegate.mm */,
+				56DFD627144971EE0078CFDE /* eaglview.h */,
+				56DFD628144971EE0078CFDE /* eaglview.mm */,
+				56DFD629144971EE0078CFDE /* viewcontroller.h */,
+				566822AB14001018007539AD /* hge_impl.h */,
+				5618F1E613F477A9007BA885 /* input.mm */,
+				5618F1E713F477A9007BA885 /* main.h */,
+				5618F1E813F477A9007BA885 /* random.mm */,
+				5618F1E913F477A9007BA885 /* resource.mm */,
+				5618F1EB13F477A9007BA885 /* system.mm */,
+				5618F1EC13F477A9007BA885 /* timer.mm */,
+				5618F1C013F47797007BA885 /* graphics.mm */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5618F1F113F477A9007BA885 /* main.h in Headers */,
+				566822AC14001018007539AD /* hge_impl.h in Headers */,
+				56DFD62B144971EE0078CFDE /* eaglview.h in Headers */,
+				56DFD62D144971EE0078CFDE /* viewcontroller.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* hgecore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "hgecore" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+				5618F20713F477F9007BA885 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hgecore;
+			productName = hgecore;
+			productReference = D2AAC07E0554694100DB518D /* libhgecore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hgecore_ios" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* hgecore */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* hgecore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5618F1C113F47797007BA885 /* graphics.mm in Sources */,
+				5618F1F013F477A9007BA885 /* input.mm in Sources */,
+				5618F1F213F477A9007BA885 /* random.mm in Sources */,
+				5618F1F313F477A9007BA885 /* resource.mm in Sources */,
+				5618F1F513F477A9007BA885 /* system.mm in Sources */,
+				5618F1F613F477A9007BA885 /* timer.mm in Sources */,
+				56DFD62A144971EE0078CFDE /* appdelegate.mm in Sources */,
+				56DFD62C144971EE0078CFDE /* eaglview.mm in Sources */,
+				56C247A21449C94800D038EA /* viewcontroller.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = hgecore_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = hgecore;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = hgecore_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				PRODUCT_NAME = hgecore;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "_IOS=1";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "_IOS=1";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "hgecore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hgecore_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

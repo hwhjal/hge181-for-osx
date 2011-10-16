@@ -15,7 +15,7 @@
 #	include <windows.h>
 #	define CALL  __stdcall
 
-#elif defined (_HGE_TARGET_OSX_)
+#elif defined (_HGE_TARGET_OSX_) or defined(_IOS)
 #	define CALL 
 typedef	void* HWND;
 #	define _MAX_PATH	512

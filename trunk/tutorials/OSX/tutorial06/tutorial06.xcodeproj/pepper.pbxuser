@@ -113,14 +113,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335569461;
-			PBXWorkspaceStateSaveDate = 335569461;
+			PBXPerProjectTemplateStateSaveDate = 340360405;
+			PBXWorkspaceStateSaveDate = 340360405;
 		};
 		perUserProjectItems = {
-			5676C04614006252007CFD38 /* PBXTextBookmark */ = 5676C04614006252007CFD38 /* PBXTextBookmark */;
-			56A3DF5213FFA39200F54E5A /* PBXTextBookmark */ = 56A3DF5213FFA39200F54E5A /* PBXTextBookmark */;
-			56A3DF5413FFA39200F54E5A /* PBXTextBookmark */ = 56A3DF5413FFA39200F54E5A /* PBXTextBookmark */;
-			56A58D4613FDA8C300C081BE /* PBXTextBookmark */ = 56A58D4613FDA8C300C081BE /* PBXTextBookmark */;
+			56DFD6A814497CE00078CFDE /* PBXBookmark */ = 56DFD6A814497CE00078CFDE /* PBXBookmark */;
+			56DFD6A914497CE00078CFDE /* PBXTextBookmark */ = 56DFD6A914497CE00078CFDE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -128,50 +126,10 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2795}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2756}}";
 			sepNavSelRange = "{2846, 0}";
-			sepNavVisRange = "{2704, 1448}";
+			sepNavVisRange = "{2285, 1273}";
 		};
-	};
-	5676C04614006252007CFD38 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 131";
-		rLen = 0;
-		rLoc = 2846;
-		rType = 0;
-		vrLen = 1448;
-		vrLoc = 2704;
-	};
-	56A3DF5213FFA39200F54E5A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 56F46BB613FAF920004298EC /* menuitem.mm */;
-		name = "menuitem.mm: 20";
-		rLen = 0;
-		rLoc = 479;
-		rType = 0;
-		vrLen = 1102;
-		vrLoc = 0;
-	};
-	56A3DF5413FFA39200F54E5A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 145";
-		rLen = 37;
-		rLoc = 3336;
-		rType = 0;
-		vrLen = 1477;
-		vrLoc = 2675;
-	};
-	56A58D4613FDA8C300C081BE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 56F46BB513FAF920004298EC /* menuitem.h */;
-		name = "menuitem.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1023;
-		vrLoc = 0;
 	};
 	56A7979C11970AF500D63247 /* tutorial06 */ = {
 		isa = PBXExecutable;
@@ -220,6 +178,20 @@
 	56A797B311970B0200D63247 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	56DFD6A814497CE00078CFDE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+	};
+	56DFD6A914497CE00078CFDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 131";
+		rLen = 0;
+		rLoc = 2846;
+		rType = 0;
+		vrLen = 1273;
+		vrLoc = 2285;
 	};
 	56F46BB513FAF920004298EC /* menuitem.h */ = {
 		uiCtxt = {
