@@ -7,6 +7,7 @@
  *
  */
 
-#define _HGE_TARGET_OSX_
+#define _HGE_TARGET_IOS
+#define _IOS
 //			or
 // #define _HGE_TARGET_WINDOWS_

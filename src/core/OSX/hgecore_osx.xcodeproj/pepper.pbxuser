@@ -55,13 +55,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 335562890;
-			PBXWorkspaceStateSaveDate = 335562890;
+			PBXPerProjectTemplateStateSaveDate = 340356700;
+			PBXWorkspaceStateSaveDate = 340356700;
 		};
 		perUserProjectItems = {
-			5676BF2F14005EDA007CFD38 /* PBXTextBookmark */ = 5676BF2F14005EDA007CFD38 /* PBXTextBookmark */;
-			5676BF3114005EDA007CFD38 /* PBXTextBookmark */ = 5676BF3114005EDA007CFD38 /* PBXTextBookmark */;
 			5676BFC814006118007CFD38 /* PBXTextBookmark */ = 5676BFC814006118007CFD38 /* PBXTextBookmark */;
+			56DFD5EB1449708D0078CFDE /* PBXTextBookmark */ = 56DFD5EB1449708D0078CFDE /* PBXTextBookmark */;
 		};
 		sourceControlManager = 5618F0D413F4719A007BA885 /* Source Control */;
 		userBuildSettings = {
@@ -126,8 +125,8 @@
 	5618F1E913F477A9007BA885 /* resource.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1230, 4095}}";
-			sepNavSelRange = "{330, 0}";
-			sepNavVisRange = "{0, 1422}";
+			sepNavSelRange = "{193, 0}";
+			sepNavVisRange = "{0, 1466}";
 		};
 	};
 	5618F1EA13F477A9007BA885 /* sound.mm */ = {
@@ -159,32 +158,6 @@
 			sepNavVisRange = "{9708, 1362}";
 		};
 	};
-	5676BF2F14005EDA007CFD38 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 5676BF3014005EDA007CFD38 /* resource.cpp */;
-		name = "resource.cpp: 27";
-		rLen = 0;
-		rLoc = 485;
-		rType = 0;
-		vrLen = 1509;
-		vrLoc = 2243;
-	};
-	5676BF3014005EDA007CFD38 /* resource.cpp */ = {
-		isa = PBXFileReference;
-		name = resource.cpp;
-		path = /Users/pepper/Work/hge181/src/core/Win32/resource.cpp;
-		sourceTree = "<absolute>";
-	};
-	5676BF3114005EDA007CFD38 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 5618F1E913F477A9007BA885 /* resource.mm */;
-		name = "resource.mm: 292";
-		rLen = 0;
-		rLoc = 6154;
-		rType = 0;
-		vrLen = 1542;
-		vrLoc = 5381;
-	};
 	5676BFC814006118007CFD38 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 5618F1E913F477A9007BA885 /* resource.mm */;
@@ -193,6 +166,16 @@
 		rLoc = 330;
 		rType = 0;
 		vrLen = 1422;
+		vrLoc = 0;
+	};
+	56DFD5EB1449708D0078CFDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5618F1E913F477A9007BA885 /* resource.mm */;
+		name = "resource.mm: 11";
+		rLen = 0;
+		rLoc = 193;
+		rType = 0;
+		vrLen = 1466;
 		vrLoc = 0;
 	};
 	D2AAC07D0554694100DB518D /* hgecore */ = {
