@@ -122,11 +122,11 @@ bool RenderFunc()
 	hge->Gfx_Clear(0);
 	bgspr->Render(0,0);
 	
-	/*for(i=0;i<nObjects;i++)
+	for(i=0;i<nObjects;i++)
 	{
 		spr->SetColor(pObjects[i].color); 
 		spr->RenderEx(pObjects[i].x, pObjects[i].y, pObjects[i].rot, pObjects[i].scale);
-	}*/
+	}
 	
 	fnt->printf(7, 7, HGETEXT_LEFT, "UP and DOWN to adjust number of hares: %d\nSPACE to change blending mode: %d\nFPS: %d, dt:%.3f", nObjects, nBlend, hge->Timer_GetFPS(), hge->Timer_GetDelta());
 	
@@ -178,11 +178,11 @@ int main (int argc, char * const argv[])
 		spr->SetHotSpot(32,32);
 		
 		bgspr=new hgeSprite(bgtex,0,0,SCREEN_WIDTH,SCREEN_HEIGHT);
-		/*bgspr->SetBlendMode(BLEND_COLORADD | BLEND_ALPHABLEND | BLEND_NOZWRITE);
+		bgspr->SetBlendMode(BLEND_COLORADD | BLEND_ALPHABLEND | BLEND_NOZWRITE);
 		bgspr->SetColor(0xFF000000,0);
 		bgspr->SetColor(0xFF000000,1);
 		bgspr->SetColor(0xFF000040,2);
-		bgspr->SetColor(0xFF000040,3);*/
+		bgspr->SetColor(0xFF000040,3);
 		
 		// Initialize objects list
 		
