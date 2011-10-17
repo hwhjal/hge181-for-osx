@@ -122,11 +122,11 @@ bool RenderFunc()
 	hge->Gfx_Clear(0);
 	bgspr->Render(0,0);
 	
-	/*for(i=0;i<nObjects;i++)
+	for(i=0;i<nObjects;i++)
 	{
 		spr->SetColor(pObjects[i].color); 
 		spr->RenderEx(pObjects[i].x, pObjects[i].y, pObjects[i].rot, pObjects[i].scale);
-	}*/
+	}
 	
 	fnt->printf(7, 7, HGETEXT_LEFT, "UP and DOWN to adjust number of hares: %d\nSPACE to change blending mode: %d\nFPS: %d, dt:%.3f", nObjects, nBlend, hge->Timer_GetFPS(), hge->Timer_GetDelta());
 	
@@ -159,7 +159,7 @@ int main (int argc, char * const argv[])
 		
 		// Load textures
 		
-		bgtex=hge->Texture_Load("bg.png");
+		bgtex=hge->Texture_Load("bg2.png");
 		tex=hge->Texture_Load("zazaka.png");
 		if(!bgtex || !tex)
 		{
