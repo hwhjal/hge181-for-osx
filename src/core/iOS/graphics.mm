@@ -743,24 +743,20 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	GLenum format = 0, type = 0;
 	int width = CGImageGetWidth(bitmap);
     int height = CGImageGetHeight(bitmap);	
-	int bitsPerPixel = 32; // CGImageGetBitsPerPixel(bitmap);
-	int bitsPerCh = CGImageGetBitsPerComponent (bitmap);
+	int bitsPerPixel = CGImageGetBitsPerPixel(bitmap);
 	CGImageAlphaInfo aInfo = CGImageGetAlphaInfo(bitmap);
-	bool isMask = CGImageIsMask (bitmap);
-	CGBitmapInfo bInfo = CGImageGetBitmapInfo (bitmap);
 	
 	CFDataRef bitmapDataCG = CGDataProviderCopyData(CGImageGetDataProvider(bitmap));
 	const UInt8 *bitmapDataPtr = CFDataGetBytePtr (bitmapDataCG);
-
 	
 	// Load texture data
-    GLubyte *bitmapData = (GLubyte *) calloc(width * height * 4, sizeof(GLubyte)); 
+    /*GLubyte *bitmapData = (GLubyte *) calloc(width * height * 4, sizeof(GLubyte)); 
     // Uses the bitmap creation function provided by the Core Graphics framework.  
     CGContextRef spriteContext = CGBitmapContextCreate(bitmapData, width, height, 8, width * 4, CGImageGetColorSpace(bitmap), kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big); 
 	// After you create the context, you can draw the sprite image to the context. 
     CGContextDrawImage(spriteContext, CGRectMake(0.0, 0.0, (CGFloat)width, (CGFloat)height), bitmap); 
     // You don't need the context at this point, so you need to release it to avoid memory leaks. 
-    CGContextRelease(spriteContext); 
+    CGContextRelease(spriteContext);*/ 
 	
 	switch (bitsPerPixel)
 	{
@@ -778,7 +774,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 			break;
 			
 		case 24:
-			internalFormat = GL_RGBA; format = GL_RGBA; type = GL_UNSIGNED_BYTE;			
+			internalFormat = GL_RGB; format = GL_RGB; type = GL_UNSIGNED_BYTE;			
 			break;
 			
 		case 32:
@@ -839,7 +835,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 			while (y < height)
 			{
 				memcpy ((void *) ((unsigned long) pbuff + y*realLineSize),
-						(void *) ((unsigned long) bitmapData + y*origLineSize),
+						(void *) ((unsigned long) bitmapDataPtr + y*origLineSize),
 						origLineSize);
 				y++;
 			}
@@ -848,12 +844,12 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 		}
 		else
 		{
-			glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, bitmapData);
+			glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, bitmapDataPtr);
 		}
 	}
 	else
 	{
-		glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, bitmapData);
+		glTexImage2D (GL_TEXTURE_2D, 0, internalFormat, realWidth, realHeight, 0, format, type, bitmapDataPtr);
 	}
 	
 	texItem=new CTextureList;
