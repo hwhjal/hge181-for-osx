@@ -28,7 +28,7 @@
     return [CAEAGLLayer class];
 }
 
-//The EAGL view is stored in the nib file. When it's unarchived it's sent -initWithCoder:.
+
 - (id)initWithFrame:(CGRect)frame 
 {
 	if ((self = [super initWithFrame:frame]))
@@ -90,16 +90,23 @@
         glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &framebufferWidth);
         glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &framebufferHeight);        
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
-		
-       
-		/*GLuint depthRenderbuffer;
-		glGenRenderbuffers(1, &depthRenderbuffer);
-		glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
-		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, framebufferWidth, framebufferHeight);
-		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);*/
-        
+
+		HGE_Impl *hge = HGE_Impl::_Interface_Get();
+		// Create Z-Buffer
+		if (hge->System_GetStateBool(HGE_ZBUFFER))
+		{
+			GLuint depthRenderbuffer;
+			glGenRenderbuffers(1, &depthRenderbuffer);
+			glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
+			glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, framebufferWidth, framebufferHeight);
+			glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);
+		}        
         if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
             NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
+
+		// Set default framebuffer
+		hge->ios_setDefaultFrameBuffer (defaultFramebuffer);
+		hge->Release();
     }
 }
 
@@ -133,15 +140,6 @@
             [self createFramebuffer];
         
         // glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-        
-		// Setup HGE
-		if (!hgeInited)
-		{
-			/*HGE_Impl *hge = HGE_Impl::_Interface_Get();
-			hge->ios_setupHGE (framebufferHeight, framebufferWidth, 60);
-			hge->System_SetStateInt (HGE_SCREENBPP, 32);*/
-			hgeInited = true;
-		}
     }
 }
 

@@ -17,12 +17,6 @@
 int			nRef=0;
 HGE_Impl*	pHGE=0;
 
-/*
- TODO:
-	Implement nPowerStatus 
- */
-
-
 
 HGE* CALL hgeCreate(int ver)
 {
@@ -103,11 +97,8 @@ HGE_Impl::HGE_Impl()
 	CurPrimType = 0;
 	
 	glVewController = 0;
+	glDefaultRenderBuffer = 0;
 		
-	/*nPowerStatus=HGEPWR_UNSUPPORTED;
-	hKrnl32 = NULL;
-	lpfnGetSystemPowerStatus = NULL;*/
-	
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 
 	NSBundle *mainBundle = [NSBundle mainBundle];
@@ -122,9 +113,6 @@ HGE_Impl::HGE_Impl()
 	int prop [2], be_res;
 	unsigned int *p_res = (unsigned int *) prop_buff;
 	size_t prop_buf_size;
-	long gs_result;	
-	prop_buf_size = sizeof (prop_buff);
-	
 	prop [0] = CTL_HW; prop [1] = HW_BYTEORDER;
 	prop_buf_size = sizeof (prop_buff);
 	be_res = sysctl (prop, 2, prop_buff, &prop_buf_size, NULL, 0);
@@ -519,8 +507,8 @@ void CALL HGE_Impl::Release()
 	
 	if(!nRef)
 	{
-		// if(pHGE->hwnd) pHGE->System_Shutdown();
-		// Resource_RemoveAllPacks();
+		pHGE->System_Shutdown();
+		Resource_RemoveAllPacks();
 		delete pHGE;
 		pHGE=0;
 	}
@@ -807,8 +795,7 @@ bool HGE_Impl::ios_renderFrame ()
 		
 		// If we reached the time for the next frame
 		// or we just run in unlimited FPS mode, then
-		// do the stuff
-		
+		// do the stuff		
 		if(dt >= nFixedDelta/1000.0f)
 		{
 			// fDeltaTime = time step in seconds returned by Timer_GetDelta

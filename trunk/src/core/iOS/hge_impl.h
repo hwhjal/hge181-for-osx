@@ -289,6 +289,7 @@ public:
 	bool				ios_renderFrame ();
 	UIWindow			*ios_getWindow () {return window;}
 	GLAppViewController *ios_getViewController () {return glVewController;}
+	void				ios_setDefaultFrameBuffer (GLuint rb) {glDefaultRenderBuffer = rb;}
 	
 	
 	void				Terminate();	
@@ -362,6 +363,7 @@ public:
 	UIWindow			*window;
 	EAGLView			*glView;
 	GLAppViewController *glVewController;
+	GLuint				glDefaultRenderBuffer;
 	CTextureList*		textures;
 	hgeVertex*			VertArray;
 	hgeVertex*			glVertexBuffer, *glVertexBufferCopy;

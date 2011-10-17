@@ -25,7 +25,7 @@
 {
 	HGE_Impl *pHGE =HGE_Impl::_Interface_Get ();
 	
-	self.window  = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]]; // phge->ios_getWindow ();
+	self.window  = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	self.viewController = pHGE->ios_getViewController ();	
 	
 	[self.window addSubview: self.viewController.view];
@@ -33,7 +33,7 @@
 	[self.window makeKeyAndVisible];
 	
 	EAGLView * eagl = (EAGLView *)self.viewController.view;
-	pHGE->Gfx_SetTransform (0, 0, 0, 0, 0, 0, 0);	
+	pHGE->Gfx_SetTransform (0, 0, 0, 0, 0, 0, 0);
 	pHGE->Gfx_SetTransform (0, 0, eagl.framebufferWidth, 0, M_PI/2, 1, 1);
 	pHGE->Release();
 	
