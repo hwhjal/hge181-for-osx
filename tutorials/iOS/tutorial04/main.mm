@@ -58,23 +58,6 @@ bool GfxRestoreFunc()
 bool FrameFunc()
 {
 	
-	if (hge->Input_GetKeyState(HGEK_W))
-	{
-		FullScreen = !FullScreen;
-		if (!f1) hge->System_SetState(HGE_WINDOWED, false);
-		f1 = true;
-		f2 = false;
-	}
-	
-	if (hge->Input_GetKeyState(HGEK_F))
-	{
-		static bool fl = false;
-		FullScreen = !FullScreen;
-		if (!f2) hge->System_SetState(HGE_WINDOWED, true);
-		f1 = false;
-		f2 = true;
-	}
-	
 	float dt=hge->Timer_GetDelta();
 	
 	if (hge->Input_GetKeyState(HGEK_LBUTTON))
@@ -144,10 +127,6 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_GFXRESTOREFUNC, GfxRestoreFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 04 - Using render targets");
 	hge->System_SetState(HGE_FPS, 60);
-	hge->System_SetState(HGE_WINDOWED, FullScreen);
-	hge->System_SetState(HGE_SCREENWIDTH, 800);
-	hge->System_SetState(HGE_SCREENHEIGHT, 600);
-	hge->System_SetState(HGE_SCREENBPP, 32);
 	
 	tar=0;
 	target=0;
