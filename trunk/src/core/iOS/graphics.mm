@@ -9,41 +9,10 @@
 #include "main.h"
 
 
-/*
- TODO:	+ Context sharing
-		Enum All modes (enum_adapter_modes)
-		Get Current Display mode (get_desktop_mode)
-		Set fullscreen with mode changing 
-		+ Path to bundle
-		Packed files support
-		+ Arrange window's rect size with contentRectForFrameRect:styleMask:
-		+ Get native texture size
-
- 
- Don't bother with locking/unlocking fo]cus on the view to do drawing. It doesn't seem to do any good. 
- When doing drawing begin with [[glView openGLContext] makeCurrentContext] and finish with [[glView openGLContext] flushBuffer]. In particular, use flushBuffer instead of glFlush(). glFlush works with single buffer only, but flushBuffer will work with both single and double buffers. I find myself caching the value of [glView openGLContext] in my screen savers for convenience. 
- If you need to set a pixel format, make sure the pixel format is set before you call [glView openGLContext] the first time. 
- You cannot safely issue GL commands into the same NSOpenGLContext from two different threads at the same time. You must use a lock or otherwise guarantee only one thread at a time is in your relevant code. 
- You can safeuly issue GL commands into separate NSOpenGLContexts? from separate threads. You can use this to load textures into one context on one thread and display them on another context on another thread. 
- 
- Here's a function I use to report errors in GL. Call it after every gl function call with some descriptive text (say the name of the function you just called). 
- 
- __private_extern__ void CheckGLError(const char *note)
- {
- GLenum error = glGetError();
- if (error) {
- NSLog(@"%s [%d]: %s", note, error, gluErrorString(error));
- }
- }
- 
- */
-
-
 //==============================================================================
 
 void CALL Texture_SizeToPow2 (int &width, int &height)
 {
-	// int w = *width, h = *height;
 	int w = 1, h = 1;
 	
 	while (w < width) {w = w << 1;}
@@ -92,33 +61,29 @@ void HGE_Impl::_OpeGLCapsGet ()
 
 void HGE_Impl::_SetBlendMode(int blend)
 {
-	
 	if((blend & BLEND_ZWRITE) != (CurBlendMode & BLEND_ZWRITE))
 	{
 		if(blend & BLEND_ZWRITE) glEnable(GL_DEPTH_TEST);
-			else
-				glDisable(GL_DEPTH_TEST);
+		else glDisable(GL_DEPTH_TEST);
 	}		
-
+	
 	if((blend & BLEND_ALPHABLEND) != (CurBlendMode & BLEND_ALPHABLEND))
 	{
-		 if(blend & BLEND_ALPHABLEND)
-		 {
-			 glEnable (GL_BLEND);
-			 glTexEnvi (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-			 glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		 }
-		 else
-			 glBlendFunc (GL_SRC_ALPHA, GL_ONE);
-	 }	
-
+		if(blend & BLEND_ALPHABLEND)
+		{
+			glEnable (GL_BLEND);
+			glTexEnvi (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+			glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		}
+		else glBlendFunc (GL_SRC_ALPHA, GL_ONE);
+	}	
+	
 	if((blend & BLEND_COLORADD) != (CurBlendMode & BLEND_COLORADD))
 	{
 		if (blend & BLEND_COLORADD) glTexEnvi( GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_ADD);
-			else
-				glTexEnvi (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		else glTexEnvi (GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	}	 
-
+	
 	CurBlendMode = blend;
 }
 
@@ -131,12 +96,12 @@ void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 	glMatrixMode (GL_MODELVIEW);
 	glLoadIdentity ();
 	if (!flip) glScalef (2.0f / (float)width, 2.0f / (float)height, 1.0f);
-		else glScalef (2.0f / (float)width, -2.0f / (float)height, 1.0f);
+	else glScalef (2.0f / (float)width, -2.0f / (float)height, 1.0f);
 	glTranslatef (-((float)width / 2.0f), -((float)height / 2.0f), 0.0f);
 	glViewport (0, 0, width, height);
 	
 	// Displacement trick for exact pixelization
-	glTranslatef(0.375, 0.375, 0);
+	// glTranslatef(0.375, 0.375, 0);
 	
 }
 
@@ -147,7 +112,7 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 		_PostError("Gfx_BeginScene: Scene is already being rendered");
 		return false;
 	}
-	CRenderTargetList *target=(CRenderTargetList *)targ;
+	CRenderTargetList *target=(CRenderTargetList *)targ;	
 	
 	if(target != pCurTarget)
 	{
@@ -176,7 +141,7 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 		{
 			// Make the window the target
 			// glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-
+			
 			if(bZBuffer)
 			{	
 				glEnable (GL_DEPTH_TEST);
@@ -219,74 +184,14 @@ void HGE_Impl::Gfx_Clear (DWORD color)
 		glClearDepthf (1.0f);
 		glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
-		else glClear (GL_COLOR_BUFFER_BIT);
-	
-}
-
-void CALL HGE_Impl::Gfx_renderBatch(t_hge_batch *batch)
-{
-	// Copy vertex data
-	memcpy(glVertexBuffer, batch->pVertexData, batch->nPrim*4*sizeof (hgeVertex));
-	
-	if(CurBlendMode != batch->blendMode)
-	   _SetBlendMode(batch->blendMode);
-	if(CurTexture!= batch->tex)
-	{
-		glBindTexture (GL_TEXTURE_2D, batch->tex); 
-		CurTexture=batch->tex;
-	}	
-	
-	switch(batch->primType)
-	{
-		case HGEPRIM_QUADS:
-			glDrawElements(GL_TRIANGLES, batch->nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
-			break;
-			
-		case HGEPRIM_TRIPLES:
-			glDrawArrays (GL_LINES, 0, batch->nPrim);
-			break;
-			
-		case HGEPRIM_LINES:
-			glDrawArrays (GL_LINES, 0, batch->nPrim * 2);
-			break;
-	}
+	else glClear (GL_COLOR_BUFFER_BIT);
 	
 }
 
 void CALL HGE_Impl::Gfx_EndScene()
 {
 	_render_batch (true);
-	
-	for (std::list <t_hge_batch *>::iterator it = m_renderBatches.begin(); it != m_renderBatches.end(); it++)
-		if (0 != (*it)->ID)
-		{
-			(*it)->ID = 0;
-			// Find batches with similar texture
-			int size = m_textureMap [(*it)->tex].size();
-			for (int i = 0; i < size; i++)
-			{
-				t_hge_batch *mapBatch = m_textureMap [(*it)->tex][i];
-				if (0 != mapBatch->ID && (*it)->primType == mapBatch->primType && (*it)->blendMode == mapBatch->blendMode && fabs(mapBatch->Z - (*it)->Z) < 0.1f) 
-				{
-					if ((*it)->append (mapBatch))
-						mapBatch->ID = 0;
-				}
-			}
-			Gfx_renderBatch (*it);
-		}
-
-	// Clear texture map
-	for (std::map <HTEXTURE, std::vector<t_hge_batch *> >::iterator it = m_textureMap.begin(); it != m_textureMap.end(); it++)
-		(*it).second.clear();
-	
-	// Delete batches
-	for (std::list <t_hge_batch *>::iterator it = m_renderBatches.begin(); it != m_renderBatches.end(); it++)
-		delete *it;
-	
-	m_renderBatches.clear();
-	m_textureMap.clear();
-	nBatchID = 0;
-	VertArray = 0;
+	glFlush ();
 }
 
 void CALL HGE_Impl::Gfx_RenderLine(float x1, float y1, float x2, float y2, DWORD color, float z)
@@ -326,7 +231,7 @@ void CALL HGE_Impl::Gfx_RenderTriple(const hgeTriple *triple)
 			if(CurBlendMode != triple->blend) _SetBlendMode(triple->blend);
 			if(triple->tex != CurTexture)
 			{
-				// glBindTexture (GL_TEXTURE_2D, (GLuint) triple->tex);
+				glBindTexture (GL_TEXTURE_2D, (GLuint) triple->tex);
 				CurTexture = triple->tex;
 			}
 		}
@@ -343,12 +248,12 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 		if(CurPrimType!=HGEPRIM_QUADS || nPrim>=VERTEX_BUFFER_SIZE/HGEPRIM_QUADS || CurTexture!=quad->tex || CurBlendMode!=quad->blend)
 		{
 			_render_batch();
-
+			
 			CurPrimType=HGEPRIM_QUADS;
 			if(CurBlendMode != quad->blend) _SetBlendMode(quad->blend);
 			if(quad->tex != CurTexture)
 			{
-				// glBindTexture (GL_TEXTURE_2D, quad->tex);
+				glBindTexture (GL_TEXTURE_2D, quad->tex);
 				CurTexture = quad->tex;
 			}
 		}
@@ -376,7 +281,7 @@ hgeVertex* CALL HGE_Impl::Gfx_StartBatch(int prim_type, HTEXTURE tex, HTEXTURE t
 		if(CurBlendMode != blend) _SetBlendMode(blend);
 		if(tex != CurTexture)
 		{
-			// glBindTexture (GL_TEXTURE_2D, (GLuint) tex);
+			glBindTexture (GL_TEXTURE_2D, (GLuint) tex);
 			CurTexture = tex;
 		}
 		
@@ -395,46 +300,58 @@ void HGE_Impl::_render_batch (bool bEndScene)
 {
 	if(VertArray)
 	{	
-
+		
 		if(nPrim)
 		{
 			hgeVertex* pVert = glVertexBuffer;
-			float Z = glVertexBuffer[0].z;
-			
 			if (1234 == nByteOrder)
 				for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
 				{
 					unsigned char r = pVert->col & 0xff;
 					unsigned char b = (pVert->col >> 16) & 0xff;
 					unsigned char *pc = (unsigned char *) &pVert->col;
-					pVert->z = 0.5f;
 					*(pc+0) = b; 
 					*(pc+2) = r; 
 					pVert++;
 				}
-					else
-						for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
-						{
-							pVert->z = 0.5f;
-							unsigned char r = pVert->col & 0xff;
-							unsigned char b = (pVert->col >> 16) & 0xff;
-							unsigned char g = (pVert->col >> 8) & 0xff;
-							unsigned char a = (pVert->col >> 24) & 0xff;							
-							unsigned char *pc = (unsigned char *) &pVert->col;
-							*pc = b; 
-							*(pc+1) = g; 
-							*(pc+2) = r; 
-							*(pc+3) = a; 
-							pVert++;
-						}
-
-			t_hge_batch *batch = new t_hge_batch (++nBatchID, nPrim, CurTexture, CurBlendMode, CurPrimType, Z, glVertexBuffer);
-			m_renderBatches.push_back (batch);
-			m_textureMap [CurTexture].push_back (batch);
- 			nPrim=0;
+			else
+				for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
+				{
+					unsigned char r = pVert->col & 0xff;
+					unsigned char b = (pVert->col >> 16) & 0xff;
+					unsigned char g = (pVert->col >> 8) & 0xff;
+					unsigned char a = (pVert->col >> 24) & 0xff;							
+					unsigned char *pc = (unsigned char *) &pVert->col;
+					*pc = b; 
+					*(pc+1) = g; 
+					*(pc+2) = r; 
+					*(pc+3) = a; 
+					pVert++;
+				}
+			
+			switch(CurPrimType)
+			{
+				case HGEPRIM_QUADS:
+ 					// glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
+					glDrawElements(GL_TRIANGLES, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
+					break;
+					
+				case HGEPRIM_TRIPLES:
+					glDrawArrays (GL_LINES, 0, nPrim); // *3
+					break;
+					
+				case HGEPRIM_LINES:
+					glDrawArrays (GL_LINES, 0, nPrim * 2);
+					break;
+			}
+			
+			nPrim=0;
+			// glFinish();
+			// glFlush ();
 		}
 		
-		VertArray = glVertexBuffer;
+		if(bEndScene) VertArray = 0;
+		else VertArray = glVertexBuffer;
 	} 
 }
 
@@ -455,29 +372,29 @@ bool HGE_Impl::_GfxRestore()
 }
 
 /*void CALL HGE_Impl::Gfx_SetTransform(float x, float y, float dx, float dy, float rot, float hscale, float vscale)
-{
-	_render_batch();
-	
-	if(vscale==0.0f)
-	{
-		GLint mvStackDepth = 1;
-		glGetIntegerv(GL_MODELVIEW_STACK_DEPTH, &mvStackDepth);
-		if (1 == mvStackDepth) return;
-		glMatrixMode (GL_MODELVIEW);
-		glPopMatrix();
-		glPushMatrix();
-	}
-	else
-	{
-		glPopMatrix (); 
-		glPushMatrix (); 
-		glTranslatef (x, y, 0.0f);			// Move to retation centre
-		glScalef (hscale, vscale, 1.0f);	// Scale
-		glRotatef(rot*180/M_PI, 0.0f, 0.0f, 1.0f);	// Rotate
-		glTranslatef (-x+dx, -y+dy, 0.0f);	// Mov back and translate
-		glTranslatef (0.375f, 0.375f, 0.);
-	}
-}*/
+ {
+ _render_batch();
+ 
+ if(vscale==0.0f)
+ {
+ GLint mvStackDepth = 1;
+ glGetIntegerv(GL_MODELVIEW_STACK_DEPTH, &mvStackDepth);
+ if (1 == mvStackDepth) return;
+ glMatrixMode (GL_MODELVIEW);
+ glPopMatrix();
+ glPushMatrix();
+ }
+ else
+ {
+ glPopMatrix (); 
+ glPushMatrix (); 
+ glTranslatef (x, y, 0.0f);			// Move to retation centre
+ glScalef (hscale, vscale, 1.0f);	// Scale
+ glRotatef(rot*180/M_PI, 0.0f, 0.0f, 1.0f);	// Rotate
+ glTranslatef (-x+dx, -y+dy, 0.0f);	// Mov back and translate
+ glTranslatef (0.375f, 0.375f, 0.);
+ }
+ }*/
 
 void CALL HGE_Impl::Gfx_SetTransform(float x, float y, float dx, float dy, float rot, float hscale, float vscale) 
 { 
@@ -546,7 +463,7 @@ void CALL HGE_Impl::Gfx_SetClipping (int x, int y, int w, int h)
 	{
 		glEnable (GL_SCISSOR_TEST);
 		if(!pCurTarget) glScissor (vpX, scr_height-(vpY+vpHeight), vpWidth, vpHeight);
-			else glScissor (vpX, vpY, vpWidth, vpHeight);
+		else glScissor (vpX, vpY, vpWidth, vpHeight);
 	}
 	else glDisable (GL_SCISSOR_TEST);
 }
@@ -559,7 +476,7 @@ bool HGE_Impl::_init_lost()
 	EAGLView * view = (EAGLView *) glVewController.view;
 	nScreenWidth = view.framebufferHeight;
 	nScreenHeight = view.framebufferWidth;
-
+	
 	// Set viewport & matrices
 	_SetProjectionMatrix(nScreenHeight, nScreenWidth, true);	
 	
@@ -574,7 +491,7 @@ bool HGE_Impl::_init_lost()
 	glVertexBufferCopy = (hgeVertex*) malloc(nVertexBufferSize);
 	memset (glVertexBuffer, 0, nVertexBufferSize);
 	memset (glVertexBufferCopy, 0, nVertexBufferSize);
-
+	
 	// Do init with standart OpenGL
 	glEnableClientState (GL_VERTEX_ARRAY);
 	glVertexPointer (3, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->x);
@@ -619,10 +536,10 @@ bool HGE_Impl::_init_lost()
 	glEnable (GL_TEXTURE_2D);
 	glDisable (GL_SCISSOR_TEST);
 	// glEnable(GL_COLOR_MATERIAL);
-
+	
 	// Texture params
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST/*GL_LINEAR*/);
-	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST/*GL_LINEAR*/); 
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); 
 	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, bTextureClamp ? GL_CLAMP_TO_EDGE : GL_REPEAT);
 	glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, bTextureClamp ? GL_CLAMP_TO_EDGE : GL_REPEAT);
 	// EF_DEFAULT
@@ -691,12 +608,12 @@ HTEXTURE CALL HGE_Impl::Texture_Create(int width, int height)
 	int realWidth = width, realHeight = height;
 	Texture_SizeToPow2(realWidth, realHeight);
 	CTextureList *texItem = 0;
-
+	
 	texItem=new CTextureList;
 	texItem->tex = HTEXTURE(name);
 	texItem->width=width;
 	texItem->height=height;
-
+	
 	texItem->realWidth=realWidth;
 	texItem->realHeight=realHeight;
 	texItem->width=width;
@@ -738,7 +655,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 		[pool release];
 		return 0;
 	}
-					
+	
 	GLint internalFormat = 0;
 	GLenum format = 0, type = 0;
 	int width = CGImageGetWidth(bitmap);
@@ -891,7 +808,7 @@ void * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int t
 	
 	int texture = 0;
 	if (0!=texFind) texture = texFind->tex;
-		else texture = tex;
+	else texture = tex;
 	
 	GLint tmpTexture;
 	int bytesPerPixel = texFind->bpp>>3;
@@ -923,7 +840,7 @@ void * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int t
 
 void CALL HGE_Impl::Texture_Unlock(HTEXTURE tex)
 {
-
+	
 	CTextureList *texItem=textures, *texFind=0;
 	while(texItem && 0 == texFind)
 	{
@@ -944,7 +861,7 @@ void CALL HGE_Impl::Texture_Unlock(HTEXTURE tex)
 		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); 
 		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, bTextureClamp ? GL_CLAMP_TO_EDGE : GL_REPEAT);
 		glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, bTextureClamp ? GL_CLAMP_TO_EDGE : GL_REPEAT);
-
+		
 		glTexImage2D (GL_TEXTURE_2D, 0, texFind->internalFormat,
 					  texFind->realWidth, texFind->realHeight, 0,
 					  texFind->format, texFind->type, texFind->lockInfo.data);
@@ -956,7 +873,7 @@ void CALL HGE_Impl::Texture_Free(HTEXTURE tex)
 {
 	GLuint texture = (GLuint) tex;
 	if (0 != texture) glDeleteTextures (1, &texture);
-
+	
 	CTextureList *texItem=textures, *texPrev=0;
 	
 	while(texItem)
@@ -980,35 +897,35 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 	CRenderTargetList *pTarget;
 	
 	/*pTarget = new CRenderTargetList;
-	pTarget->framebuffer=0;
-	pTarget->texture=0;
-	pTarget->bDepth = zbuffer;
-	GLenum status;
-	glGenFramebuffersEXT (1, &pTarget->framebuffer);
-	// Set up the FBO with one texture attachment
-	glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, pTarget->framebuffer);
-	glGenTextures(1, &pTarget->texture);
-	glBindTexture(GL_TEXTURE_2D, pTarget->texture);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0,
-				 GL_RGBA, GL_UNSIGNED_BYTE, NULL);
-	glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT,
-							  GL_TEXTURE_2D, pTarget->texture, 0);
-	status = glCheckFramebufferStatusEXT(GL_FRAMEBUFFER_EXT);
-	if (status != GL_FRAMEBUFFER_COMPLETE_EXT)
-	{
-		_PostError("Can't create render target texture");
-		delete pTarget;
-		glDeleteTextures (1, &pTarget->texture);
-		return 0;		
-	}*/
+	 pTarget->framebuffer=0;
+	 pTarget->texture=0;
+	 pTarget->bDepth = zbuffer;
+	 GLenum status;
+	 glGenFramebuffersEXT (1, &pTarget->framebuffer);
+	 // Set up the FBO with one texture attachment
+	 glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, pTarget->framebuffer);
+	 glGenTextures(1, &pTarget->texture);
+	 glBindTexture(GL_TEXTURE_2D, pTarget->texture);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0,
+	 GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+	 glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT,
+	 GL_TEXTURE_2D, pTarget->texture, 0);
+	 status = glCheckFramebufferStatusEXT(GL_FRAMEBUFFER_EXT);
+	 if (status != GL_FRAMEBUFFER_COMPLETE_EXT)
+	 {
+	 _PostError("Can't create render target texture");
+	 delete pTarget;
+	 glDeleteTextures (1, &pTarget->texture);
+	 return 0;		
+	 }*/
 	
 	pTarget->width=width;
 	pTarget->height=height;	
 	pTarget->next=pTargets;
 	pTargets=pTarget;
-
+	
 	// Make the window the target
 	// glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
 	
@@ -1019,7 +936,7 @@ HTEXTURE CALL HGE_Impl::Target_GetTexture(HTARGET target)
 {
 	CRenderTargetList *targ=(CRenderTargetList *)target;
 	if(target) return (HTEXTURE)targ->texture;
-		else return 0;
+	else return 0;
 }
 
 

@@ -172,7 +172,7 @@ bool CALL HGE_Impl::System_Initiate()
 	}
 	
 	fTime=0.0f;
-	t0=t0fps=CFAbsoluteTimeGetCurrent ();
+	t0=t0fps=CFAbsoluteTimeGetCurrent ()*1000;
 	dt=cfps=0;
 	nFPS=0;	
 	
@@ -325,26 +325,11 @@ void CALL HGE_Impl::System_SetStateInt(hgeIntState state, int value)
 			
 			if(VertArray) break;
 			
-			if(bRendererInit)
-			{
-				if((nHGEFPS>=0 && value <0) || (nHGEFPS<0 && value>=0))
-				{
-					if(value==HGEFPS_VSYNC)
-					{
-						// d3dppW.SwapEffect = D3DSWAPEFFECT_COPY_VSYNC;
-						// d3dppFS.FullScreen_PresentationInterval = D3DPRESENT_INTERVAL_ONE;
-					}
-					else
-					{
-						// d3dppW.SwapEffect = D3DSWAPEFFECT_COPY;
-						// d3dppFS.FullScreen_PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;
-					}
-					// _GfxRestore();
-				}
-			}
 			nHGEFPS=value;
-			if(nHGEFPS>0) nFixedDelta=int(1000.0f/value);
-			else nFixedDelta=0;
+			if(nHGEFPS>0) 
+				nFixedDelta=int(1000.0f/value);
+			else 
+				nFixedDelta=0;
 			break;
 	}
 }
@@ -829,7 +814,7 @@ bool HGE_Impl::ios_renderFrame ()
 		// Ensure we have at least 1ms time step
 		// to not confuse user's code with 0
 		
-		do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
+		do { dt= CFAbsoluteTimeGetCurrent ()*1000 - t0; } while(dt < 0.001);
 		
 		// If we reached the time for the next frame
 		// or we just run in unlimited FPS mode, then
@@ -839,7 +824,7 @@ bool HGE_Impl::ios_renderFrame ()
 		{
 			// fDeltaTime = time step in seconds returned by Timer_GetDelta
 			
-			fDeltaTime=1/15.0f; //dt;
+			fDeltaTime=dt;
 			
 			// Cap too large time steps usually caused by lost focus to avoid jerks
 			
@@ -855,8 +840,8 @@ bool HGE_Impl::ios_renderFrame ()
 			// Store current time for the next frame
 			// and count FPS
 			
-			t0=CFAbsoluteTimeGetCurrent ();
-			if(t0-t0fps <= 1) cfps++;
+			t0=CFAbsoluteTimeGetCurrent ()*1000;
+			if(t0-t0fps <= 1000) cfps++;
 			else
 			{
 				nFPS=cfps; cfps=0; t0fps=t0;
@@ -880,5 +865,8 @@ bool HGE_Impl::ios_renderFrame ()
 				usleep (10);
 		}
 	}
+	else
+		usleep(10);
+
 	return false;
 }

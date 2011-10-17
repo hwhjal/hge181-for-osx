@@ -84,8 +84,11 @@ void SetBlend(int blend)
 
 bool FrameFunc()
 {
-	float dt=hge->Timer_GetDelta();
+	float dt=hge->Timer_GetDelta()*10;
 	int i;
+	
+	if (hge->Input_GetKeyState(HGEK_LBUTTON))
+		SetBlend(++nBlend);
 	
 	switch(hge->Input_GetKey())
 	{
@@ -128,7 +131,7 @@ bool RenderFunc()
 		spr->RenderEx(pObjects[i].x, pObjects[i].y, pObjects[i].rot, pObjects[i].scale);
 	}
 	
-	fnt->printf(7, 7, HGETEXT_LEFT, "UP and DOWN to adjust number of hares: %d\nSPACE to change blending mode: %d\nFPS: %d, dt:%.3f", nObjects, nBlend, hge->Timer_GetFPS(), hge->Timer_GetDelta());
+	fnt->printf(7, 7, HGETEXT_LEFT, "UP and DOWN to adjust number of hares: %d\nTap the screen to change blending mode: %d\nFPS: %d, dt:%.3f", nObjects, nBlend, hge->Timer_GetFPS(), hge->Timer_GetDelta());
 	
 	hge->Gfx_EndScene();
 	
@@ -149,7 +152,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 07 - Thousand of Hares");
 	hge->System_SetState(HGE_USESOUND, false);
 	hge->System_SetState(HGE_WINDOWED, true);
-	hge->System_SetState(HGE_FPS, 0);
+	hge->System_SetState(HGE_FPS, 60);
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
