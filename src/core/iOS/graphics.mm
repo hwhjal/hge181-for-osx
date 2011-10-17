@@ -95,8 +95,10 @@ void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 	glLoadIdentity ();
 	glMatrixMode (GL_MODELVIEW);
 	glLoadIdentity ();
-	if (!flip) glScalef (2.0f / (float)width, 2.0f / (float)height, 1.0f);
-	else glScalef (2.0f / (float)width, -2.0f / (float)height, 1.0f);
+	if (!flip) 
+		glScalef (2.0f / (float)width, 2.0f / (float)height, 1.0f);
+	else 
+		glScalef (2.0f / (float)width, -2.0f / (float)height, 1.0f);
 	glTranslatef (-((float)width / 2.0f), -((float)height / 2.0f), 0.0f);
 	glViewport (0, 0, width, height);
 	
@@ -118,15 +120,7 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 	{
 		if(target)
 		{
-			// glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, target->framebuffer);
-		}
-		else
-		{
-			// pSurf=pScreenSurf;
-			// pDepth=pScreenDepth;
-		}
-		if(target)
-		{
+			glBindFramebuffer(GL_FRAMEBUFFER, target->framebuffer);			
 			if(target->bDepth)
 			{	
 				glEnable (GL_DEPTH_TEST);
@@ -135,12 +129,16 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 				glDepthMask (GL_TRUE);
 			}
 			else glDisable (GL_DEPTH_TEST);
+			pHGE->Gfx_SetTransform (0, 0, 0, 0, 0, 0, 0);
 			_SetProjectionMatrix(target->width, target->height, false);
 		}
 		else
 		{
 			// Make the window the target
-			// glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+			glBindFramebuffer(GL_FRAMEBUFFER, glDefaultRenderBuffer);
+			_SetProjectionMatrix (nScreenHeight, nScreenWidth, true);
+			pHGE->Gfx_SetTransform (0, 0, 0, 0, 0, 0, 0);
+			pHGE->Gfx_SetTransform (0, 0, nScreenHeight, 0, M_PI/2, 1, 1);
 			
 			if(bZBuffer)
 			{	
@@ -150,7 +148,6 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 				glDepthMask (GL_TRUE);
 			}
 			else glDisable (GL_DEPTH_TEST);
-			_SetProjectionMatrix (nScreenWidth, nScreenHeight, true);
 		}
 		
 		pCurTarget=target;
@@ -691,7 +688,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 			if (aInfo != kCGImageAlphaNone)
 			{
 				internalFormat = GL_RGBA;
-				format = GL_RGBA; type = GL_UNSIGNED_BYTE; // GL_UNSIGNED_INT_8_8_8_8_REV;
+				format = GL_RGBA; type = GL_UNSIGNED_BYTE;
 			}
 			else
 			{	
@@ -889,30 +886,39 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 {
 	CRenderTargetList *pTarget;
 	
-	/*pTarget = new CRenderTargetList;
-	 pTarget->framebuffer=0;
-	 pTarget->texture=0;
-	 pTarget->bDepth = zbuffer;
-	 GLenum status;
-	 glGenFramebuffersEXT (1, &pTarget->framebuffer);
-	 // Set up the FBO with one texture attachment
-	 glBindFramebufferEXT (GL_FRAMEBUFFER_EXT, pTarget->framebuffer);
-	 glGenTextures(1, &pTarget->texture);
-	 glBindTexture(GL_TEXTURE_2D, pTarget->texture);
-	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0,
-	 GL_RGBA, GL_UNSIGNED_BYTE, NULL);
-	 glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT,
-	 GL_TEXTURE_2D, pTarget->texture, 0);
-	 status = glCheckFramebufferStatusEXT(GL_FRAMEBUFFER_EXT);
-	 if (status != GL_FRAMEBUFFER_COMPLETE_EXT)
-	 {
-	 _PostError("Can't create render target texture");
-	 delete pTarget;
-	 glDeleteTextures (1, &pTarget->texture);
-	 return 0;		
-	 }*/
+	pTarget = new CRenderTargetList;
+	pTarget->framebuffer=0;
+	pTarget->texture=0;
+	pTarget->bDepth = zbuffer;
+	GLenum status;
+	glGenFramebuffers (1, &pTarget->framebuffer);
+	// Set up the FBO with one texture attachment
+	glBindFramebuffer(GL_FRAMEBUFFER, pTarget->framebuffer);
+	// Set up texture 
+	pTarget->texture = Texture_Create (width, height);	
+	glBindTexture(GL_TEXTURE_2D, pTarget->texture);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);	
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, pTarget->texture, 0);
+	if (zbuffer)
+	{
+		GLuint depthRenderbuffer;
+		glGenRenderbuffers(1, &depthRenderbuffer);
+		glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
+		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, width, height);
+		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);
+	}
+
+	
+	status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+	if(status != GL_FRAMEBUFFER_COMPLETE)
+	{
+		_PostError("Can't create render target texture");
+		delete pTarget;
+		glDeleteTextures (1, &pTarget->texture);
+		return 0;		
+	}
 	
 	pTarget->width=width;
 	pTarget->height=height;	
@@ -920,7 +926,7 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 	pTargets=pTarget;
 	
 	// Make the window the target
-	// glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+	glBindFramebuffer(GL_FRAMEBUFFER, glDefaultRenderBuffer);
 	
 	return (HTARGET)pTarget;
 }
@@ -928,8 +934,10 @@ HTARGET CALL HGE_Impl::Target_Create(int width, int height, bool zbuffer)
 HTEXTURE CALL HGE_Impl::Target_GetTexture(HTARGET target)
 {
 	CRenderTargetList *targ=(CRenderTargetList *)target;
-	if(target) return (HTEXTURE)targ->texture;
-	else return 0;
+	if(target)
+		return (HTEXTURE)targ->texture;
+	else
+		return 0;
 }
 
 
@@ -948,10 +956,9 @@ void CALL HGE_Impl::Target_Free(HTARGET target)
 			
 			if(pTarget->framebuffer)
 			{
-				glDeleteTextures(1, &pTarget->texture);
-				// glDeleteFramebuffersEXT(1, &pTarget->framebuffer);				
-			}
-			
+				Texture_Free (pTarget->texture);
+				glDeleteFramebuffers(1, &pTarget->framebuffer);
+			}			
 			delete pTarget;
 			return;
 		}
