@@ -260,13 +260,6 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 		
 		hgeVertex *vertexBuffer = (hgeVertex *)&VertArray[nPrim*HGEPRIM_QUADS];
 		memcpy(vertexBuffer, quad->v, sizeof(hgeVertex) * HGEPRIM_QUADS);
-#ifdef HALF_PIXEL_HOTFIX
-		for (int i = 0; i < HGEPRIM_QUADS; ++i)
-		{
-			vertexBuffer[i].x += 0.5f;
-			vertexBuffer[i].y += 0.5f;
-		}
-#endif // HALF_PIXEL_HOTFIX
 		nPrim++;
 	}
 }
