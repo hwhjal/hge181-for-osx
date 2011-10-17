@@ -149,7 +149,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 07 - Thousand of Hares");
 	hge->System_SetState(HGE_USESOUND, false);
 	hge->System_SetState(HGE_WINDOWED, true);
-	hge->System_SetState(HGE_FPS, 60);
+	hge->System_SetState(HGE_FPS, 0);
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
