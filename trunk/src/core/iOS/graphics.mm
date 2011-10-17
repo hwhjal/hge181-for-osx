@@ -732,7 +732,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	CGImageRef bitmap = [UIImage imageWithData:memData].CGImage;
 	if (0 == bitmap)
 	{	
-		_PostError("Can't create image");
+		_PostError("Texture_Load: Can't create image");
 		[memData release];
 		if(!size) Resource_Free(data);		
 		[pool release];
@@ -749,14 +749,14 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	CFDataRef bitmapDataCG = CGDataProviderCopyData(CGImageGetDataProvider(bitmap));
 	const UInt8 *bitmapDataPtr = CFDataGetBytePtr (bitmapDataCG);
 	
-	// Load texture data
-    /*GLubyte *bitmapData = (GLubyte *) calloc(width * height * 4, sizeof(GLubyte)); 
-    // Uses the bitmap creation function provided by the Core Graphics framework.  
-    CGContextRef spriteContext = CGBitmapContextCreate(bitmapData, width, height, 8, width * 4, CGImageGetColorSpace(bitmap), kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big); 
-	// After you create the context, you can draw the sprite image to the context. 
-    CGContextDrawImage(spriteContext, CGRectMake(0.0, 0.0, (CGFloat)width, (CGFloat)height), bitmap); 
-    // You don't need the context at this point, so you need to release it to avoid memory leaks. 
-    CGContextRelease(spriteContext);*/ 
+	if (bitsPerPixel < 16 || bitsPerPixel > 32)
+	{	
+		_PostError("Texture_Load: Invalid BPP");
+		[memData release];
+		if(!size) Resource_Free(data);		
+		[pool release];
+		return 0;
+	}
 	
 	switch (bitsPerPixel)
 	{

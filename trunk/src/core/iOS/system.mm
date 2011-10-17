@@ -606,9 +606,15 @@ bool HGE_Impl::_ProcessMessage (int event, int subevent, int x, int y, int event
 			// Mouse events
 			case c_EVENT_MOUSE:
 				if (c_EVENT_MOUSE_DOWN == subevent)
+				{
 					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, 0, x, y);
+					hwKeyz[HGEK_LBUTTON] = 1;
+				}
 				if (c_EVENT_MOUSE_UP == subevent)
+				{
 					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_LBUTTON, 0, 0, x, y);
+					hwKeyz[HGEK_LBUTTON] = 0;
+				}
 				break;
 				
 			// Keyboard events
@@ -823,13 +829,13 @@ bool HGE_Impl::ios_renderFrame ()
 		// Ensure we have at least 1ms time step
 		// to not confuse user's code with 0
 		
-		// do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
+		do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
 		
 		// If we reached the time for the next frame
 		// or we just run in unlimited FPS mode, then
 		// do the stuff
 		
-		//if(dt >= nFixedDelta)
+		if(dt >= nFixedDelta)
 		{
 			// fDeltaTime = time step in seconds returned by Timer_GetDelta
 			
@@ -837,10 +843,10 @@ bool HGE_Impl::ios_renderFrame ()
 			
 			// Cap too large time steps usually caused by lost focus to avoid jerks
 			
-			/*if(fDeltaTime > 0.2f)
+			if(fDeltaTime > 0.2f)
 			{
 				fDeltaTime = nFixedDelta ? nFixedDelta/1000.0f : 0.01f;
-			}*/
+			}
 			
 			// Update time counter returned Timer_GetTime
 			
@@ -848,14 +854,14 @@ bool HGE_Impl::ios_renderFrame ()
 			
 			// Store current time for the next frame
 			// and count FPS
-			/*
+			
 			t0=CFAbsoluteTimeGetCurrent ();
 			if(t0-t0fps <= 1) cfps++;
 			else
 			{
 				nFPS=cfps; cfps=0; t0fps=t0;
 				/// _UpdatePowerStatus();
-			}*/
+			}
 			
 			// Do user's stuff
 			if(procFrameFunc())
