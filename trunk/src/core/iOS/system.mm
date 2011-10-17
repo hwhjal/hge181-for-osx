@@ -871,15 +871,14 @@ bool HGE_Impl::ios_renderFrame ()
 				procRenderFunc();
 			
 			_ClearQueue();			
-		}
-		
+		}		
 		// If we have a fixed frame rate and the time
 		// for the next frame isn't too close, sleep a bit		
-		/*else
+		else
 		{
 			if(nFixedDelta && dt+3 < nFixedDelta)
 				usleep (10);
-		}*/
+		}
 	}
 	return false;
 }
