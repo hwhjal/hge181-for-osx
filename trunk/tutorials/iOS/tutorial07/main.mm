@@ -84,7 +84,7 @@ void SetBlend(int blend)
 
 bool FrameFunc()
 {
-	float dt=hge->Timer_GetDelta()*10;
+	float dt=hge->Timer_GetDelta();
 	int i;
 	
 	if (hge->Input_GetKeyState(HGEK_LBUTTON))

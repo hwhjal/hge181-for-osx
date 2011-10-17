@@ -172,7 +172,7 @@ bool CALL HGE_Impl::System_Initiate()
 	}
 	
 	fTime=0.0f;
-	t0=t0fps=CFAbsoluteTimeGetCurrent ()*1000;
+	t0=t0fps=CFAbsoluteTimeGetCurrent ();
 	dt=cfps=0;
 	nFPS=0;	
 	
@@ -340,17 +340,6 @@ void CALL HGE_Impl::System_SetStateString(hgeStringState state, const char *valu
 	
 	switch(state)
 	{
-		/*case HGE_ICON:			szIcon=value;
-			if(pHGE->hwnd)
-			{
-				NSString *iconName = [[NSString alloc] initWithBytes:value length:strlen(value) encoding:NSASCIIStringEncoding];
-				NSImage *myImage = [[NSImage alloc] initWithContentsOfFile:iconName];
-				[NSApp setApplicationIconImage: myImage];
-			}
-			break;*/
-		case HGE_TITLE:			strcpy(szWinTitle,value);
-			// if(pHGE->hwnd) SetWindowText(pHGE->hwnd, szWinTitle);
-			break;
 		case HGE_INIFILE:		
 			if(value) strcpy(szIniFile, /*Resource_MakePath*/(value));
 		else szIniFile[0]=0;
@@ -814,21 +803,20 @@ bool HGE_Impl::ios_renderFrame ()
 		// Ensure we have at least 1ms time step
 		// to not confuse user's code with 0
 		
-		do { dt= CFAbsoluteTimeGetCurrent ()*1000 - t0; } while(dt < 0.001);
+		do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
 		
 		// If we reached the time for the next frame
 		// or we just run in unlimited FPS mode, then
 		// do the stuff
 		
-		if(dt >= nFixedDelta)
+		if(dt >= nFixedDelta/1000.0f)
 		{
 			// fDeltaTime = time step in seconds returned by Timer_GetDelta
 			
 			fDeltaTime=dt;
 			
-			// Cap too large time steps usually caused by lost focus to avoid jerks
-			
-			if(fDeltaTime > 0.2f)
+			// Cap too large time steps usually caused by lost focus to avoid jerks			
+			if(fDeltaTime > 0.5f)
 			{
 				fDeltaTime = nFixedDelta ? nFixedDelta/1000.0f : 0.01f;
 			}
@@ -840,8 +828,8 @@ bool HGE_Impl::ios_renderFrame ()
 			// Store current time for the next frame
 			// and count FPS
 			
-			t0=CFAbsoluteTimeGetCurrent ()*1000;
-			if(t0-t0fps <= 1000) cfps++;
+			t0=CFAbsoluteTimeGetCurrent ();
+			if(t0-t0fps <= 1) cfps++;
 			else
 			{
 				nFPS=cfps; cfps=0; t0fps=t0;
