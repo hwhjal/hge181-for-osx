@@ -128,7 +128,7 @@ bool RenderFunc()
 	
 	hge->Gfx_BeginScene();
 	RenderSimulation();	
-	fnt->printf(7, 7, HGETEXT_LEFT, "Tap the screen to adjust simulation speed\nFPS: %d", hge->Timer_GetFPS());
+	fnt->printf(7, 7, HGETEXT_LEFT, "Tap the screen to adjust simulation speed\nFPS: %d, dt:%.3f", hge->Timer_GetFPS(), hge->Timer_GetDelta());
 	fnt->printf(SCREEN_WIDTH-50, 7, HGETEXT_LEFT, "%02d:%02d:%02d", hrs, mins, secs);
 	hge->Gfx_EndScene();
 	
@@ -151,7 +151,7 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
-	hge->System_SetState(HGE_FPS, 0);	
+	hge->System_SetState(HGE_FPS, 60);	
 	
 	if(hge->System_Initiate())
 	{
