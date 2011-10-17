@@ -77,6 +77,12 @@ bool FrameFunc()
 	
 	float dt=hge->Timer_GetDelta();
 	
+	if (hge->Input_GetKeyState(HGEK_LBUTTON))
+	{
+		dx = float (rand () % 25);
+		dy = float (rand () % 25);
+	}
+	
 	// Process keys
 	if (hge->Input_GetKeyState(HGEK_ESCAPE)) return true;
 	if (hge->Input_GetKeyState(HGEK_LEFT)) dx-=speed*dt;
@@ -120,7 +126,8 @@ bool RenderFunc()
 		tar->SetColor(0xFFFFFF | (((5-i)*40+55)<<24));
 		tar->RenderEx(i*100.0f, i*50.0f, i*M_PI/8, 1.0f-i*0.1f);
 	}
-	fnt->printf(5, 5, HGETEXT_LEFT, "dt:%.3f\nFPS:%d (constant)", hge->Timer_GetDelta(), hge->Timer_GetFPS());
+	fnt->printf(5, 5, HGETEXT_LEFT, "Tap the screen");
+	fnt->printf(5, 30, HGETEXT_LEFT, "dt:%.3f\nFPS:%d (constant)", hge->Timer_GetDelta(), hge->Timer_GetFPS());
 	hge->Gfx_EndScene();
 	
 	return false;
