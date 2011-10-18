@@ -465,21 +465,12 @@ void HGE_Impl::_PostError(const char *error)
 void CALL HGE_Impl::System_Shutdown()
 {
 	System_Log("\nFinishing..");
-	
-	/*timeEndPeriod(1);
-	if(hSearch) { FindClose(hSearch); hSearch=0; }
 	_ClearQueue();
 	_SoundDone();
 	_GfxDone();
-	_DonePowerStatus();
 	
-	if(hwnd)
-	{
-		DestroyWindow(hwnd);
-		hwnd=0;
-	}
-	
-	if(hInstance) UnregisterClass(WINDOW_CLASS_NAME, hInstance);*/
+	/*timeEndPeriod(1);
+	if(hSearch) { FindClose(hSearch); hSearch=0; }*/
 	
 	System_Log("The End.");
 }
