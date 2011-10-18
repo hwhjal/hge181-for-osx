@@ -140,7 +140,7 @@ int main (int argc, char * const argv[])
 		{
 			// If one of the data files is not found, display
 			// an error message and shutdown.
-			// hge->System_Shutdown();
+			hge->System_Shutdown();
 			hge->Release();
 			return 0;
 		}
@@ -177,7 +177,7 @@ int main (int argc, char * const argv[])
 	}
 	
 	// Clean up and shutdown
-	// hge->System_Shutdown();
+	hge->System_Shutdown();
 	hge->Release();
 	return 0;
 }

@@ -296,7 +296,7 @@ public:
 	bool				_ProcessMessage (int event, int subevent, int x, int y, int event_data1);
 	bool				_GfxInit();
 	void				_CreateWindow ();
-	//	void				_GfxDone();
+	void				_GfxDone();
 	bool				_GfxRestore();
 	//	void				_AdjustWindow();
 	//	void				_Resize(int width, int height);

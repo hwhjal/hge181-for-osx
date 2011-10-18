@@ -32,6 +32,11 @@ bool HGE_Impl::_GfxInit()
 	return true;
 }
 
+void HGE_Impl::_GfxDone()
+{
+	
+}
+
 void HGE_Impl::_OpeGLCapsGet ()
 {
 	const GLubyte* strVers = glGetString (GL_VERSION);
