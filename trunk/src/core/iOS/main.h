@@ -32,6 +32,11 @@
 // HGE
 #include "hge_impl.h"
 
+#undef DWORD
+// Bass
+#include "../Bass/iOS/bass.h"
+
+
 
 
 #endif

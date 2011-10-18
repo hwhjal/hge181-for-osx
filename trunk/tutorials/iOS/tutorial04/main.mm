@@ -41,7 +41,7 @@ void boom()
 {
 	int pan=int((x-256)/2.56f);
 	float pitch=(dx*dx+dy*dy)*0.0005f+0.2f;
-	// hge->Effect_PlayEx(snd,100,pan,pitch);
+	hge->Effect_PlayEx(snd,100,pan,pitch);
 }
 
 // This function will be called by HGE when
@@ -127,15 +127,16 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_GFXRESTOREFUNC, GfxRestoreFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 04 - Using render targets");
 	hge->System_SetState(HGE_FPS, 60);
+	hge->System_SetState(HGE_USESOUND, true);
 	
 	tar=0;
 	target=0;
 	
 	if(hge->System_Initiate()) 
 	{
-		// snd=hge->Effect_Load("menu.wav");
+		snd=hge->Effect_Load("menu.wav");
 		tex=hge->Texture_Load("particles.png");
-		if(/*!snd ||*/ !tex)
+		if(!snd || !tex)
 		{
 			// If one of the data files is not found, display
 			// an error message and shutdown.
@@ -172,7 +173,7 @@ int main (int argc, char * const argv[])
 		delete tar;
 		hge->Target_Free(target);
 		hge->Texture_Free(tex);
-		// hge->Effect_Free(snd);
+		hge->Effect_Free(snd);
 	}
 	
 	// Clean up and shutdown

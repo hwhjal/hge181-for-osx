@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>18</integer>
+									<integer>7</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -313,12 +311,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>resource.mm</string>
+								<string>sound.mm</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,14 +326,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>resource.mm</string>
+										<string>sound.mm</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>56DFD5EB1449708D0078CFDE</string>
+										<string>56D86E96144D477900370A14</string>
 										<key>history</key>
 										<array>
-											<string>5676BFC814006118007CFD38</string>
+											<string>56D86D83144D3EFF00370A14</string>
+											<string>56D86E72144D46D300370A14</string>
+											<string>56D86E73144D46D300370A14</string>
+											<string>56D86E95144D477900370A14</string>
+											<string>56D86E74144D46D300370A14</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -365,7 +369,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 829}, {1072, 0}}</string>
+								<string>{{0, 824}, {1072, 0}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 137 1280 865 0 0 1280 1002 </string>
 							</dict>
@@ -391,9 +395,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>56DFD5DC14496E740078CFDE</string>
+				<string>56D86E97144D477900370A14</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>56DFD5DD14496E740078CFDE</string>
+				<string>56D86E98144D477900370A14</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -612,7 +616,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5618F0D213F4719A007BA885</string>
-				<string>56DFD5DE14496E740078CFDE</string>
+				<string>56D86E99144D477900370A14</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

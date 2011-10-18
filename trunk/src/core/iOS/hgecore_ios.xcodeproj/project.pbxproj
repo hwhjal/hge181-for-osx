@@ -17,6 +17,8 @@
 		5618F20813F47851007BA885 /* libhgecore.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libhgecore.a */; };
 		566822AC14001018007539AD /* hge_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 566822AB14001018007539AD /* hge_impl.h */; };
 		56C247A21449C94800D038EA /* viewcontroller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56C247A11449C94800D038EA /* viewcontroller.mm */; };
+		56D86D90144D3FD000370A14 /* appdelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D86D8E144D3FD000370A14 /* appdelegate.h */; };
+		56D86D91144D3FD000370A14 /* sound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56D86D8F144D3FD000370A14 /* sound.mm */; };
 		56DFD62A144971EE0078CFDE /* appdelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DFD626144971EE0078CFDE /* appdelegate.mm */; };
 		56DFD62B144971EE0078CFDE /* eaglview.h in Headers */ = {isa = PBXBuildFile; fileRef = 56DFD627144971EE0078CFDE /* eaglview.h */; };
 		56DFD62C144971EE0078CFDE /* eaglview.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DFD628144971EE0078CFDE /* eaglview.mm */; };
@@ -50,6 +52,8 @@
 		5618F1EC13F477A9007BA885 /* timer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = timer.mm; sourceTree = "<group>"; };
 		566822AB14001018007539AD /* hge_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hge_impl.h; sourceTree = "<group>"; };
 		56C247A11449C94800D038EA /* viewcontroller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = viewcontroller.mm; sourceTree = "<group>"; };
+		56D86D8E144D3FD000370A14 /* appdelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appdelegate.h; sourceTree = "<group>"; };
+		56D86D8F144D3FD000370A14 /* sound.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = sound.mm; sourceTree = "<group>"; };
 		56DFD626144971EE0078CFDE /* appdelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = appdelegate.mm; sourceTree = "<group>"; };
 		56DFD627144971EE0078CFDE /* eaglview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eaglview.h; sourceTree = "<group>"; };
 		56DFD628144971EE0078CFDE /* eaglview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = eaglview.mm; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		5618F18413F4762B007BA885 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				56D86D8E144D3FD000370A14 /* appdelegate.h */,
 				56C247A11449C94800D038EA /* viewcontroller.mm */,
 				56DFD626144971EE0078CFDE /* appdelegate.mm */,
 				56DFD627144971EE0078CFDE /* eaglview.h */,
@@ -145,6 +150,7 @@
 				5618F1E813F477A9007BA885 /* random.mm */,
 				5618F1E913F477A9007BA885 /* resource.mm */,
 				5618F1EB13F477A9007BA885 /* system.mm */,
+				56D86D8F144D3FD000370A14 /* sound.mm */,
 				5618F1EC13F477A9007BA885 /* timer.mm */,
 				5618F1C013F47797007BA885 /* graphics.mm */,
 			);
@@ -162,6 +168,7 @@
 				566822AC14001018007539AD /* hge_impl.h in Headers */,
 				56DFD62B144971EE0078CFDE /* eaglview.h in Headers */,
 				56DFD62D144971EE0078CFDE /* viewcontroller.h in Headers */,
+				56D86D90144D3FD000370A14 /* appdelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +232,7 @@
 				56DFD62A144971EE0078CFDE /* appdelegate.mm in Sources */,
 				56DFD62C144971EE0078CFDE /* eaglview.mm in Sources */,
 				56C247A21449C94800D038EA /* viewcontroller.mm in Sources */,
+				56D86D91144D3FD000370A14 /* sound.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
