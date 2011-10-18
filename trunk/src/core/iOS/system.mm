@@ -90,6 +90,13 @@ HGE_Impl::HGE_Impl()
 	bTextureClamp = false;
 	bMainMenuHidden = false;
 	
+	hBass=0;
+	bSilent=false;
+	streams=0;
+	
+	hSearch=false;
+	res=0;	
+	
 	iconName = 0;
 	
 	CurBlendMode = 0;

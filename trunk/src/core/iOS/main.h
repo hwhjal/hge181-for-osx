@@ -12,11 +12,15 @@
 
 #import <Foundation/Foundation.h>
 
+
 // System
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/sysctl.h>
+#include <assert.h>
+#include <glob.h>
+
 
 #import <UIKit/UIImage.h>
 #import <OpenGLES/EAGL.h>
@@ -35,6 +39,11 @@
 #undef DWORD
 // Bass
 #include "../Bass/iOS/bass.h"
+#undef DWORD
+
+// Zlib
+#include "../ZLIB/unzip.h"
+
 
 
 

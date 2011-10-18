@@ -121,7 +121,7 @@ int main (int argc, char * const argv[])
 			// If one of the data files is not found, display
 			// an error message and shutdown.
 			// MessageBox(NULL, "Can't load TEXTURE.JPG", "Error", MB_OK | MB_ICONERROR | MB_APPLMODAL);
-			// hge->System_Shutdown();
+			hge->System_Shutdown();
 			hge->Release();
 			return 0;
 		}
