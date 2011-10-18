@@ -33,6 +33,7 @@
 	[self.window makeKeyAndVisible];
 	
 	EAGLView * eagl = (EAGLView *)self.viewController.view;
+	pHGE->ios_setMainWindow (self.window);
 	pHGE->Gfx_SetTransform (0, 0, 0, 0, 0, 0, 0);
 	pHGE->Gfx_SetTransform (0, 0, eagl.framebufferWidth, 0, M_PI/2, 1, 1);
 	pHGE->Release();
@@ -54,6 +55,7 @@
 	pHGE = HGE_Impl::_Interface_Get ();	
 	pHGE->_FocusChange (true);
 	pHGE->Release();
+	
 	[self.viewController startAnimation];
 }
 

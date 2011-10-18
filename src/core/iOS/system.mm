@@ -96,6 +96,7 @@ HGE_Impl::HGE_Impl()
 	CurTexture = 0;
 	CurPrimType = 0;
 	
+	hwnd = 0;
 	glVewController = 0;
 	glDefaultRenderBuffer = 0;
 		
@@ -159,6 +160,10 @@ bool CALL HGE_Impl::System_Initiate()
 		return false;
 	}
 	
+	// Sound init
+	if (!_SoundInit ())
+		System_Log("Sound init failed.\n");
+	
 	fTime=0.0f;
 	t0=t0fps=CFAbsoluteTimeGetCurrent ();
 	dt=cfps=0;
@@ -214,23 +219,15 @@ void CALL HGE_Impl::System_SetStateBool (hgeBoolState state, bool value)
 	switch(state)
 	{
 		case HGE_WINDOWED:
-
-			if(VertArray) break;
-			/*
-			 if((glContextWindowed || glContextFullscreen) && bWindowed != value)
-			{
-				bWindowed=value;
-				_GfxRestore();
-			}
-			 */
-			else bWindowed=value;
 			break;
 			
 		case HGE_ZBUFFER:		
-			if(!bGLInitDone)	bZBuffer=value;
+			if(!bGLInitDone)
+				bZBuffer=value;
 			break;
 			
-		/*case HGE_TEXTUREFILTER: bTextureFilter=value;
+		/*case HGE_TEXTUREFILTER:
+			bTextureFilter=value;
 			if(pD3DDevice)
 			{
 				_render_batch();
@@ -247,22 +244,31 @@ void CALL HGE_Impl::System_SetStateBool (hgeBoolState state, bool value)
 			}
 			break;*/
 			
-		/*case HGE_USESOUND:		if(bUseSound!=value)
-		{
-			bUseSound=value;
-			if(bUseSound && hwnd) _SoundInit();
-			if(!bUseSound && hwnd) _SoundDone();
-		}
-			break;*/
+		case HGE_USESOUND:
+			if(bUseSound!=value)
+			{
+				bUseSound=value;
+				if(bUseSound && hwnd) _SoundInit();
+				if(!bUseSound && hwnd) _SoundDone();
+			}
+		break;
 			
-		case HGE_HIDEMOUSE:		bHideMouse=value; break;
+		case HGE_HIDEMOUSE:
+			bHideMouse=value;
+		break;
 			
-		case HGE_DONTSUSPEND:	bDontSuspend=value; break;
+		case HGE_DONTSUSPEND:
+			bDontSuspend=value;
+		break;
 			
-#ifdef DEMO
-		case HGE_SHOWSPLASH:	bDMO=value; break;
-#endif
-		case HGE_TEXTURECLAMP:  bTextureClamp = value; break;
+	#ifdef DEMO
+		case HGE_SHOWSPLASH:
+			bDMO=value;
+		break;
+	#endif
+		case HGE_TEXTURECLAMP:
+			bTextureClamp = value;
+		break;
 	}
 
 }

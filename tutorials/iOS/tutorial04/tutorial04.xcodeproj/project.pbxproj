@@ -15,6 +15,9 @@
 		56C248AD1449CE7900D038EA /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C248AC1449CE7900D038EA /* libhgecore.a */; };
 		56C248AF1449CE7900D038EA /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C248AE1449CE7900D038EA /* libhgehelp.a */; };
 		56C248C21449CEDA00D038EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C248C11449CEDA00D038EA /* CoreGraphics.framework */; };
+		56D86E1B144D44E400370A14 /* libbass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D86E1A144D44E400370A14 /* libbass.a */; };
+		56D86E32144D452F00370A14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D86E31144D452F00370A14 /* AudioToolbox.framework */; };
+		56D86E53144D456F00370A14 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D86E52144D456F00370A14 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		56C248AC1449CE7900D038EA /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libhgecore.a"; sourceTree = "<absolute>"; };
 		56C248AE1449CE7900D038EA /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libhgehelp.a"; sourceTree = "<absolute>"; };
 		56C248C11449CEDA00D038EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56D86E1A144D44E400370A14 /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libbass.a"; sourceTree = "<absolute>"; };
+		56D86E31144D452F00370A14 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		56D86E52144D456F00370A14 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* tutorial04-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial04-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +49,9 @@
 				56C248AD1449CE7900D038EA /* libhgecore.a in Frameworks */,
 				56C248AF1449CE7900D038EA /* libhgehelp.a in Frameworks */,
 				56C248C21449CEDA00D038EA /* CoreGraphics.framework in Frameworks */,
+				56D86E1B144D44E400370A14 /* libbass.a in Frameworks */,
+				56D86E32144D452F00370A14 /* AudioToolbox.framework in Frameworks */,
+				56D86E53144D456F00370A14 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +104,9 @@
 				56C248AC1449CE7900D038EA /* libhgecore.a */,
 				56C248AE1449CE7900D038EA /* libhgehelp.a */,
 				56C248C11449CEDA00D038EA /* CoreGraphics.framework */,
+				56D86E1A144D44E400370A14 /* libbass.a */,
+				56D86E31144D452F00370A14 /* AudioToolbox.framework */,
+				56D86E52144D456F00370A14 /* CFNetwork.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

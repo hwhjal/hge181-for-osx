@@ -209,44 +209,43 @@ public:
 	virtual float		CALL	Timer_GetTime();
 	virtual float		CALL	Timer_GetDelta();
 	virtual int			CALL	Timer_GetFPS();
+	virtual HEFFECT		CALL	Effect_Load(const char *filename, DWORD size=0);
+	virtual void		CALL	Effect_Free(HEFFECT eff);
+	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff);
+	virtual HCHANNEL	CALL 	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false);
 	//	
-	virtual HEFFECT		CALL	Effect_Load(const char *filename, DWORD size=0) {ASSERT(0);};;
-	virtual void		CALL	Effect_Free(HEFFECT eff) {ASSERT(0);};;
-	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff) {ASSERT(0);};
-	virtual HCHANNEL	CALL 	Effect_PlayEx(HEFFECT eff, int volume=100, int pan=0, float pitch=1.0f, bool loop=false) {ASSERT(0);};
+	virtual HMUSIC		CALL 	Music_Load(const char *filename, DWORD size=0);
+	virtual void		CALL	Music_Free(HMUSIC mus);
+	virtual HCHANNEL	CALL 	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = 0, int row = 0);
+	virtual void		CALL	Music_SetAmplification(HMUSIC music, int ampl);
+	virtual int			CALL	Music_GetAmplification(HMUSIC music);
+	virtual int			CALL	Music_GetLength(HMUSIC music) ;
+	virtual void		CALL	Music_SetPos(HMUSIC music, int order, int row);
+	virtual bool		CALL	Music_GetPos(HMUSIC music, int *order, int *row);
+	virtual void		CALL	Music_SetInstrVolume(HMUSIC music, int instr, int volume);
+	virtual int			CALL	Music_GetInstrVolume(HMUSIC music, int instr);
+	virtual void		CALL	Music_SetChannelVolume(HMUSIC music, int channel, int volume);
+	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel);
 	//	
-	virtual HMUSIC		CALL 	Music_Load(const char *filename, DWORD size=0) {ASSERT(0);};;
-	virtual void		CALL	Music_Free(HMUSIC mus) {ASSERT(0);};;
-	virtual HCHANNEL	CALL 	Music_Play(HMUSIC mus, bool loop, int volume = 100, int order = 0, int row = 0) {ASSERT(0);};
-	virtual void		CALL	Music_SetAmplification(HMUSIC music, int ampl) {ASSERT(0);};;
-	virtual int			CALL	Music_GetAmplification(HMUSIC music) {ASSERT(0);};
-	virtual int			CALL	Music_GetLength(HMUSIC music) {ASSERT(0);}
-	virtual void		CALL	Music_SetPos(HMUSIC music, int order, int row) {ASSERT(0);};
-	virtual bool		CALL	Music_GetPos(HMUSIC music, int *order, int *row) {ASSERT(0);};
-	virtual void		CALL	Music_SetInstrVolume(HMUSIC music, int instr, int volume) {ASSERT(0);};
-	virtual int			CALL	Music_GetInstrVolume(HMUSIC music, int instr) {ASSERT(0);};
-	virtual void		CALL	Music_SetChannelVolume(HMUSIC music, int channel, int volume) {ASSERT(0);};
-	virtual int			CALL	Music_GetChannelVolume(HMUSIC music, int channel) {ASSERT(0);};
+	virtual HSTREAM		CALL	Stream_Load(const char *filename, DWORD size=0);
+	virtual void		CALL	Stream_Free(HSTREAM stream);
+	virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100);
 	//	
-	virtual HSTREAM		CALL	Stream_Load(const char *filename, DWORD size=0) {ASSERT(0);};
-	virtual void		CALL	Stream_Free(HSTREAM stream) {ASSERT(0);};
-	virtual HCHANNEL	CALL	Stream_Play(HSTREAM stream, bool loop, int volume = 100) {ASSERT(0);};
-	//	
-	virtual void		CALL 	Channel_SetPanning(HCHANNEL chn, int pan) {ASSERT(0);};
-	virtual void		CALL 	Channel_SetVolume(HCHANNEL chn, int volume) {ASSERT(0);};
-	virtual void		CALL 	Channel_SetPitch(HCHANNEL chn, float pitch) {ASSERT(0);};
-	virtual void		CALL 	Channel_Pause(HCHANNEL chn) {ASSERT(0);};
-	virtual void		CALL 	Channel_Resume(HCHANNEL chn) {ASSERT(0);};
-	virtual void		CALL 	Channel_Stop(HCHANNEL chn) {ASSERT(0);};
-	virtual void		CALL 	Channel_PauseAll() {ASSERT(0);};
-	virtual void		CALL 	Channel_ResumeAll() {ASSERT(0);};
-	virtual void		CALL 	Channel_StopAll() {ASSERT(0);};
-	virtual bool		CALL	Channel_IsPlaying(HCHANNEL chn) {ASSERT(0);};
-	virtual float		CALL	Channel_GetLength(HCHANNEL chn) {ASSERT(0);};
-	virtual float		CALL	Channel_GetPos(HCHANNEL chn) {ASSERT(0);};
-	virtual void		CALL	Channel_SetPos(HCHANNEL chn, float fSeconds) {ASSERT(0);};
-	virtual void		CALL	Channel_SlideTo(HCHANNEL channel, float time, int volume, int pan = -101, float pitch = -1) {ASSERT(0);};
-	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel) {ASSERT(0);};
+	virtual void		CALL 	Channel_SetPanning(HCHANNEL chn, int pan);
+	virtual void		CALL 	Channel_SetVolume(HCHANNEL chn, int volume);
+	virtual void		CALL 	Channel_SetPitch(HCHANNEL chn, float pitch);
+	virtual void		CALL 	Channel_Pause(HCHANNEL chn);
+	virtual void		CALL 	Channel_Resume(HCHANNEL chn);
+	virtual void		CALL 	Channel_Stop(HCHANNEL chn);
+	virtual void		CALL 	Channel_PauseAll();
+	virtual void		CALL 	Channel_ResumeAll();
+	virtual void		CALL 	Channel_StopAll();
+	virtual bool		CALL	Channel_IsPlaying(HCHANNEL chn);
+	virtual float		CALL	Channel_GetLength(HCHANNEL chn);
+	virtual float		CALL	Channel_GetPos(HCHANNEL chn);
+	virtual void		CALL	Channel_SetPos(HCHANNEL chn, float fSeconds);
+	virtual void		CALL	Channel_SlideTo(HCHANNEL channel, float time, int volume, int pan = -101, float pitch = -1);
+	virtual bool		CALL	Channel_IsSliding(HCHANNEL channel);
 	//	
 	virtual void		CALL	Input_GetMousePos(float *x, float *y);
 	virtual void		CALL	Input_SetMousePos(float x, float y);
@@ -290,6 +289,7 @@ public:
 	UIWindow			*ios_getWindow () {return window;}
 	GLAppViewController *ios_getViewController () {return glVewController;}
 	void				ios_setDefaultFrameBuffer (GLuint rb) {glDefaultRenderBuffer = rb;}
+	void				ios_setMainWindow (UIWindow *wnd) {hwnd = wnd;}
 	
 	
 	void				Terminate();	
@@ -307,7 +307,6 @@ public:
 	
 	
 	void				_render_batch(bool bEndScene=false);
-	//	int					_format_id(D3DFORMAT fmt);
 	void				_SetBlendMode(int blend);
 	void				_SetProjectionMatrix(int width, int height, bool flip);
 	
@@ -317,14 +316,12 @@ public:
 	void				_FocusChange(bool bAct);
 	void				_PostError(const char *error);
 	
-	// NSWindow			*hwnd;
+	UIWindow 			*hwnd;
 	NSString			*iconName;
-	// NSRect				rect;
 	bool				bActive;
 	char				szError[256];
 	char				szAppPath[_MAX_PATH];
 	char				szIniString[256];
-	// Application			*application;	
 	
 	// System States
 	bool				bRendererInit;
@@ -354,8 +351,7 @@ public:
 	int					nHGEFPS;
 	bool				bHideMouse;
 	bool				bDontSuspend;
-	// HWND				hwndParent;
-	
+
 	// Graphix
 	bool				bGLInitDone;
 	bool				bKeepDesktopMode;
@@ -380,6 +376,17 @@ public:
 	bool				bGLAppleFenceSupported;
 	GLint				nGLMaxTexUnits;
 	GLint				nGLMaxTexSize;
+	
+	// Audio
+	bool				hBass;
+	bool				bSilent;
+	CStreamList*		streams;
+	bool				_SoundInit();
+	void				_SoundDone();
+	void				_SetMusVolume(int vol);
+	void				_SetStreamVolume(int vol);
+	void				_SetFXVolume(int vol);
+	
 	
 	// Resources
 	char				szTmpFilename[_MAX_PATH];
