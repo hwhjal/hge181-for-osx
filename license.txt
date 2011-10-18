@@ -35,4 +35,4 @@ You may choose not to use BASS in your application and replace it with your
 own code or any other audio routines, either free or licensed to you. 
 
 --------------------------------------------------------------------------
-Mac OS X port was created by Andrew Onofreytchuk (a.Onofreytchuk@gmail.com)
+Mac OS X and iOS port was created by Andrew Onofreytchuk (a.Onofreytchuk@gmail.com)
