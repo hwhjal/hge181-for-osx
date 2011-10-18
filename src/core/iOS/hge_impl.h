@@ -187,19 +187,21 @@ public:
 	//	
 	virtual void*		CALL	Resource_Load(const char *filename, DWORD *size=0);
 	virtual void		CALL	Resource_Free(void *res);
-	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0) {ASSERT(0);};
-	virtual void		CALL	Resource_RemovePack(const char *filename) {ASSERT(0);};
-	virtual void		CALL	Resource_RemoveAllPacks() {ASSERT(0);};
+	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0);
+	virtual void		CALL	Resource_RemovePack(const char *filename);
+	virtual void		CALL	Resource_RemoveAllPacks();
 	virtual char*		CALL	Resource_MakePath(const char *filename=0);
-	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0) {ASSERT(0);};
-	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0) {ASSERT(0);};
+	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0);
+	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0);
+	char*						getNextSearchResult (NSString *fileType);
+	
 	//	
 	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
 	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return def_val;} // {ASSERT(0);};
 	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value) {} // {ASSERT(0);};
 	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val) {return def_val;} // {ASSERT(0);};
 	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value) {} // {ASSERT(0);};
-	virtual	char*	CALL	Ini_GetString(const char *section, const char *name, const char *def_val) {return 0;} // {ASSERT(0);};
+	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val) {return 0;} // {ASSERT(0);};
 	
 	//	
 	virtual void		CALL	Random_Seed(int seed=0);
@@ -389,10 +391,14 @@ public:
 	
 	
 	// Resources
+	NSBundle			*mainBundle;
 	char				szTmpFilename[_MAX_PATH];
 	CResourceList*		res;
-	// HANDLE				hSearch;
-	// WIN32_FIND_DATA		SearchData;	
+	glob_t				fileSearcher;
+	NSFileManager		*localFileManager;
+	bool				hSearch;
+	int					searchIndex;
+	char				szFindFileData[_MAX_PATH];
 	
 	// Timer
 	float				fTime;

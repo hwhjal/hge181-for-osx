@@ -11,6 +11,10 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		56937740144D59230003909F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5693773F144D59230003909F /* AudioToolbox.framework */; };
+		56937742144D59230003909F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56937741144D59230003909F /* CFNetwork.framework */; };
+		56937748144D59300003909F /* libbass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56937747144D59300003909F /* libbass.a */; };
+		5693774A144D59300003909F /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56937749144D59300003909F /* libzlib.a */; };
 		56C248AB1449CE6500D038EA /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56C248AA1449CE6500D038EA /* main.mm */; };
 		56C248AD1449CE7900D038EA /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C248AC1449CE7900D038EA /* libhgecore.a */; };
 		56C248AF1449CE7900D038EA /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C248AE1449CE7900D038EA /* libhgehelp.a */; };
@@ -24,6 +28,10 @@
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* tutorial08_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tutorial08_Prefix.pch; sourceTree = "<group>"; };
+		5693773F144D59230003909F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		56937741144D59230003909F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		56937747144D59300003909F /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libbass.a"; sourceTree = "<absolute>"; };
+		56937749144D59300003909F /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libzlib.a"; sourceTree = "<absolute>"; };
 		56C248AA1449CE6500D038EA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		56C248AC1449CE7900D038EA /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libhgecore.a"; sourceTree = "<absolute>"; };
 		56C248AE1449CE7900D038EA /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/iOS/libhgehelp.a"; sourceTree = "<absolute>"; };
@@ -43,6 +51,10 @@
 				56C248AD1449CE7900D038EA /* libhgecore.a in Frameworks */,
 				56C248AF1449CE7900D038EA /* libhgehelp.a in Frameworks */,
 				56C248C21449CEDA00D038EA /* CoreGraphics.framework in Frameworks */,
+				56937740144D59230003909F /* AudioToolbox.framework in Frameworks */,
+				56937742144D59230003909F /* CFNetwork.framework in Frameworks */,
+				56937748144D59300003909F /* libbass.a in Frameworks */,
+				5693774A144D59300003909F /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,10 @@
 				56C248AC1449CE7900D038EA /* libhgecore.a */,
 				56C248AE1449CE7900D038EA /* libhgehelp.a */,
 				56C248C11449CEDA00D038EA /* CoreGraphics.framework */,
+				5693773F144D59230003909F /* AudioToolbox.framework */,
+				56937741144D59230003909F /* CFNetwork.framework */,
+				56937747144D59300003909F /* libbass.a */,
+				56937749144D59300003909F /* libzlib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

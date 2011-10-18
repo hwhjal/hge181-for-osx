@@ -159,7 +159,7 @@ int main (int argc, char * const argv[])
 		
 		// Create a render target and a sprite for it
 		target=hge->Target_Create(512,512,false);
-		tar=new hgeSprite(hge->Target_GetTexture(target),0,0,512,512);
+		tar=new hgeSprite(hge->Target_GetTexture(target),0,0,1024,768);
 		tar->SetBlendMode(BLEND_COLORMUL | BLEND_ALPHAADD | BLEND_NOZWRITE);
 		
 		// Let's rock now!
