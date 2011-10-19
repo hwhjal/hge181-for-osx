@@ -37,6 +37,7 @@
 
 #undef DWORD
 // Zlib
+#define NOCRYPT
 #include "../ZLIB/unzip.h"
 
 

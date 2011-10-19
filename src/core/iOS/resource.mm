@@ -7,9 +7,6 @@
 //
 
 
-#define NOCRYPT
-//#define NOUNCRYPT
-
 #include "main.h"
 #include <string.h>
 #include <ctype.h>

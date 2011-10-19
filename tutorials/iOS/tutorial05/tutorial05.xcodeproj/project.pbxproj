@@ -182,7 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rsync -r --exclude=.svn ../../data/ ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app";
+			shellScript = "rsync -r --exclude=.svn ../../Data/ ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app";
 		};
 /* End PBXShellScriptBuildPhase section */
 

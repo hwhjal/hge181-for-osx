@@ -113,12 +113,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 340360405;
-			PBXWorkspaceStateSaveDate = 340360405;
+			PBXPerProjectTemplateStateSaveDate = 340740733;
+			PBXWorkspaceStateSaveDate = 340740733;
 		};
 		perUserProjectItems = {
-			56DFD6A814497CE00078CFDE /* PBXBookmark */ = 56DFD6A814497CE00078CFDE /* PBXBookmark */;
-			56DFD6A914497CE00078CFDE /* PBXTextBookmark */ = 56DFD6A914497CE00078CFDE /* PBXTextBookmark */;
+			56E469BA144F483000F21A8D /* PBXTextBookmark */ = 56E469BA144F483000F21A8D /* PBXTextBookmark */;
+			56E46A31144F4A8900F21A8D /* PBXTextBookmark */ = 56E46A31144F4A8900F21A8D /* PBXTextBookmark */;
 		};
 		sourceControlManager = 56A797B211970B0200D63247 /* Source Control */;
 		userBuildSettings = {
@@ -126,9 +126,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 2756}}";
-			sepNavSelRange = "{2846, 0}";
-			sepNavVisRange = "{2285, 1273}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2678}}";
+			sepNavSelRange = "{3807, 0}";
+			sepNavVisRange = "{4068, 1235}";
 		};
 	};
 	56A7979C11970AF500D63247 /* tutorial06 */ = {
@@ -179,19 +179,25 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	56DFD6A814497CE00078CFDE /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-	};
-	56DFD6A914497CE00078CFDE /* PBXTextBookmark */ = {
+	56E469BA144F483000F21A8D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
-		name = "main.mm: 131";
+		name = "main.mm: 114";
 		rLen = 0;
-		rLoc = 2846;
+		rLoc = 2529;
 		rType = 0;
-		vrLen = 1273;
+		vrLen = 1236;
 		vrLoc = 2285;
+	};
+	56E46A31144F4A8900F21A8D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.mm */;
+		name = "main.mm: 159";
+		rLen = 0;
+		rLoc = 3807;
+		rType = 0;
+		vrLen = 1235;
+		vrLoc = 4068;
 	};
 	56F46BB513FAF920004298EC /* menuitem.h */ = {
 		uiCtxt = {

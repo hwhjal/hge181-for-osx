@@ -22,10 +22,10 @@
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
 		5676BFF414006204007CFD38 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676BFF314006204007CFD38 /* libzlib.a */; };
-		5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694895613F3457F000A3A69 /* libhgehelp.a */; };
 		56A58C9513FDA2C900C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58C9413FDA2C900C081BE /* libbass.dylib */; };
 		56A58CEB13FDA53900C081BE /* libbass.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A58C9413FDA2C900C081BE /* libbass.dylib */; };
-		56AE395A13FD6B0800600AD1 /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE395913FD6B0800600AD1 /* libhgecore.a */; };
+		56E46967144F47A100F21A8D /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E46966144F47A100F21A8D /* libhgecore.a */; };
+		56E46969144F47A100F21A8D /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E46968144F47A100F21A8D /* libhgehelp.a */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -68,10 +68,9 @@
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5676BF88140060A8007CFD38 /* tutorial01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676BFF314006204007CFD38 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = ../../../lib/OSX/libzlib.a; sourceTree = SOURCE_ROOT; };
-		5694895613F3457F000A3A69 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Users/pepper/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
 		56A58C9413FDA2C900C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
-		56AE395913FD6B0800600AD1 /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
-		56BE54A211DDB708004C93F2 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Volumes/MacData/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
+		56E46966144F47A100F21A8D /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/OSX/libhgecore.a"; sourceTree = "<absolute>"; };
+		56E46968144F47A100F21A8D /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/OSX/libhgehelp.a"; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,10 +81,10 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */,
-				5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */,
-				56AE395A13FD6B0800600AD1 /* libhgecore.a in Frameworks */,
 				56A58C9513FDA2C900C081BE /* libbass.dylib in Frameworks */,
 				5676BFF414006204007CFD38 /* libzlib.a in Frameworks */,
+				56E46967144F47A100F21A8D /* libhgecore.a in Frameworks */,
+				56E46969144F47A100F21A8D /* libhgehelp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,10 +125,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				5694895613F3457F000A3A69 /* libhgehelp.a */,
-				56AE395913FD6B0800600AD1 /* libhgecore.a */,
-				56A58C9413FDA2C900C081BE /* libbass.dylib */,
-				5676BFF314006204007CFD38 /* libzlib.a */,
 			);
 			name = tutorial01;
 			sourceTree = "<group>";
@@ -158,7 +153,10 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-				56BE54A211DDB708004C93F2 /* libhgehelp.a */,
+				56E46966144F47A100F21A8D /* libhgecore.a */,
+				56E46968144F47A100F21A8D /* libhgehelp.a */,
+				56A58C9413FDA2C900C081BE /* libbass.dylib */,
+				5676BFF314006204007CFD38 /* libzlib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,7 +338,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

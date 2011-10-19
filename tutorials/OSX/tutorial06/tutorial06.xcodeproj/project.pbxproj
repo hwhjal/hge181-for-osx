@@ -22,10 +22,10 @@
 		5618F47413F4894D007BA885 /* zazaka.png in Resources */ = {isa = PBXBuildFile; fileRef = 5618F46713F4894D007BA885 /* zazaka.png */; };
 		563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */; };
 		5676C0331400623D007CFD38 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676C0321400623D007CFD38 /* libzlib.a */; };
-		5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5694895613F3457F000A3A69 /* libhgehelp.a */; };
 		56A58D2A13FDA81900C081BE /* libbass.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58D2913FDA81900C081BE /* libbass.dylib */; };
 		56A58D2C13FDA81900C081BE /* libhgecore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A58D2B13FDA81900C081BE /* libhgecore.a */; };
 		56A58D2E13FDA83500C081BE /* libbass.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A58D2913FDA81900C081BE /* libbass.dylib */; };
+		56E469B3144F481A00F21A8D /* libhgehelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E469B2144F481A00F21A8D /* libhgehelp.a */; };
 		56F46BB713FAF920004298EC /* menuitem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56F46BB613FAF920004298EC /* menuitem.mm */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
@@ -68,10 +68,9 @@
 		5618F46713F4894D007BA885 /* zazaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zazaka.png; path = ../../Data/zazaka.png; sourceTree = SOURCE_ROOT; };
 		563D5F8A11ADB76A00ED57C4 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5676C0321400623D007CFD38 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = ../../../lib/OSX/libzlib.a; sourceTree = SOURCE_ROOT; };
-		5694895613F3457F000A3A69 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = ../../../../../hge181/lib/OSX/libhgehelp.a; sourceTree = SOURCE_ROOT; };
 		56A58D2913FDA81900C081BE /* libbass.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbass.dylib; path = ../../../lib/OSX/libbass.dylib; sourceTree = SOURCE_ROOT; };
 		56A58D2B13FDA81900C081BE /* libhgecore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgecore.a; path = ../../../lib/OSX/libhgecore.a; sourceTree = SOURCE_ROOT; };
-		56BE54A211DDB708004C93F2 /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = /Volumes/MacData/Work/hge181/lib/OSX/libhgehelp.a; sourceTree = "<absolute>"; };
+		56E469B2144F481A00F21A8D /* libhgehelp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhgehelp.a; path = "/Users/pepper/Work/HGE_OSX&iOS/hge181-for-osx/lib/OSX/libhgehelp.a"; sourceTree = "<absolute>"; };
 		56F46BB513FAF920004298EC /* menuitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuitem.h; sourceTree = "<group>"; };
 		56F46BB613FAF920004298EC /* menuitem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = menuitem.mm; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* tutorial01-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tutorial01-Info.plist"; sourceTree = "<group>"; };
@@ -85,10 +84,10 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				563D5F8B11ADB76A00ED57C4 /* OpenGL.framework in Frameworks */,
-				5694895713F3457F000A3A69 /* libhgehelp.a in Frameworks */,
 				56A58D2A13FDA81900C081BE /* libbass.dylib in Frameworks */,
 				56A58D2C13FDA81900C081BE /* libhgecore.a in Frameworks */,
 				5676C0331400623D007CFD38 /* libzlib.a in Frameworks */,
+				56E469B3144F481A00F21A8D /* libhgehelp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,10 +128,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				5694895613F3457F000A3A69 /* libhgehelp.a */,
-				56A58D2913FDA81900C081BE /* libbass.dylib */,
-				56A58D2B13FDA81900C081BE /* libhgecore.a */,
-				5676C0321400623D007CFD38 /* libzlib.a */,
 			);
 			name = tutorial01;
 			sourceTree = "<group>";
@@ -163,7 +158,10 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-				56BE54A211DDB708004C93F2 /* libhgehelp.a */,
+				56A58D2913FDA81900C081BE /* libbass.dylib */,
+				56A58D2B13FDA81900C081BE /* libhgecore.a */,
+				56E469B2144F481A00F21A8D /* libhgehelp.a */,
+				5676C0321400623D007CFD38 /* libzlib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
