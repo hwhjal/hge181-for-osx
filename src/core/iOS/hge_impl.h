@@ -196,12 +196,12 @@ public:
 	char*						getNextSearchResult (NSString *fileType);
 	
 	//	
-	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
-	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return def_val;} // {ASSERT(0);};
-	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value) {} // {ASSERT(0);};
-	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val) {return def_val;} // {ASSERT(0);};
-	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value) {} // {ASSERT(0);};
-	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val) {return 0;} // {ASSERT(0);};
+	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value);
+	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val);
+	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value);
+	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val);
+	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value);
+	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val);
 	
 	//	
 	virtual void		CALL	Random_Seed(int seed=0);

@@ -98,7 +98,7 @@ public:
 	static HGE_Impl*	_Interface_Get();
 
 	virtual	void		CALL	Release();
-//	
+	//	
 	virtual bool		CALL	System_Initiate();
 	virtual void		CALL	System_Shutdown();
 	virtual bool		CALL	System_Start();
@@ -116,7 +116,7 @@ public:
 	virtual	void		CALL	System_Log(const char *format, ...);
 	virtual bool		CALL	System_Launch(const char *url) {ASSERT(0);};
 	virtual void		CALL	System_Snapshot(const char *filename=0) {ASSERT(0);};
-//	
+	//	
 	virtual void*		CALL	Resource_Load(const char *filename, DWORD *size=0);
 	virtual void		CALL	Resource_Free(void *res);
 	virtual bool		CALL	Resource_AttachPack(const char *filename, const char *password=0);
@@ -126,13 +126,13 @@ public:
 	virtual char*		CALL	Resource_EnumFiles(const char *wildcard=0);
 	virtual char*		CALL	Resource_EnumFolders(const char *wildcard=0);
 	char*						getNextSearchResult (NSString *fileType);
-//	
-	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value) {}// {ASSERT(0);};
-	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val) {return 1;} // {ASSERT(0);};
-	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value) {} // {ASSERT(0);};
-	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val) {return 1;} // {ASSERT(0);};
-	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value) {} // {ASSERT(0);};
-	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val) {return 0;} // {ASSERT(0);};
+	//	
+	virtual	void		CALL	Ini_SetInt(const char *section, const char *name, int value);
+	virtual	int 		CALL	Ini_GetInt(const char *section, const char *name, int def_val);
+	virtual	void		CALL	Ini_SetFloat(const char *section, const char *name, float value);
+	virtual	float		CALL	Ini_GetFloat(const char *section, const char *name, float def_val);
+	virtual	void		CALL	Ini_SetString(const char *section, const char *name, const char *value);
+	virtual	char*		CALL	Ini_GetString(const char *section, const char *name, const char *def_val);
 
 	//	
 	virtual void		CALL	Random_Seed(int seed=0);
@@ -142,7 +142,7 @@ public:
 	virtual float		CALL	Timer_GetTime();
 	virtual float		CALL	Timer_GetDelta();
 	virtual int			CALL	Timer_GetFPS();
-//	
+	//	
 	virtual HEFFECT		CALL	Effect_Load(const char *filename, DWORD size=0);
 	virtual void		CALL	Effect_Free(HEFFECT eff);
 	virtual HCHANNEL	CALL 	Effect_Play(HEFFECT eff);
@@ -231,7 +231,6 @@ public:
 	
 	
 	void				_render_batch(bool bEndScene=false);
-//	int					_format_id(D3DFORMAT fmt);
 	void				_SetBlendMode(int blend);
 	void				_SetProjectionMatrix(int width, int height, bool flip);
 	
