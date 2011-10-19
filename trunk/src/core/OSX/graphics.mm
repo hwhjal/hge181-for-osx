@@ -104,7 +104,7 @@ bool HGE_Impl::_GfxContextCreate()
 		if (bZBuffer) attr = attributes_Z;
 		
 		NSOpenGLPixelFormat *format;
-		format = [[[NSOpenGLPixelFormat alloc] initWithAttributes:attr] autorelease];
+		format = [[NSOpenGLPixelFormat alloc] initWithAttributes:attr];
 		if (!format)
 		{
 			_PostError ("No OpegGL pixel format found");

@@ -8,14 +8,11 @@
  */
 
 #include "main.h"
+#include "../Ini/SimpleIni.h"
+
 
 int			nRef=0;
 HGE_Impl*	pHGE=0;
-
-/*
- TODO:
-	Implement nPowerStatus 
- */
 
 
 
@@ -312,15 +309,15 @@ void CALL HGE_Impl::System_SetStateInt(hgeIntState state, int value)
 			break;
 			
 		case HGE_FXVOLUME:		nFXVolume=value;
-			// _SetFXVolume(nFXVolume);
+			_SetFXVolume(nFXVolume);
 			break;
 			
 		case HGE_MUSVOLUME:		nMusVolume=value;
-			// _SetMusVolume(nMusVolume);
+			_SetMusVolume(nMusVolume);
 			break;
 			
 		case HGE_STREAMVOLUME:	nStreamVolume=value;
-			// _SetStreamVolume(nStreamVolume);
+			_SetStreamVolume(nStreamVolume);
 			break;
 			
 		case HGE_FPS:
@@ -357,25 +354,37 @@ void CALL HGE_Impl::System_SetStateString(hgeStringState state, const char *valu
 	
 	switch(state)
 	{
-		case HGE_ICON:			szIcon=value;
-			// if(pHGE->hwnd) SetClassLong(pHGE->hwnd, GCL_HICON, (LONG)LoadIcon(pHGE->hInstance, szIcon));
-			break;
-		case HGE_TITLE:			strcpy(szWinTitle,value);
-			// if(pHGE->hwnd) SetWindowText(pHGE->hwnd, szWinTitle);
-			break;
+		case HGE_ICON:
+			szIcon=value;
+			if(pHGE->hwnd)
+			{
+				NSString *iconName = [[NSString alloc] initWithBytes:value length:strlen(value) encoding:NSASCIIStringEncoding];
+				NSImage *myImage = [[NSImage alloc] initWithContentsOfFile:iconName];
+				[NSApp setApplicationIconImage: myImage];
+			}
+		break;
+			
+		case HGE_TITLE:
+			strcpy(szWinTitle,value);
+		break;
+			
 		case HGE_INIFILE:		
-			if(value) strcpy(szIniFile, /*Resource_MakePath*/(value));
-		else szIniFile[0]=0;
+			if(value)
+				strcpy(szIniFile, Resource_MakePath(value));
+		else
+			szIniFile[0]=0;
 			break;
-		case HGE_LOGFILE:		if(value)
-		{
-			strcpy(szLogFile, /*Resource_MakePath*/(value));
-			hf=fopen(szLogFile, "w");
-			if(!hf) szLogFile[0]=0;
-			else fclose(hf);
-		}
-		else szLogFile[0]=0;
-			break;
+			
+		case HGE_LOGFILE:
+			if(value)
+			{
+				strcpy(szLogFile, Resource_MakePath(value));
+				hf=fopen(szLogFile, "w");
+				if(!hf) szLogFile[0]=0;
+				else fclose(hf);
+			}
+			else szLogFile[0]=0;
+		break;
 	}
 }
 
@@ -870,5 +879,43 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 	return false;
 }
 
-
-
+void CALL HGE_Impl::Ini_SetInt(const char *section, const char *name, int value)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	iniFile.SetLongValue(section, name, value );
+	iniFile.SaveFile ( szIniFile);
+	
+}
+int CALL HGE_Impl::Ini_GetInt(const char *section, const char *name, int def_val)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	return iniFile.GetLongValue ( section, name ,def_val);	
+}
+void CALL HGE_Impl::Ini_SetFloat(const char *section, const char *name, float value)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	iniFile.SetDoubleValue ( section, name, value );
+	iniFile.SaveFile ( szIniFile);
+}
+float CALL HGE_Impl::Ini_GetFloat(const char *section, const char *name, float def_val)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	return iniFile.GetDoubleValue (section,name,def_val);
+}
+void CALL HGE_Impl::Ini_SetString(const char *section, const char *name, const char *value)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	iniFile.SetValue ( section, name, value );
+	iniFile.SaveFile ( szIniFile);
+}
+char* CALL HGE_Impl::Ini_GetString(const char *section, const char *name, const char *def_val)
+{
+	CSimpleIniA iniFile;
+	iniFile.LoadFile ( szIniFile);
+	return (char *)iniFile.GetValue ( section, name ,def_val);
+}
