@@ -106,10 +106,6 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_FRAMEFUNC, FrameFunc);
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 05 - Using distortion mesh");
-	hge->System_SetState(HGE_WINDOWED, true);
-	hge->System_SetState(HGE_SCREENWIDTH, 800);
-	hge->System_SetState(HGE_SCREENHEIGHT, 600);
-	hge->System_SetState(HGE_SCREENBPP, 32);
 	hge->System_SetState(HGE_USESOUND, false);
 	
 	if(hge->System_Initiate()) {

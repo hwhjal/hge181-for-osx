@@ -179,7 +179,7 @@ int main (int argc, char * const argv[])
 		delete fnt;
 	}
 	
-	// hge->System_Shutdown();
+	hge->System_Shutdown();
 	hge->Release();
 	return 0;
 }
@@ -187,18 +187,7 @@ int main (int argc, char * const argv[])
 
 float GetTime()
 {
-	/*SYSTEMTIME SysTime;
-	float tmp;
-	
-	GetLocalTime(&SysTime);
-	tmp=SysTime.wSecond;
-	tmp=SysTime.wMinute+tmp/60.0f;
-	tmp=SysTime.wHour+tmp/60.0f;*/
-	
-	
-	return CFAbsoluteTimeGetCurrent ()/10000000;
-	
-	// return tmp;
+	return CFAbsoluteTimeGetCurrent ()/100000000;
 }
 
 

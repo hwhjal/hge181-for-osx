@@ -331,14 +331,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1072, 639}}</string>
+								<string>{{0, 0}, {1072, 634}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>639pt</string>
+							<string>634pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -351,14 +351,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 644}, {1072, 185}}</string>
+								<string>{{0, 639}, {1072, 190}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 132 1280 870 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>185pt</string>
+							<string>190pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -377,9 +377,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>5676BD09140037FB007CFD38</string>
+				<string>56E46860144F450900F21A8D</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>5676BD0A140037FB007CFD38</string>
+				<string>56E46861144F450900F21A8D</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -518,7 +518,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>5691EFFD13FFFA1D00A899BF</string>
-		<string>/Users/pepper/Work/__hge_OSX/hge181-for-osx/src/core/ZLIB/zlib/zlib.xcodeproj</string>
+		<string>/Users/pepper/Work/HGE_OSX&amp;iOS/hge181-for-osx/src/core/ZLIB/zlib/zlib.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 132 1280 870 0 0 1280 1002 </string>
@@ -598,7 +598,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5691EFFD13FFFA1D00A899BF</string>
-				<string>5676BD0B140037FB007CFD38</string>
+				<string>56E46862144F450900F21A8D</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
