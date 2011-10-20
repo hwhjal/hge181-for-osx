@@ -19,17 +19,15 @@
 #	define CALL 
 typedef	void* HWND;
 #	define _MAX_PATH	512
-#	define MAX_PATH	512
+#	define MAX_PATH		512
 #	define _vsnprintf vsnprintf
 #	define ZeroMemory(_a_, _b_) memset(_a_, 0, _b_);
 #	define min(x,y) ((x) < (y)) ? (x) : (y)
 #	define max(x,y) ((x) > (y)) ? (x) : (y)
 #	define HCURSOR unsigned int
 #define NULL 0
+#	include <stdint.h>
 #endif
-
-// #include "core/core.h"
-#include <stdint.h>
 
 
 #define HGE_VERSION 0x180
