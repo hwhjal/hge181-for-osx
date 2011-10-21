@@ -185,40 +185,6 @@ bool CALL HGE_Impl::System_Initiate()
 
 void CALL HGE_Impl::_CreateWindow ()
 {
-	/*
-	 if (bWindowed)
-	{	
-		NSRect frame = NSMakeRect(0, 0, nScreenWidth, nScreenHeight);
-		unsigned int styleMask = NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask;
-		// Corretct frame size with given content rect
-		// frame = [NSWindow frameRectForContentRect: frame styleMask: styleMask];
-		rect = frame;
-		hwnd =  [[NSWindow alloc] initWithContentRect:rect styleMask:styleMask backing: NSBackingStoreBuffered defer:false];
-		if (!hwnd)
-		{
-			_PostError("Can't create window");
-			return;
-		}
-		
-		[hwnd setBackgroundColor:[NSColor blackColor]];
-		NSString* title = [[NSString alloc] initWithBytes:szWinTitle length:strlen(szWinTitle) encoding:NSASCIIStringEncoding];		
-		[hwnd setTitle: title];
-		[hwnd display];
-		[hwnd center];
-		[hwnd makeKeyAndOrderFront: hwnd];
-		[hwnd setAcceptsMouseMovedEvents: YES];
-		[hwnd makeMainWindow];
-		if (iconName)
-		{
-			NSImage *myImage = [[NSImage alloc] initWithContentsOfFile:iconName];
-			[NSApp setApplicationIconImage: myImage];			
-		}
-	}
-	else
-	{
-		hwnd = 0;
-	}
-	 */
 }
 
 	

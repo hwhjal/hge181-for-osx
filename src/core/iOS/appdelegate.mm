@@ -74,6 +74,10 @@
     // Handle any foreground procedures not related to animation here.
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+}
+
 - (void)dealloc
 {
 	[viewController release];
