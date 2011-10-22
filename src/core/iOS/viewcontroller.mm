@@ -143,7 +143,7 @@
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];    
+    [super didReceiveMemoryWarning];   
     // Release any cached data, images, etc. that aren't in use.
 }
 
@@ -158,11 +158,22 @@
 	int y = eagl.framebufferWidth - location.x;
 	
 	pHGE->_ProcessMessage (c_EVENT_MOUSE, c_EVENT_MOUSE_DOWN, x, y, 0);
+	NSLog(@"touchesBegan");
 }
+
 
 // Handles the continuation of a touch.
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{  
+{
+	UITouch*			touch = [[event touchesForView:self.view] anyObject];
+	CGPoint location = [touch locationInView:self.view];
+	EAGLView * eagl = (EAGLView *)self.view;
+	int x = location.y;
+	int y = eagl.framebufferWidth - location.x;
+	
+	if (UITouchPhaseMoved == [touch phase])
+		pHGE->_ProcessMessage (c_EVENT_MOUSE, c_EVENT_MOUSE_MOVE, x, y, 0);
+	NSLog(@"touchesMoved");	
 }
 
 // Handles the end of a touch event when the touch is a tap.
@@ -175,6 +186,7 @@
 	int y = eagl.framebufferWidth - location.x;
 	
 	pHGE->_ProcessMessage (c_EVENT_MOUSE, c_EVENT_MOUSE_UP, x, y, 0);
+	NSLog(@"touchesEnded");
 }
 
 

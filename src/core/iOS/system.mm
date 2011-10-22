@@ -538,17 +538,25 @@ bool HGE_Impl::_ProcessMessage (int event, int subevent, int x, int y, int event
 		{
 			// Mouse events
 			case c_EVENT_MOUSE:
-				if (c_EVENT_MOUSE_DOWN == subevent)
+				if (c_EVENT_MOUSE_DOWN == subevent && hwKeyz[HGEK_LBUTTON] != 1)
 				{
 					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, 0, x, y);
 					hwKeyz[HGEK_LBUTTON] = 1;
+					NSLog(@"!!!!!!!!!!!!!!!!!");
+					return true;
 				}
 				if (c_EVENT_MOUSE_UP == subevent)
 				{
 					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_LBUTTON, 0, 0, x, y);
 					hwKeyz[HGEK_LBUTTON] = 0;
+					return true;
 				}
-				break;
+				if (c_EVENT_MOUSE_MOVE == subevent)
+				{
+					pHGE->_BuildEvent(INPUT_MOUSEMOVE, 0, 0, 0, x, y);
+					return true;
+				}
+			break;
 				
 			// Keyboard events
 			case c_EVENT_KEYBOARD:
@@ -562,104 +570,6 @@ bool HGE_Impl::_ProcessMessage (int event, int subevent, int x, int y, int event
 		
 		switch ([event type])
 		{
-//			case NSAppKitDefined:
-//				if ([event subtype] == NSApplicationActivatedEventType || [event subtype] == NSApplicationDeactivatedEventType)
-//				{
-//					[hwnd makeKeyAndOrderFront: hwnd];					
-//					return false;
-//				}
-//			break;
-			// Mouse Left button
-			case NSLeftMouseDown:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-				{
-					if (1 == [event clickCount]) pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, 0, mousePos.x, mousePos.y);
-						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_LBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);
-					hwKeyz[HGEK_LBUTTON] = 1;
-					return false;
-				}
-			}
-			break;
-	 
-			case NSLeftMouseUp:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_LBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				hwKeyz[HGEK_LBUTTON] = 0;
-				return false;
-			}	
-			break;
-				
-			// Mouse right button
-			case NSRightMouseDown:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-				{
-					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);
-					if (1 == [event clickCount]) pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);
-						else pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_RBUTTON, 0, HGEINP_REPEAT, mousePos.x, mousePos.y);
-					hwKeyz[HGEK_RBUTTON] = 1;
-				}
-				return false;
-			}
-			break;
-				
-			case NSRightMouseUp:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_RBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				hwKeyz[HGEK_RBUTTON] = 0;
-				return false;
-			}	
-			break;	
-				
-			// Mouse Middle button
-			case NSOtherMouseDown:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-					pHGE->_BuildEvent(INPUT_MBUTTONDOWN, HGEK_MBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return false;
-			}
-			break;
-			case NSOtherMouseUp:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)
-					pHGE->_BuildEvent(INPUT_MBUTTONUP, HGEK_MBUTTON, 0, 0, mousePos.x, mousePos.y);	
-				return false;
-			}
-			break;
-				
-			// Mouse moving	
-			case NSMouseMoved:
-			case NSLeftMouseDragged:
-			case NSRightMouseDragged:
-			{
-				POINT mousePos = _GetMousePos ();
-				if (-1 != mousePos.x && -1 != mousePos.y)	
-					pHGE->_BuildEvent(INPUT_MOUSEMOVE, 0, 0, 0, mousePos.x, mousePos.y);
-				return false;
-			}
-			break;
-				
-			// Mouse wheel
-			case NSScrollWheel:
-			{
-				if (0 != [event deltaY])
-				{
-					POINT mousePos = _GetMousePos ();
-					if (-1 != mousePos.x && -1 != mousePos.y)
-						pHGE->_BuildEvent(INPUT_MOUSEWHEEL, [event deltaY], 0, 0, mousePos.x, mousePos.y);
-					return false;
-				}
-			}
-			break;				
 	 
 			// Keyboard Keydown
 			case NSKeyDown:

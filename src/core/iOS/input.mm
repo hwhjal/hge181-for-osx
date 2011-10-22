@@ -284,8 +284,8 @@ bool CALL HGE_Impl::Input_IsMouseOver()
 
 bool CALL HGE_Impl::Input_GetKeyState(int key)
 {
-	return (hwKeyz [key] != 0);
-	// return (keyz[key] & 1 != 0);
+	// return (hwKeyz [key] != 0);
+	return (keyz[key] & 1 != 0);
 	// return ((GetKeyState(key) & 0x8000) != 0);
 }
 
