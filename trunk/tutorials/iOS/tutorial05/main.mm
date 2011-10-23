@@ -28,7 +28,7 @@ const float cellw=512.0f/(nCols-1);
 const float cellh=512.0f/(nRows-1);
 
 const float meshx=256;
-const float meshy=44;
+const float meshy=128;
 
 
 bool FrameFunc()
