@@ -443,8 +443,13 @@ void CALL HGE_Impl::System_Shutdown()
 	_SoundDone();
 	_GfxDone();
 	
-	/*timeEndPeriod(1);
-	if(hSearch) { FindClose(hSearch); hSearch=0; }*/
+	[localFileManager release];
+	if (hSearch)
+	{
+		globfree(&fileSearcher);
+		hSearch = false;
+		searchIndex = 0;
+	}
 	
 	System_Log("The End.");
 }

@@ -505,8 +505,11 @@ void HGE_Impl::_PostError(const char *error)
 void CALL HGE_Impl::System_Shutdown()
 {
 	System_Log("\nFinishing..");
-	_ClearQueue();
-	_SoundDone();
+	
+	_ClearQueue();	
+	_SoundDone();	
+	_GfxDone();
+	
 	[localFileManager release];
 	if (hSearch)
 	{
@@ -514,9 +517,9 @@ void CALL HGE_Impl::System_Shutdown()
 		hSearch = false;
 		searchIndex = 0;
 	}
+
 	
 	/*timeEndPeriod(1);
-	_GfxDone();
 	_DonePowerStatus();
 	
 	if(hwnd)
