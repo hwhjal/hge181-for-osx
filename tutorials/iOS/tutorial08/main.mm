@@ -147,10 +147,6 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 08 - The Big Calm");
 	hge->System_SetState(HGE_USESOUND, false);
-	hge->System_SetState(HGE_WINDOWED, true);
-	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
-	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
-	hge->System_SetState(HGE_SCREENBPP, 32);
 	hge->System_SetState(HGE_FPS, 60);	
 	
 	if(hge->System_Initiate())
@@ -161,7 +157,7 @@ int main (int argc, char * const argv[])
 		{
 			// If one of the data files is not found, display an error message and shutdown
 			// MessageBox(NULL, "Can't load resources. See log for details.", "Error", MB_OK | MB_ICONERROR | MB_APPLMODAL);
-			// hge->System_Shutdown();
+			hge->System_Shutdown();
 			hge->Release();
 			return 0;
 		}
@@ -172,7 +168,7 @@ int main (int argc, char * const argv[])
 		delete fnt;
 	}
 	
-	// hge->System_Shutdown();
+	hge->System_Shutdown();
 	hge->Release();
 	return 0;
 }
