@@ -220,7 +220,7 @@ public:
 	bool				_ProcessMessage (NSEvent *event);
 	bool				_GfxInit();
 	void				_CreateWindow ();
-//	void				_GfxDone();
+	void				_GfxDone();
 	bool				_GfxRestore();
 //	void				_AdjustWindow();
 //	void				_Resize(int width, int height);

@@ -1117,7 +1117,6 @@ void CALL HGE_Impl::Target_Free(HTARGET target)
 			
 			if(pTarget->framebuffer)
 			{
-				// glDeleteTextures(1, &pTarget->texture);
 				Texture_Free (pTarget->texture);
 				glDeleteFramebuffersEXT(1, &pTarget->framebuffer);				
 			}
@@ -1129,4 +1128,30 @@ void CALL HGE_Impl::Target_Free(HTARGET target)
 		pPrevTarget = pTarget;
 		pTarget = pTarget->next;
 	}
+}
+
+void HGE_Impl::_GfxDone()
+{
+	CRenderTargetList *target=pTargets, *next_target;
+	
+	while(target)
+	{
+		if(target->framebuffer)
+		{
+			Texture_Free (target->texture);
+			glDeleteFramebuffersEXT(1, &target->framebuffer);				
+		}		
+		next_target=target->next;
+		delete target;
+		target=next_target;
+	}
+	pTargets=0;	
+	
+	while(textures)
+		Texture_Free(textures->tex);
+	
+	// Vertex buffer	
+	if (0 != glVertexBuffer) free (glVertexBuffer);
+	if (0 != glVertexBufferCopy) free (glVertexBufferCopy);
+	if (0 != glIndexBuffer) free (glIndexBuffer);	
 }
