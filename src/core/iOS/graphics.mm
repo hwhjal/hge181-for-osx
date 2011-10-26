@@ -717,7 +717,9 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	{	
 		_PostError("Can't create texture");
 		[memData release];
-		if(!size) Resource_Free(data);
+		CFRelease(bitmapDataCG);
+		if(!size) 
+			Resource_Free(data);
 		
 		[pool release];
 		return 0;
@@ -775,8 +777,9 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	
 	// Release data
 	[memData release];
-	// free (bitmapData);
-	if (!size) Resource_Free(data);
+	CFRelease(bitmapDataCG);
+	if (!size) 
+		Resource_Free(data);
 	
 	[pool release];
 	return (HTEXTURE) name;
