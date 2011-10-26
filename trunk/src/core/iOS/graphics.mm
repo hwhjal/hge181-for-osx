@@ -660,7 +660,9 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 	{	
 		_PostError("Texture_Load: Invalid BPP");
 		[memData release];
-		if(!size) Resource_Free(data);		
+		CFRelease(bitmapDataCG);
+		if(!size)
+			Resource_Free(data);		
 		[pool release];
 		return 0;
 	}
