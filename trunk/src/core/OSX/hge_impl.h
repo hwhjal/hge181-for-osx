@@ -276,7 +276,7 @@ public:
 	int					nHGEFPS;
 	bool				bHideMouse;
 	bool				bDontSuspend;
-	// HWND				hwndParent;
+	int					nPowerStatus;
 	
 	// Graphix
 	bool				bGLInitDone;
