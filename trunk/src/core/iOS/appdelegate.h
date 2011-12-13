@@ -16,14 +16,10 @@
 @interface GLAppAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     GLAppViewController *viewController;
-	// EAGLView *eaglViev;
 }
 
-//@property (nonatomic, retain) IBOutlet UIWindow *window;
-//@property (nonatomic, retain) IBOutlet GLAppViewController *viewController;
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) GLAppViewController *viewController;
-//@property (nonatomic, retain) EAGLView *eaglView;
 
 + (BOOL) forceLoadChunk;
 

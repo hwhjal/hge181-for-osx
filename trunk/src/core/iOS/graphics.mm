@@ -460,6 +460,8 @@ void CALL HGE_Impl::Gfx_SetClipping (int x, int y, int w, int h)
 
 bool HGE_Impl::_init_lost()
 {
+	bRendererInit = false;
+	
 	if (0 == window && 0 == glVewController)
 		glVewController = [GLAppViewController alloc];
 	
@@ -545,7 +547,8 @@ bool HGE_Impl::_init_lost()
 	{
 		// glPixelStorei (GL_PACK_SWAP_BYTES, GL_TRUE);
 		// glPixelStorei (GL_UNPACK_SWAP_BYTES, GL_TRUE);
-	}	
+	}
+	bRendererInit = true;
 	
 	return true;
 }

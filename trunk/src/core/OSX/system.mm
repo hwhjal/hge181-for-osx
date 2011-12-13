@@ -304,7 +304,7 @@ void CALL HGE_Impl::System_SetStateInt(hgeIntState state, int value)
 		case HGE_SCREENWIDTH:	if(!bRendererInit) nScreenWidth=value; break;
 			
 		case HGE_SCREENHEIGHT:	if(!bRendererInit) nScreenHeight=value; break;
-			
+				
 		case HGE_SCREENBPP:		if(!bRendererInit) nScreenBPP=value; break;
 			
 		case HGE_SAMPLERATE:	if(!bSoundInit) nSampleRate=value;
