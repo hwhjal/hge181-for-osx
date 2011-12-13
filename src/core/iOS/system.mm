@@ -29,6 +29,8 @@ HGE* CALL hgeCreate(int ver)
 
 HGE_Impl::HGE_Impl()
 {
+	bRendererInit = false;
+	
 	window = 0;
 	glView = 0;;
 	
