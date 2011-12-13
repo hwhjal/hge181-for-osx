@@ -26,6 +26,7 @@ HGE* CALL hgeCreate(int ver)
 
 HGE_Impl::HGE_Impl()
 {
+	bRendererInit = false;
 	glView = 0;
 	glContextWindowed = glContextFullscreen = nil;
 	
@@ -90,9 +91,10 @@ HGE_Impl::HGE_Impl()
 	nFixedDelta=0;
 	bHideMouse=true;
 	bDontSuspend=false;
-	// hwndParent=0;
 	
 	bTextureClamp = false;
+	
+	nPowerStatus=HGEPWR_UNSUPPORTED;
 	
 	/*nPowerStatus=HGEPWR_UNSUPPORTED;
 	hKrnl32 = NULL;
@@ -645,7 +647,7 @@ bool CALL HGE_Impl::System_Start()
 		
 	} while ([application isRunning]);
 	
-	[application setDelegate:nil];	
+	[application setDelegate:nil];		
 	[pool release];	
 
 	_ClearQueue();	
@@ -823,9 +825,7 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 			// Keyboard Keydown
 			case NSKeyDown:
 			{
-				// Check for spec keys
 				unsigned int fkMask = [event modifierFlags];
-				if (NSControlKeyMask & fkMask || NSCommandKeyMask & fkMask) return false;
 				
 				int macKey = [event keyCode], winKey = -1;
 				// Translate key from mac to Windows
@@ -835,7 +835,19 @@ bool HGE_Impl::_ProcessMessage (NSEvent *event)
 						winKey = MapVkey [i].win;
 						break;
 					}
-	
+				
+				// Check for spec keys
+				if (NSControlKeyMask & fkMask)
+				{
+					return false;
+				}
+				else if (NSCommandKeyMask & fkMask) 
+				{
+					if (![event isARepeat] && (winKey == HGEK_F || (HGEK_M && pHGE->System_GetStateBool(HGE_WINDOWED) == false))) {
+						pHGE->System_SetStateBool(HGE_WINDOWED, !pHGE->System_GetStateBool(HGE_WINDOWED));
+					}
+					return false;
+				}
 				if (-1 == winKey) return false;
 				
 				// Set hw key

@@ -128,13 +128,12 @@ bool HGE_Impl::_GfxContextCreate()
 				glContextFullscreen = nil;
 			}
 
-		[glView setOpenGLContext: glContextWindowed];
-		[glContextWindowed setView:glView];
-		
-		[format release];
-		
+		[glView setOpenGLContext: glContextWindowed];		
 		[hwnd setContentView:glView];
+		[glContextWindowed setView:[hwnd contentView]];		
 		[glContextWindowed makeCurrentContext]; 
+
+		[format release];
 	}
 	else
 	{
@@ -272,7 +271,7 @@ void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 	glViewport (0, 0, width, height);
 	
 	// Displacement trick for exact pixelization
-	glTranslatef(0.375, 0.375, 0);
+	// glTranslatef(0.375, 0.375, 0);
 	
 }
 
