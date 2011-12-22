@@ -507,8 +507,8 @@ void HGE_Impl::_render_batch (bool bEndScene)
 					break;
 					
 				case HGEPRIM_TRIPLES:
-					glDrawArrays (GL_LINES, 0, nPrim); // *3
-					break;
+					glDrawArrays (GL_TRIANGLES, 0, nPrim * 3);
+					break;					
 					
 				case HGEPRIM_LINES:
 					glDrawArrays (GL_LINES, 0, nPrim * 2);
