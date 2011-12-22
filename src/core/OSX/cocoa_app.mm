@@ -368,8 +368,6 @@ extern Application *application;
 	event =[self nextEventMatchingMask:NSAnyEventMask
 			untilDate:nil inMode:NSDefaultRunLoopMode dequeue:YES];	
 		
-	// [self _checkForReleasedWindows];
-	// [self _checkForTerminate];
 
 	[pool release];
 }

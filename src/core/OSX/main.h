@@ -15,6 +15,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
+#import <AppKit/NSApplication.h>
 
 // System
 #include <iostream>
