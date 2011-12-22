@@ -150,9 +150,9 @@ bool CALL HGE_Impl::System_Initiate()
 	System_Log("Application: %s",szWinTitle);
 	System_Log("OS: Mac OS X");
 	
-	application = [Application sharedApplication];
+	application = (Application*)[Application sharedApplication];
 	[application setDelegate:application];	
-	[application preRun];
+	[application preRun];	
 	
 	// Cerate window	
 	_CreateWindow ();

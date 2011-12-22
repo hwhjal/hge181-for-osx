@@ -153,12 +153,12 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_FRAMEFUNC, FrameFunc);
 	hge->System_SetState(HGE_RENDERFUNC, RenderFunc);
 	hge->System_SetState(HGE_TITLE, "HGE Tutorial 08 - The Big Calm");
-	hge->System_SetState(HGE_USESOUND, false);
+	hge->System_SetState(HGE_USESOUND, false);		
 	hge->System_SetState(HGE_WINDOWED, true);
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
-	hge->System_SetState(HGE_FPS, 60);	
+	// hge->System_SetState(HGE_FPS, 60);	
 	
 	if(hge->System_Initiate())
 	{
