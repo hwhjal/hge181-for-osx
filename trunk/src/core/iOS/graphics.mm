@@ -322,13 +322,12 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			switch(CurPrimType)
 			{
 				case HGEPRIM_QUADS:
- 					// glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
 					glDrawElements(GL_TRIANGLES, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
 					break;
 					
 				case HGEPRIM_TRIPLES:
-					glDrawArrays (GL_LINES, 0, nPrim); // *3
-					break;
+					glDrawArrays (GL_TRIANGLES, 0, nPrim * 3);
+					break;					
 					
 				case HGEPRIM_LINES:
 					glDrawArrays (GL_LINES, 0, nPrim * 2);
