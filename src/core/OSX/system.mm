@@ -128,6 +128,12 @@ HGE_Impl::HGE_Impl()
 	// Search init
 	searchIndex = 0;
 	localFileManager = [NSFileManager defaultManager];
+	
+	if(nHGEFPS>0)
+		nFixedDelta=int(1000.0f/nHGEFPS);
+	else
+		nFixedDelta=0;	
+
 }
 
 HGE_Impl* HGE_Impl::_Interface_Get()
@@ -344,8 +350,10 @@ void CALL HGE_Impl::System_SetStateInt(hgeIntState state, int value)
 				}
 			}
 			nHGEFPS=value;
-			if(nHGEFPS>0) nFixedDelta=int(1000.0f/value);
-			else nFixedDelta=0;
+			if(nHGEFPS>0) 
+				nFixedDelta=int(1000.0f/value);
+			else
+				nFixedDelta=0;
 			break;
 	}
 }
@@ -577,21 +585,20 @@ bool CALL HGE_Impl::System_Start()
 			// to not confuse user's code with 0
 			
 			// do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);
-			do { dt= round (CFAbsoluteTimeGetCurrent ()*1000.f- t0); } while(dt < 1);
-			
+			do { dt= CFAbsoluteTimeGetCurrent () - t0; } while(dt < 0.001);			
 			// If we reached the time for the next frame
 			// or we just run in unlimited FPS mode, then
 			// do the stuff
 			
-			if(dt >= nFixedDelta)
+			if(dt >= nFixedDelta/1000.0f)
 			{
 				// fDeltaTime = time step in seconds returned by Timer_GetDelta
 				
-				fDeltaTime=dt/1000.0f;
+				fDeltaTime=dt;
 				
 				// Cap too large time steps usually caused by lost focus to avoid jerks
 				
-				if(fDeltaTime > 0.2f)
+				if(fDeltaTime > 0.5f)
 				{
 					fDeltaTime = nFixedDelta ? nFixedDelta/1000.0f : 0.01f;
 				}
@@ -603,8 +610,9 @@ bool CALL HGE_Impl::System_Start()
 				// Store current time for the next frame
 				// and count FPS
 				
-				t0=CFAbsoluteTimeGetCurrent ()*1000;
-				if(t0-t0fps <= 1000) cfps++;
+				t0=CFAbsoluteTimeGetCurrent ();
+				if(t0-t0fps <= 1)
+					cfps++;
 				else
 				{
 					nFPS=cfps; cfps=0; t0fps=t0;

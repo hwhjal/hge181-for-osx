@@ -67,8 +67,6 @@ void HGE_Impl::_OpeGLCapsGet ()
 	System_Log("OpenGL bGLAppleFenceSupported: %d", (unsigned long)bGLAppleFenceSupported);
 	System_Log("OpenGL nGLMaxTexUnits: %d", nGLMaxTexUnits);
 	System_Log("OpenGL nGLMaxTexSize: %d", nGLMaxTexSize);
-	
-	bGLVARSupported = false;
 }
 
 bool HGE_Impl::_GfxContextCreate()
@@ -361,8 +359,6 @@ void HGE_Impl::Gfx_Clear (DWORD color)
 void CALL HGE_Impl::Gfx_EndScene()
 {
 	_render_batch (true);
-	// glFlush ();
-	glFinish();
 	if (bWindowed) [glContextWindowed flushBuffer];
 		else [glContextFullscreen flushBuffer];
 }
@@ -431,7 +427,13 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 			}
 		}
 		
-		memcpy(&VertArray[nPrim*HGEPRIM_QUADS], quad->v, sizeof(hgeVertex)*HGEPRIM_QUADS);
+		// memcpy(&VertArray[nPrim*HGEPRIM_QUADS], quad->v, sizeof(hgeVertex)*HGEPRIM_QUADS);
+		hgeVertex *pDst = &VertArray[nPrim*HGEPRIM_QUADS];
+		const hgeVertex *pSrc = quad->v;
+		*pDst++ = *pSrc++;
+		*pDst++ = *pSrc++;
+		*pDst++ = *pSrc++;
+		*pDst++ = *pSrc++;
 		nPrim++;
 	}
 }
@@ -495,15 +497,16 @@ void HGE_Impl::_render_batch (bool bEndScene)
 						}
 			// nByteOrder
 			if (bGLVARSupported)
-			{
-				memcpy (glVertexBufferCopy, glVertexBuffer, nVertexBufferSize);
-				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBufferCopy);
-			}
+				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
+
+			// Set fence
+			glSetFenceAPPLE(nGLFence);
 			
 			switch(CurPrimType)
 			{
 				case HGEPRIM_QUADS:
 					glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
+					// glDrawArrays (GL_QUADS, 0, nPrim*4);
 					break;
 					
 				case HGEPRIM_TRIPLES:
@@ -516,8 +519,8 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			}
 			
 			nPrim=0;
-			glFinish();
-			// glFlush ();
+			// Wait fence
+			glFinishFenceAPPLE(nGLFence);
 		}
 		
 		if(bEndScene) VertArray = 0;
@@ -655,6 +658,8 @@ bool HGE_Impl::_init_lost()
 	glVertexBufferCopy = (hgeVertex*) malloc(nVertexBufferSize);
 	memset (glVertexBuffer, 0, nVertexBufferSize);
 	memset (glVertexBufferCopy, 0, nVertexBufferSize);
+	
+	glGenFencesAPPLE(1, &nGLFence);
 
 	if (bGLVARSupported)
 	{
@@ -1151,6 +1156,9 @@ void HGE_Impl::_GfxDone()
 	
 	while(textures)
 		Texture_Free(textures->tex);
+	
+	// OpenGL Fence
+	glDeleteFencesAPPLE(1, &nGLFence);
 	
 	// Vertex buffer	
 	if (0 != glVertexBuffer) free (glVertexBuffer);

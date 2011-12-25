@@ -301,6 +301,7 @@ public:
 	bool				bGLAppleFenceSupported;
 	GLint				nGLMaxTexUnits;
 	GLint				nGLMaxTexSize;
+	GLuint				nGLFence;
 	
 	// Audio
 	bool				hBass;
