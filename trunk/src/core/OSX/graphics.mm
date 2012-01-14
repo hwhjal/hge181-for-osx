@@ -495,12 +495,13 @@ void HGE_Impl::_render_batch (bool bEndScene)
 							*(pc+3) = a; 
 							pVert++;
 						}
-			// nByteOrder
+			// Set fence
+			glSetFenceAPPLE(nGLFence);
+
+			// Transfer data to buffer
 			if (bGLVARSupported)
 				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
 
-			// Set fence
-			glSetFenceAPPLE(nGLFence);
 			
 			switch(CurPrimType)
 			{
@@ -519,6 +520,10 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			}
 			
 			nPrim=0;
+			
+			// Force HW to process OpenGL commands
+			glFlush ();
+			
 			// Wait fence
 			glFinishFenceAPPLE(nGLFence);
 		}
