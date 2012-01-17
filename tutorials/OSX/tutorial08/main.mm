@@ -158,7 +158,6 @@ int main (int argc, char * const argv[])
 	hge->System_SetState(HGE_SCREENWIDTH, SCREEN_WIDTH);
 	hge->System_SetState(HGE_SCREENHEIGHT, SCREEN_HEIGHT);
 	hge->System_SetState(HGE_SCREENBPP, 32);
-	// hge->System_SetState(HGE_ZBUFFER, true);	
 	// hge->System_SetState(HGE_FPS, 60);	
 	
 	if(hge->System_Initiate())
