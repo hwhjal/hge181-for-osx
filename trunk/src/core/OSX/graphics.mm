@@ -20,6 +20,9 @@
 		+ Get native texture size
  */
 
+
+GLuint myArrayObject;
+
 void CALL Texture_SizeToPow2 (int &width, int &height)
 {
 	// int w = *width, h = *height;
@@ -360,9 +363,6 @@ void CALL HGE_Impl::Gfx_EndScene()
 {
 	_render_batch (true);
 	
-	// Wait fence
-	glFinishFenceAPPLE(nGLFence);
-
 	// Display render buffer content
 	if (bWindowed) [glContextWindowed flushBuffer];
 		else [glContextFullscreen flushBuffer];
@@ -432,7 +432,6 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 			}
 		}
 		
-		// memcpy(&VertArray[nPrim*HGEPRIM_QUADS], quad->v, sizeof(hgeVertex)*HGEPRIM_QUADS);
 		hgeVertex *pDst = &VertArray[nPrim*HGEPRIM_QUADS];
 		const hgeVertex *pSrc = quad->v;
 		*pDst++ = *pSrc++;
@@ -476,8 +475,15 @@ void HGE_Impl::_render_batch (bool bEndScene)
 		if(nPrim)
 		{
 			hgeVertex* pVert = glVertexBuffer;
+			int buffSize = nPrim * 4;
+			if (HGEPRIM_TRIPLES == CurPrimType)
+				buffSize = nPrim * 3;
+			else
+				if (HGEPRIM_LINES == CurPrimType)
+					buffSize = nPrim * 2;
+				
 			if (1234 == nByteOrder)
-				for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
+				for (int i = 0; i < buffSize; i++)
 				{
 					unsigned char r = pVert->col & 0xff;
 					unsigned char b = (pVert->col >> 16) & 0xff;
@@ -487,7 +493,7 @@ void HGE_Impl::_render_batch (bool bEndScene)
 					pVert++;
 				}
 					else
-						for (int i = 0; i < VERTEX_BUFFER_SIZE; i++)
+						for (int i = 0; i < buffSize; i++)
 						{
 							unsigned char r = pVert->col & 0xff;
 							unsigned char b = (pVert->col >> 16) & 0xff;
@@ -501,9 +507,6 @@ void HGE_Impl::_render_batch (bool bEndScene)
 							pVert++;
 						}
 
-			 // Wait fence
-			glFinishFenceAPPLE(nGLFence);
-			
 			// Transfer data to buffer
 			if (bGLVARSupported)
 				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
@@ -511,8 +514,8 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			switch(CurPrimType)
 			{
 				case HGEPRIM_QUADS:
-					glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
-					// glDrawArrays (GL_QUADS, 0, nPrim*4);
+					// glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
+					glDrawArrays (GL_QUADS, 0, nPrim*4);
 					break;
 					
 				case HGEPRIM_TRIPLES:
@@ -527,10 +530,17 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			nPrim=0;
 			
 			// Set fence
-			glSetFenceAPPLE(nGLFence);
+			if (bGLAppleFenceSupported)
+				glSetFenceAPPLE(nGLFence);
 			
 			// Force HW to process OpenGL commands
 			glFlush ();
+		
+			// Wait fence
+			if (bGLAppleFenceSupported)
+				glFinishFenceAPPLE(nGLFence);
+			else
+				glFinish();
 		}
 		
 		if(bEndScene) VertArray = 0;
@@ -669,9 +679,8 @@ bool HGE_Impl::_init_lost()
 	memset (glVertexBuffer, 0, nVertexBufferSize);
 	memset (glVertexBufferCopy, 0, nVertexBufferSize);
 
-	// Create and set Fence
-	glGenFencesAPPLE(1, &nGLFence);
-	glSetFenceAPPLE(nGLFence);
+	glGenVertexArraysAPPLE(1,&myArrayObject);
+	glBindVertexArrayAPPLE(myArrayObject);
 
 	if (bGLVARSupported)
 	{
@@ -707,6 +716,9 @@ bool HGE_Impl::_init_lost()
 		glDepthMask (GL_TRUE);
 	}
 	else glDisable (GL_DEPTH_TEST);	
+	
+	// Create and set Fence
+	glGenFencesAPPLE(1, &nGLFence);
 	
 	// Index buffer
 	if (0 != glIndexBuffer) free (glIndexBuffer);
