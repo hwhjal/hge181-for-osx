@@ -359,6 +359,11 @@ void HGE_Impl::Gfx_Clear (DWORD color)
 void CALL HGE_Impl::Gfx_EndScene()
 {
 	_render_batch (true);
+	
+	// Wait fence
+	glFinishFenceAPPLE(nGLFence);
+
+	// Display render buffer content
 	if (bWindowed) [glContextWindowed flushBuffer];
 		else [glContextFullscreen flushBuffer];
 }
@@ -495,13 +500,13 @@ void HGE_Impl::_render_batch (bool bEndScene)
 							*(pc+3) = a; 
 							pVert++;
 						}
-			// Set fence
-			glSetFenceAPPLE(nGLFence);
 
+			 // Wait fence
+			glFinishFenceAPPLE(nGLFence);
+			
 			// Transfer data to buffer
 			if (bGLVARSupported)
 				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
-
 			
 			switch(CurPrimType)
 			{
@@ -521,11 +526,11 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			
 			nPrim=0;
 			
+			// Set fence
+			glSetFenceAPPLE(nGLFence);
+			
 			// Force HW to process OpenGL commands
 			glFlush ();
-			
-			// Wait fence
-			glFinishFenceAPPLE(nGLFence);
 		}
 		
 		if(bEndScene) VertArray = 0;
@@ -663,24 +668,25 @@ bool HGE_Impl::_init_lost()
 	glVertexBufferCopy = (hgeVertex*) malloc(nVertexBufferSize);
 	memset (glVertexBuffer, 0, nVertexBufferSize);
 	memset (glVertexBufferCopy, 0, nVertexBufferSize);
-	
+
+	// Create and set Fence
 	glGenFencesAPPLE(1, &nGLFence);
+	glSetFenceAPPLE(nGLFence);
 
 	if (bGLVARSupported)
 	{
 		// Do init with Vertex Array Range extension
 		glVertexArrayParameteriAPPLE (GL_VERTEX_ARRAY_STORAGE_HINT_APPLE, GL_STORAGE_SHARED_APPLE);
 		glVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
-		glEnableClientState(GL_VERTEX_ARRAY_RANGE_APPLE);	
-
+		// Enable states
+		glEnableClientState(GL_VERTEX_ARRAY_RANGE_APPLE);
 		glEnableClientState(GL_VERTEX_ARRAY);
+		// Map data
 		glVertexPointer (3, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->x);
 		glEnableClientState (GL_COLOR_ARRAY);
 		glColorPointer (4, GL_UNSIGNED_BYTE, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->col);
 		glEnableClientState (GL_TEXTURE_COORD_ARRAY);
 		glTexCoordPointer (2, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->tx);
-		
-		glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);		
 	}
 		else
 		{
