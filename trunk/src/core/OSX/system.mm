@@ -41,7 +41,6 @@ HGE_Impl::HGE_Impl()
 	nVertexBufferSize = nIndexBufferSize = 0;
 	glVertexBuffer = nil;
 	glIndexBuffer = nil;
-	glVertexBufferCopy = nil;
 	bGLVARSupported = false;
 	bGLAppleFenceSupported = false;
 	nGLMaxTexUnits = 0;

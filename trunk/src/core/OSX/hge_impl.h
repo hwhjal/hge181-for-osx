@@ -287,7 +287,7 @@ public:
 	NSOpenGLContext*	glContextWindowed, *glContextFullscreen;
 	CTextureList*		textures;
 	hgeVertex*			VertArray;
-	hgeVertex*			glVertexBuffer, *glVertexBufferCopy;
+	hgeVertex*			glVertexBuffer;
 	unsigned short*		glIndexBuffer;
 	int					nVertexBufferSize, nIndexBufferSize;
 	CRenderTargetList*	pTargets;

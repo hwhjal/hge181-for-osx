@@ -21,7 +21,6 @@
  */
 
 
-GLuint myArrayObject;
 
 void CALL Texture_SizeToPow2 (int &width, int &height)
 {
@@ -672,15 +671,9 @@ bool HGE_Impl::_init_lost()
 	
 	// Vertex buffer	
 	if (0 != glVertexBuffer) free (glVertexBuffer);
-	if (0 != glVertexBufferCopy) free (glVertexBufferCopy);
 	nVertexBufferSize = VERTEX_BUFFER_SIZE*sizeof(hgeVertex);
 	glVertexBuffer = (hgeVertex*) malloc(nVertexBufferSize);
-	glVertexBufferCopy = (hgeVertex*) malloc(nVertexBufferSize);
 	memset (glVertexBuffer, 0, nVertexBufferSize);
-	memset (glVertexBufferCopy, 0, nVertexBufferSize);
-
-	glGenVertexArraysAPPLE(1,&myArrayObject);
-	glBindVertexArrayAPPLE(myArrayObject);
 
 	if (bGLVARSupported)
 	{
@@ -1185,6 +1178,5 @@ void HGE_Impl::_GfxDone()
 	
 	// Vertex buffer	
 	if (0 != glVertexBuffer) free (glVertexBuffer);
-	if (0 != glVertexBufferCopy) free (glVertexBufferCopy);
 	if (0 != glIndexBuffer) free (glIndexBuffer);	
 }
