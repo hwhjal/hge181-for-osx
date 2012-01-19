@@ -21,6 +21,7 @@
  */
 
 
+GLuint nVertexBuffer;
 
 void CALL Texture_SizeToPow2 (int &width, int &height)
 {
@@ -216,6 +217,11 @@ bool HGE_Impl::_GfxContextCreate()
 
 void HGE_Impl::_SetBlendMode(int blend)
 {
+	
+	// Wait fence
+	if (bGLAppleFenceSupported)
+		glFinishFenceAPPLE(nGLFence);
+	
 	if((blend & BLEND_ZWRITE) != (CurBlendMode & BLEND_ZWRITE))
 	{
 		if(blend & BLEND_ZWRITE) glEnable(GL_DEPTH_TEST);
@@ -254,12 +260,23 @@ void HGE_Impl::_SetBlendMode(int blend)
 		else pD3DDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_MODULATE);
 	}*/
 	
+	// Set fence
+	if (bGLAppleFenceSupported)
+		glSetFenceAPPLE(nGLFence);
+	
+	// Force OpenGL commands to HW
+	glFlush();
+
 	CurBlendMode = blend;
 }
 
 
 void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 {
+	// Wait fence
+	if (bGLAppleFenceSupported)
+		glFinishFenceAPPLE(nGLFence);	
+	
 	glDisable (GL_SCISSOR_TEST);	
 	glMatrixMode (GL_PROJECTION);
 	glLoadIdentity ();
@@ -270,9 +287,13 @@ void HGE_Impl::_SetProjectionMatrix(int width, int height, bool flip)
 	glTranslatef (-((float)width / 2.0f), -((float)height / 2.0f), 0.0f);
 	glViewport (0, 0, width, height);
 	
-	// Displacement trick for exact pixelization
-	// glTranslatef(0.375, 0.375, 0);
 	
+	// Set fence
+	if (bGLAppleFenceSupported)
+		glSetFenceAPPLE(nGLFence);				
+	
+	// Force OpenGL commands to HW
+	glFlush();
 }
 
 bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
@@ -282,7 +303,12 @@ bool CALL HGE_Impl::Gfx_BeginScene(HTARGET targ)
 		_PostError("Gfx_BeginScene: Scene is already being rendered");
 		return false;
 	}
-	CRenderTargetList *target=(CRenderTargetList *)targ;	
+	CRenderTargetList *target=(CRenderTargetList *)targ;
+	
+	// Set fence
+	if (bGLAppleFenceSupported)	
+		glSetFenceAPPLE (nGLFence);
+
 	
 	if(target != pCurTarget)
 	{
@@ -376,8 +402,25 @@ void CALL HGE_Impl::Gfx_RenderLine(float x1, float y1, float x2, float y2, DWORD
 			_render_batch();
 			
 			CurPrimType=HGEPRIM_LINES;
-			if(CurBlendMode != BLEND_DEFAULT) _SetBlendMode(BLEND_DEFAULT);
-			if(CurTexture) { glBindTexture (GL_TEXTURE_2D, 0); CurTexture=0; }
+			if(CurBlendMode != BLEND_DEFAULT)
+				_SetBlendMode(BLEND_DEFAULT);
+
+			if(CurTexture)
+			{
+				// Wait fence
+				if (bGLAppleFenceSupported)
+					glFinishFenceAPPLE(nGLFence);
+				
+				glBindTexture (GL_TEXTURE_2D, 0);
+				CurTexture=0;
+				
+				// Set fence
+				if (bGLAppleFenceSupported)
+					glSetFenceAPPLE(nGLFence);				
+
+				// Force OpenGL commands to HW
+				glFlush();				
+			}
 		}
 		
 		int i=nPrim*HGEPRIM_LINES;
@@ -403,8 +446,20 @@ void CALL HGE_Impl::Gfx_RenderTriple(const hgeTriple *triple)
 			CurPrimType=HGEPRIM_TRIPLES;
 			if(CurBlendMode != triple->blend) _SetBlendMode(triple->blend);
 			if(triple->tex != CurTexture)
-			{
+			{				
+				// Wait fence
+				if (bGLAppleFenceSupported)
+					glFinishFenceAPPLE(nGLFence);
+				
 				glBindTexture (GL_TEXTURE_2D, (GLuint) triple->tex);
+				
+				// Set fence
+				if (bGLAppleFenceSupported)
+					glSetFenceAPPLE(nGLFence);
+				
+				// Force OpenGL commands to HW
+				glFlush();
+				
 				CurTexture = triple->tex;
 			}
 		}
@@ -426,7 +481,19 @@ void CALL HGE_Impl::Gfx_RenderQuad(const hgeQuad *quad)
 			if(CurBlendMode != quad->blend) _SetBlendMode(quad->blend);
 			if(quad->tex != CurTexture)
 			{
+				// Wait fence
+				if (bGLAppleFenceSupported)
+					glFinishFenceAPPLE(nGLFence);
+				
 				glBindTexture (GL_TEXTURE_2D, quad->tex);
+
+				// Set fence
+				if (bGLAppleFenceSupported)
+					glSetFenceAPPLE(nGLFence);
+				
+				// Force OpenGL commands to HW
+				glFlush();
+				
 				CurTexture = quad->tex;
 			}
 		}
@@ -451,8 +518,19 @@ hgeVertex* CALL HGE_Impl::Gfx_StartBatch(int prim_type, HTEXTURE tex, HTEXTURE t
 		if(CurBlendMode != blend) _SetBlendMode(blend);
 		if(tex != CurTexture)
 		{
+			// Wait fence
+			if (bGLAppleFenceSupported)
+				glFinishFenceAPPLE(nGLFence);
+			
 			glBindTexture (GL_TEXTURE_2D, (GLuint) tex);
 			CurTexture = tex;
+			
+			// Set fence
+			if (bGLAppleFenceSupported)
+				glSetFenceAPPLE(nGLFence);		
+			
+			// Force OpenGL commands to HW
+			glFlush();
 		}
 		
 		*max_prim=VERTEX_BUFFER_SIZE / prim_type;
@@ -506,15 +584,31 @@ void HGE_Impl::_render_batch (bool bEndScene)
 							pVert++;
 						}
 
+
+
+			// Wait fence
+			if (bGLAppleFenceSupported)
+				glFinishFenceAPPLE(nGLFence);
+			else
+				glFinish();
+			
 			// Transfer data to buffer
 			if (bGLVARSupported)
 				glFlushVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
+			else
+			{
+				glBindBuffer (GL_ARRAY_BUFFER, nVertexBuffer);
+				glBufferData(GL_ARRAY_BUFFER, nVertexBufferSize, nil, GL_DYNAMIC_DRAW);
+				hgeVertex *pBuff =  (hgeVertex *)glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+				memcpy(pBuff, glVertexBuffer, nVertexBufferSize);
+				glUnmapBuffer(GL_ARRAY_BUFFER);				
+			}
 			
 			switch(CurPrimType)
 			{
 				case HGEPRIM_QUADS:
-					// glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
-					glDrawArrays (GL_QUADS, 0, nPrim*4);
+					glDrawRangeElements (GL_TRIANGLES, 0, nPrim<<2, nPrim*6, GL_UNSIGNED_SHORT, glIndexBuffer);
+					// glDrawArrays (GL_QUADS, 0, nPrim*4);
 					break;
 					
 				case HGEPRIM_TRIPLES:
@@ -535,11 +629,6 @@ void HGE_Impl::_render_batch (bool bEndScene)
 			// Force HW to process OpenGL commands
 			glFlush ();
 		
-			// Wait fence
-			if (bGLAppleFenceSupported)
-				glFinishFenceAPPLE(nGLFence);
-			else
-				glFinish();
 		}
 		
 		if(bEndScene) VertArray = 0;
@@ -574,10 +663,12 @@ bool HGE_Impl::_GfxRestore()
 	}
 	
 	// Reinit gfx
-	if(!_init_lost()) return false;
+	if (!_init_lost())
+		return false;
 	
 	// Call restore callback
-	if(procGfxRestoreFunc) return procGfxRestoreFunc();
+	if (procGfxRestoreFunc)
+		return procGfxRestoreFunc();
 	
 	return true;
 }
@@ -674,7 +765,19 @@ bool HGE_Impl::_init_lost()
 	nVertexBufferSize = VERTEX_BUFFER_SIZE*sizeof(hgeVertex);
 	glVertexBuffer = (hgeVertex*) malloc(nVertexBufferSize);
 	memset (glVertexBuffer, 0, nVertexBufferSize);
-
+	
+	
+	/*glGenBuffers(1, &nVertexBuffer);
+	glBindBuffer (GL_ARRAY_BUFFER, nVertexBuffer);*/
+	
+	/*glEnableClientState(GL_VERTEX_ARRAY);	
+	glVertexPointer (3, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) ((char *)&glVertexBuffer->x - (char*)glVertexBuffer));
+	glEnableClientState (GL_COLOR_ARRAY);
+	glColorPointer (4, GL_UNSIGNED_BYTE, sizeof (hgeVertex), (GLvoid *) ((char *)&glVertexBuffer->col - (char*)glVertexBuffer));
+	glEnableClientState (GL_TEXTURE_COORD_ARRAY);
+	glTexCoordPointer (2, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) ((char *)&glVertexBuffer->tx - (char*)glVertexBuffer));*/
+	
+	
 	if (bGLVARSupported)
 	{
 		// Do init with Vertex Array Range extension
@@ -682,8 +785,8 @@ bool HGE_Impl::_init_lost()
 		glVertexArrayRangeAPPLE (nVertexBufferSize, (void *) glVertexBuffer);
 		// Enable states
 		glEnableClientState(GL_VERTEX_ARRAY_RANGE_APPLE);
-		glEnableClientState(GL_VERTEX_ARRAY);
 		// Map data
+		glEnableClientState(GL_VERTEX_ARRAY);
 		glVertexPointer (3, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->x);
 		glEnableClientState (GL_COLOR_ARRAY);
 		glColorPointer (4, GL_UNSIGNED_BYTE, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->col);
@@ -698,8 +801,9 @@ bool HGE_Impl::_init_lost()
 			glEnableClientState (GL_COLOR_ARRAY);
 			glColorPointer (4, GL_UNSIGNED_BYTE, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->col);
 			glEnableClientState (GL_TEXTURE_COORD_ARRAY);
-			glTexCoordPointer (2, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->tx);			
+			glTexCoordPointer (2, GL_FLOAT, sizeof (hgeVertex), (GLvoid *) &glVertexBuffer->tx);
 		}
+		
 	
 	if(bZBuffer)
 	{	
