@@ -1078,7 +1078,7 @@ HTEXTURE CALL HGE_Impl::Texture_Load(const char *filename, DWORD size, bool bMip
 }
 
 
-DWORD * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int top, int width, int height)
+void* CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int top, int width, int height)
 {
 	CTextureList *texItem=textures, *texFind=0;
 	while(texItem && 0 == texFind)
@@ -1120,7 +1120,7 @@ DWORD * CALL HGE_Impl::Texture_Lock(HTEXTURE tex, bool bReadOnly, int left, int 
 	glBindTexture(GL_TEXTURE_2D, tmpTexture);
 	
 	void *res = (unsigned char *)texFind->lockInfo.data + (top*texFind->realWidth + left)*bytesPerPixel;
-	return (DWORD *) res;
+	return res;
 }
 
 
