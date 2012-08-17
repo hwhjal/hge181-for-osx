@@ -41,7 +41,7 @@
 	self.context = aContext;
 	[aContext release];
 	
-	EAGLView *view = [[EAGLView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+	EAGLView *view = [[EAGLView alloc] initWithFrame:CGRectMake (0, 0, [UIScreen mainScreen].currentMode.size.width, [UIScreen mainScreen].currentMode.size.height)];
 	self.view = view;
     [(EAGLView *)self.view setContext:context];
     [(EAGLView *)self.view setFramebuffer];
